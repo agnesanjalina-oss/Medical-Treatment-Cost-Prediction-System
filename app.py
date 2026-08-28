@@ -1,6 +1,7 @@
 from flask import Flask, render_template, request, redirect, session, url_for
 import sqlite3
 from datetime import datetime
+import os
 
 app = Flask(__name__)
 
@@ -8,9 +9,14 @@ app = Flask(__name__)
 # APPLICATION SETTINGS
 # =====================================================
 
-app.secret_key = "medical_cost_secret"
+app.secret_key = os.environ.get(
+    "SECRET_KEY",
+    "medical_cost_secret"
+)
 
-DATABASE = "medical_cost.db"
+# Use one database file consistently
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+DATABASE = os.path.join(BASE_DIR, "medical_cost.db")
 
 
 # =====================================================
@@ -90,7 +96,11 @@ def init_db():
     # -------------------------------------------------
 
     admin = conn.execute(
-        "SELECT * FROM users WHERE email = ?",
+        """
+        SELECT *
+        FROM users
+        WHERE email = ?
+        """,
         ("admin@gmail.com",)
     ).fetchone()
 
@@ -98,7 +108,13 @@ def init_db():
 
         conn.execute("""
             INSERT INTO users
-            (name, email, phone, user_type, password)
+            (
+                name,
+                email,
+                phone,
+                user_type,
+                password
+            )
             VALUES (?, ?, ?, ?, ?)
         """, (
             "Administrator",
@@ -110,6 +126,14 @@ def init_db():
 
     conn.commit()
     conn.close()
+
+
+# =====================================================
+# IMPORTANT:
+# INITIALIZE DATABASE WHEN FLASK/GUNICORN STARTS
+# =====================================================
+
+init_db()
 
 
 # =====================================================
@@ -131,8 +155,15 @@ def login():
 
     if request.method == "POST":
 
-        email = request.form.get("email", "").strip()
-        password = request.form.get("password", "").strip()
+        email = request.form.get(
+            "email",
+            ""
+        ).strip()
+
+        password = request.form.get(
+            "password",
+            ""
+        ).strip()
 
         # Check empty fields
         if not email or not password:
@@ -162,7 +193,9 @@ def login():
             session["user_name"] = user["name"]
             session["user_type"] = user["user_type"]
 
-            return redirect(url_for("dashboard"))
+            return redirect(
+                url_for("dashboard")
+            )
 
         # Invalid login
         return """
@@ -173,7 +206,9 @@ def login():
         <a href="/">Back to Login</a>
         """
 
-    return redirect(url_for("login_page"))
+    return redirect(
+        url_for("login_page")
+    )
 
 
 # =====================================================
@@ -185,11 +220,31 @@ def register_page():
 
     if request.method == "POST":
 
-        name = request.form.get("name", "").strip()
-        email = request.form.get("email", "").strip()
-        phone = request.form.get("phone", "").strip()
-        user_type = request.form.get("user_type", "").strip()
-        password = request.form.get("password", "").strip()
+        name = request.form.get(
+            "name",
+            ""
+        ).strip()
+
+        email = request.form.get(
+            "email",
+            ""
+        ).strip()
+
+        phone = request.form.get(
+            "phone",
+            ""
+        ).strip()
+
+        user_type = request.form.get(
+            "user_type",
+            ""
+        ).strip()
+
+        password = request.form.get(
+            "password",
+            ""
+        ).strip()
+
         confirm_password = request.form.get(
             "confirm_password",
             ""
@@ -222,6 +277,14 @@ def register_page():
                 Back to Register
             </a>
             """
+
+        # -------------------------------------------------
+        # DEFAULT USER TYPE
+        # -------------------------------------------------
+
+        if not user_type:
+
+            user_type = "Hospital Staff"
 
         # -------------------------------------------------
         # SAVE USER
@@ -281,7 +344,9 @@ def register_page():
         </a>
         """
 
-    return render_template("register.html")
+    return render_template(
+        "register.html"
+    )
 
 
 # =====================================================
@@ -294,7 +359,9 @@ def dashboard():
     # Check login
     if "user" not in session:
 
-        return redirect(url_for("login_page"))
+        return redirect(
+            url_for("login_page")
+        )
 
     return render_template(
         "dashboard.html",
@@ -314,7 +381,9 @@ def patient():
     # Check login
     if "user" not in session:
 
-        return redirect(url_for("login_page"))
+        return redirect(
+            url_for("login_page")
+        )
 
     # -------------------------------------------------
     # SAVE PATIENT
@@ -366,11 +435,17 @@ def patient():
         # VALIDATION
         # -------------------------------------------------
 
-        if not patient_name or not age or not gender or not disease:
+        if (
+            not patient_name
+            or not age
+            or not gender
+            or not disease
+        ):
 
             return """
             <h3>
-                Please fill in all required patient information.
+                Please fill in all required
+                patient information.
             </h3>
 
             <a href="/patient">
@@ -387,6 +462,16 @@ def patient():
 
             return """
             <h3>Age must be a number.</h3>
+
+            <a href="/patient">
+                Back to Patient Information
+            </a>
+            """
+
+        if age <= 0:
+
+            return """
+            <h3>Age must be greater than 0.</h3>
 
             <a href="/patient">
                 Back to Patient Information
@@ -426,7 +511,9 @@ def patient():
         conn.commit()
         conn.close()
 
-        return redirect(url_for("patient"))
+        return redirect(
+            url_for("patient")
+        )
 
     # -------------------------------------------------
     # GET PATIENTS
@@ -458,7 +545,9 @@ def prediction():
     # Check login
     if "user" not in session:
 
-        return redirect(url_for("login_page"))
+        return redirect(
+            url_for("login_page")
+        )
 
     predicted_cost = None
 
@@ -499,14 +588,46 @@ def prediction():
         ).strip()
 
         # -------------------------------------------------
+        # VALIDATE REQUIRED FIELDS
+        # -------------------------------------------------
+
+        if not patient_name:
+
+            return """
+            <h3>Please enter patient name.</h3>
+
+            <a href="/prediction">
+                Back to Prediction
+            </a>
+            """
+
+        if not disease:
+
+            return """
+            <h3>Please enter disease.</h3>
+
+            <a href="/prediction">
+                Back to Prediction
+            </a>
+            """
+
+        if not treatment_type:
+
+            treatment_type = "General Treatment"
+
+        # -------------------------------------------------
         # VALIDATE NUMBERS
         # -------------------------------------------------
 
         try:
 
-            hospital_days = int(hospital_days_text)
+            hospital_days = int(
+                hospital_days_text
+            )
 
-            icu = int(icu_text)
+            icu = int(
+                icu_text
+            )
 
         except ValueError:
 
@@ -610,7 +731,9 @@ def history():
     # Check login
     if "user" not in session:
 
-        return redirect(url_for("login_page"))
+        return redirect(
+            url_for("login_page")
+        )
 
     conn = get_db_connection()
 
@@ -637,17 +760,24 @@ def logout():
 
     session.clear()
 
-    return redirect(url_for("login_page"))
+    return redirect(
+        url_for("login_page")
+    )
 
 
 # =====================================================
-# RUN APPLICATION
+# RUN APPLICATION LOCALLY
 # =====================================================
 
 if __name__ == "__main__":
 
-    # Create database and tables
-    init_db()
-
-    # Start Flask
-    app.run(debug=True)
+    app.run(
+        host="0.0.0.0",
+        port=int(
+            os.environ.get(
+                "PORT",
+                5000
+            )
+        ),
+        debug=True
+    )
