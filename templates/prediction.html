@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Treatment Cost Prediction</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+          rel="stylesheet">
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <style>
+
+        body {
+            background: #eef3f8;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            margin-top: 40px;
+        }
+
+        .card {
+            border: none;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,.12);
+        }
+
+        .header {
+            background: #198754;
+            color: white;
+            padding: 20px;
+            border-radius: 15px 15px 0 0;
+        }
+
+        .result {
+            background: #e8f5e9;
+            border-radius: 12px;
+            padding: 25px;
+            text-align: center;
+        }
+
+        .cost {
+            font-size: 35px;
+            font-weight: bold;
+            color: #198754;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="d-flex justify-content-between align-items-center mb-4">
+
+        <h2>
+            <i class="fa-solid fa-calculator"></i>
+            Treatment Cost Prediction
+        </h2>
+
+        <a href="{{ url_for('dashboard') }}"
+           class="btn btn-secondary">
+
+            <i class="fa-solid fa-arrow-left"></i>
+            Dashboard
+
+        </a>
+
+    </div>
+
+
+    <div class="card">
+
+        <div class="header">
+
+            <h4>
+                Enter Treatment Information
+            </h4>
+
+        </div>
+
+
+        <div class="card-body">
+
+            <form action="{{ url_for('prediction') }}"
+                  method="POST">
+
+                <div class="row">
+
+
+                    <div class="col-md-6 mb-3">
+
+                        <label class="form-label">
+                            Patient
+                        </label>
+
+                        <select name="patient_id"
+                                id="patient_id"
+                                class="form-select"
+                                onchange="fillPatient()">
+
+                            <option value="">
+                                Select Patient
+                            </option>
+
+                            {% for p in patients %}
+
+                            <option value="{{ p['id'] }}"
+                                    data-name="{{ p['patient_name'] }}"
+                                    data-disease="{{ p['disease'] }}">
+
+                                {{ p['patient_name'] }}
+
+                            </option>
+
+                            {% endfor %}
+
+                        </select>
+
+                    </div>
+
+
+                    <div class="col-md-6 mb-3">
+
+                        <label class="form-label">
+                            Patient Name
+                        </label>
+
+                        <input type="text"
+                               name="patient_name"
+                               id="patient_name"
+                               class="form-control"
+                               placeholder="Patient name"
+                               required>
+
+                    </div>
+
+
+                    <div class="col-md-6 mb-3">
+
+                        <label class="form-label">
+                            Disease
+                        </label>
+
+                        <input type="text"
+                               name="disease"
+                               id="disease"
+                               class="form-control"
+                               placeholder="Disease"
+                               required>
+
+                    </div>
+
+
+                    <div class="col-md-6 mb-3">
+
+                        <label class="form-label">
+                            Treatment Type
+                        </label>
+
+                        <select name="treatment_type"
+                                class="form-select"
+                                required>
+
+                            <option value="">
+                                Select Treatment
+                            </option>
+
+                            <option value="Medication">
+                                Medication
+                            </option>
+
+                            <option value="Surgery">
+                                Surgery
+                            </option>
+
+                            <option value="Emergency">
+                                Emergency
+                            </option>
+
+                            <option value="General Treatment">
+                                General Treatment
+                            </option>
+
+                            <option value="Diagnostic">
+                                Diagnostic
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div class="col-md-6 mb-3">
+
+                        <label class="form-label">
+                            Hospital Days
+                        </label>
+
+                        <input type="number"
+                               name="hospital_days"
+                               class="form-control"
+                               min="0"
+                               value="0"
+                               required>
+
+                    </div>
+
+
+                    <div class="col-md-6 mb-3">
+
+                        <label class="form-label">
+                            ICU Required?
+                        </label>
+
+                        <select name="icu"
+                                class="form-select">
+
+                            <option value="0">
+                                No
+                            </option>
+
+                            <option value="1">
+                                Yes
+                            </option>
+
+                        </select>
+
+                    </div>
+
+                </div>
+
+
+                <button type="submit"
+                        class="btn btn-success">
+
+                    <i class="fa-solid fa-calculator"></i>
+                    Predict Treatment Cost
+
+                </button>
+
+            </form>
+
+
+            {% if predicted_cost is not none %}
+
+            <hr class="my-4">
+
+
+            <div class="result">
+
+                <h4>
+                    Estimated Treatment Cost
+                </h4>
+
+                <div class="cost">
+
+                    ৳ {{ "{:,.2f}".format(predicted_cost) }}
+
+                </div>
+
+                <p class="text-muted mb-0">
+
+                    This is an estimated cost.
+
+                </p>
+
+            </div>
+
+            {% endif %}
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<script>
+
+function fillPatient() {
+
+    const select = document.getElementById("patient_id");
+
+    const option = select.options[select.selectedIndex];
+
+    if (option.value) {
+
+        document.getElementById("patient_name").value =
+            option.getAttribute("data-name");
+
+        document.getElementById("disease").value =
+            option.getAttribute("data-disease");
+
+    }
+
+}
+
+</script>
+
+</body>
+</html>
