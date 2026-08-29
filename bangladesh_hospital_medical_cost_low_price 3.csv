@@ -1,0 +1,1001 @@
+age,gender,department,disease,treatment_type,hospital_days,icu,hospital_type,hospital_location,doctor_fee,medicine_cost,diagnostic_cost,surgery_cost,room_cost,icu_cost,consultation_cost,treatment_cost
+43,Female,Orthopedics,Fracture,Minor Surgery,5,No,Community Private,Chattogram,1442,8136,1998,5092,6100,0,524,23292
+76,Female,Neurology,Epilepsy,Medication,4,No,Private,Chattogram,880,1793,4500,0,9448,0,1160,17781
+42,Male,Neurology,Stroke,Diagnostic & Medical,5,No,Community Private,Chattogram,911,1867,2652,0,5855,0,1065,12350
+81,Male,Cardiology,Heart Failure,Medication,4,No,Private,Rajshahi,1195,8187,2257,0,8120,0,837,20596
+59,Male,General Medicine,Diabetes,Diagnostic & Medical,4,No,Private,Chattogram,1516,3725,1698,0,6560,0,522,14021
+60,Male,Gynecology,Fibroid,Diagnostic & Medical,1,No,Specialized Private,Khulna,1633,5042,1688,0,3957,0,386,12706
+63,Female,Cardiology,Heart Disease,Medication,4,No,Private,Chattogram,1498,2804,2273,0,11984,0,388,18947
+58,Male,Nephrology,Urinary Infection,Medication,1,No,Community Private,Dhaka,1135,9691,3764,0,1559,0,797,16946
+85,Male,Nephrology,Chronic Kidney Disease,Diagnostic & Medical,2,No,Community Private,Khulna,975,5012,1681,0,3014,0,986,11668
+25,Female,Nephrology,Urinary Infection,Diagnostic & Medical,2,No,Specialized Private,Dhaka,759,1622,2328,0,6966,0,911,12586
+34,Male,Oncology,Breast Cancer,Medication,4,No,Community Private,Dhaka,822,5055,2354,0,6124,0,310,14665
+50,Male,Orthopedics,Arthritis,Critical Care,5,Yes,Community Private,Dhaka,1492,6917,2094,0,6270,21245,581,38599
+55,Female,Oncology,Lymphoma,Minor Surgery,4,No,Specialized Private,Chattogram,1104,3069,1357,14832,12516,0,639,33517
+9,Male,Cardiology,Heart Failure,Minor Surgery,2,No,Private,Rajshahi,1742,1367,2032,5639,5818,0,1185,17783
+41,Male,Oncology,Lymphoma,Medication,1,No,Private,Chattogram,1607,8657,4165,0,2386,0,650,17465
+45,Male,General Medicine,Pneumonia,Medication,2,No,Private,Dhaka,942,2218,1533,0,3878,0,713,9284
+54,Male,General Medicine,Diabetes,Diagnostic & Medical,5,No,Private,Chattogram,1049,1796,2435,0,13740,0,522,19542
+42,Female,General Medicine,Diabetes,Medication,4,No,Private,Chattogram,1748,2111,2154,0,11048,0,826,17887
+48,Female,Pulmonology,Asthma,Medication,2,No,Specialized Private,Sylhet,1352,4909,1823,0,5032,0,1099,14215
+19,Female,Neurology,Migraine,Diagnostic & Medical,4,No,Specialized Private,Chattogram,898,921,5686,0,12160,0,996,20661
+44,Female,Nephrology,Kidney Stone,Minor Surgery,4,No,Private,Rajshahi,1757,4843,4607,13666,8812,0,376,34061
+41,Female,Oncology,Lung Cancer,Major Surgery,4,No,Community Private,Dhaka,902,1584,1610,19591,5704,0,719,30110
+80,Male,Oncology,Lung Cancer,Medication,3,No,Community Private,Chattogram,1220,5460,2790,0,4869,0,558,14897
+85,Male,Oncology,Lymphoma,Medication,1,No,Private,Chattogram,934,3481,2068,0,2451,0,923,9857
+22,Female,Cardiology,Heart Disease,Medication,2,No,Private,Chattogram,811,1428,1782,0,3496,0,371,7888
+32,Female,Oncology,Lymphoma,Minor Surgery,2,No,Community Private,Chattogram,1265,2229,2201,7881,2510,0,1043,17129
+31,Female,General Surgery,Gallstones,Minor Surgery,2,No,Private,Chattogram,1257,1828,2518,13956,3414,0,701,23674
+25,Male,Gastroenterology,Fatty Liver,Medication,1,No,Community Private,Khulna,1372,3526,1613,0,981,0,716,8208
+22,Male,Cardiology,Hypertension,Medication,1,No,Specialized Private,Dhaka,1684,2510,3697,0,4057,0,413,12361
+39,Female,General Surgery,Gallstones,Diagnostic & Medical,5,No,Private,Sylhet,522,3934,1844,0,9145,0,553,15998
+48,Female,Pulmonology,COPD,Diagnostic & Medical,4,No,Specialized Private,Dhaka,1419,2853,1177,0,17812,0,674,23935
+33,Female,Gynecology,Pregnancy Complication,Medication,3,No,Private,Dhaka,1639,1061,1422,0,5895,0,393,10410
+37,Male,General Medicine,Pneumonia,Major Surgery,4,No,Private,Dhaka,1408,4350,2739,26058,11060,0,641,46256
+35,Female,Gynecology,Fibroid,Diagnostic & Medical,4,No,Community Private,Rajshahi,1369,1405,3366,0,5684,0,1009,12833
+46,Male,General Medicine,Gastritis,Major Surgery,3,No,Private,Chattogram,699,4091,2094,54399,6903,0,851,69037
+47,Male,Cardiology,Heart Failure,Diagnostic & Medical,1,No,Community Private,Dhaka,517,1746,1718,0,1011,0,653,5645
+50,Female,Pulmonology,Respiratory Infection,Medication,3,No,Specialized Private,Rajshahi,1027,2298,5049,0,12948,0,1163,22485
+46,Male,Gynecology,Fibroid,Minor Surgery,5,No,Private,Sylhet,769,2729,2210,8203,8680,0,657,23248
+17,Female,Oncology,Lung Cancer,Medication,4,No,Private,Dhaka,990,2205,6713,0,10224,0,769,20901
+50,Female,Cardiology,Heart Failure,Medication,4,No,Community Private,Dhaka,1474,3704,1461,0,6768,0,491,13898
+18,Male,Cardiology,Hypertension,Major Surgery,8,No,Private,Rajshahi,1641,1875,1079,20106,18304,0,354,43359
+33,Female,Oncology,Breast Cancer,Diagnostic & Medical,5,No,Specialized Private,Rajshahi,1741,5544,5086,0,16180,0,624,29175
+1,Female,General Surgery,Gallstones,Medication,3,No,Private,Chattogram,1288,5994,2649,0,6930,0,645,17506
+26,Male,Neurology,Epilepsy,Minor Surgery,4,No,Community Private,Sylhet,960,2320,1669,13531,6028,0,519,25027
+49,Female,Orthopedics,Arthritis,Critical Care,3,Yes,Private,Rajshahi,1638,7336,2335,0,6615,17010,1177,36111
+19,Male,Orthopedics,Knee Osteoarthritis,Medication,4,No,Private,Chattogram,1581,1952,2171,0,11472,0,362,17538
+42,Male,Gynecology,Pregnancy Complication,Minor Surgery,2,No,Private,Dhaka,1432,5340,1155,6854,3266,0,1043,19090
+31,Female,General Medicine,Diabetes,Major Surgery,6,No,Private,Sylhet,1714,4107,9094,32083,10050,0,877,57925
+5,Male,Cardiology,Hypertension,Major Surgery,3,No,Private,Rajshahi,695,3418,5043,49555,5028,0,306,64045
+39,Male,Cardiology,Hypertension,Medication,1,No,Specialized Private,Dhaka,504,3874,2295,0,4326,0,714,11713
+67,Female,Nephrology,Chronic Kidney Disease,Medication,3,No,Private,Dhaka,1723,1760,3403,0,8439,0,1096,16421
+59,Female,Cardiology,Heart Failure,Medication,3,No,Community Private,Rajshahi,1540,6236,2051,0,3216,0,660,13703
+75,Female,Gastroenterology,Hepatitis,Medication,1,No,Specialized Private,Dhaka,1372,3444,3355,0,4000,0,639,12810
+70,Female,Pulmonology,COPD,Diagnostic & Medical,5,No,Specialized Private,Khulna,1348,1475,4457,0,20735,0,1090,29105
+40,Female,Neurology,Migraine,Diagnostic & Medical,4,No,Specialized Private,Chattogram,700,5820,3349,0,10008,0,831,20708
+23,Male,General Surgery,Hernia,Major Surgery,4,No,Community Private,Khulna,1294,2764,2054,41446,4136,0,823,52517
+57,Male,General Surgery,Gallstones,Medication,2,No,Private,Dhaka,1218,1711,1573,0,3134,0,960,8596
+15,Male,Pulmonology,COPD,Medication,4,No,Specialized Private,Chattogram,1258,1419,2154,0,10108,0,806,15745
+50,Male,General Surgery,Gallstones,Diagnostic & Medical,3,No,Community Private,Chattogram,1148,2381,1877,0,3921,0,445,9772
+49,Female,Cardiology,Heart Failure,Medication,3,No,Private,Chattogram,911,8577,2686,0,4671,0,996,17841
+26,Female,Gastroenterology,Peptic Ulcer,Major Surgery,3,No,Community Private,Chattogram,764,5177,4434,57501,5235,0,693,73804
+47,Female,Cardiology,Hypertension,Minor Surgery,4,No,Specialized Private,Sylhet,1339,6352,2038,5924,13224,0,945,29822
+60,Male,Oncology,Lymphoma,Medication,1,No,Private,Dhaka,935,3806,2802,0,2681,0,406,10630
+26,Male,Pulmonology,Asthma,Diagnostic & Medical,2,No,Community Private,Sylhet,1681,2159,2309,0,2410,0,558,9117
+51,Female,General Surgery,Hernia,Critical Care,7,Yes,Specialized Private,Chattogram,1098,2177,3041,0,22897,22435,965,52613
+59,Female,General Surgery,Gallstones,Medication,3,No,Community Private,Rajshahi,913,1354,1183,0,4959,0,1118,9527
+49,Female,Nephrology,Chronic Kidney Disease,Major Surgery,6,No,Specialized Private,Khulna,855,2309,1906,42915,22272,0,736,70993
+68,Female,Gastroenterology,Hepatitis,Minor Surgery,3,No,Private,Chattogram,611,3846,4116,7500,7920,0,508,24501
+59,Male,Orthopedics,Arthritis,Major Surgery,5,No,Private,Dhaka,1225,2570,8023,24343,9785,0,1070,47016
+51,Female,General Medicine,Dengue Fever,Medication,3,No,Community Private,Rajshahi,1575,1389,4242,0,4266,0,332,11804
+18,Female,General Medicine,Gastritis,Critical Care,8,Yes,Specialized Private,Dhaka,1711,1902,1967,0,26360,25328,723,57991
+40,Male,Pulmonology,COPD,Diagnostic & Medical,4,No,Community Private,Dhaka,1151,2655,4232,0,7144,0,485,15667
+40,Male,Orthopedics,Arthritis,Major Surgery,8,No,Community Private,Chattogram,1317,8351,648,26031,9432,0,1151,46930
+1,Male,Cardiology,Hypertension,Critical Care,8,Yes,Private,Dhaka,1629,3567,2924,0,21912,51760,458,82250
+65,Male,General Medicine,Pneumonia,Minor Surgery,3,No,Specialized Private,Khulna,979,1527,3045,14452,7608,0,639,28250
+56,Male,Orthopedics,Fracture,Diagnostic & Medical,5,No,Private,Dhaka,1023,2310,2811,0,8665,0,1015,15824
+81,Male,General Surgery,Appendicitis,Medication,3,No,Specialized Private,Chattogram,701,2078,4084,0,11376,0,430,18669
+40,Female,Cardiology,Heart Failure,Medication,3,No,Community Private,Chattogram,838,2663,5749,0,4026,0,825,14101
+77,Female,Cardiology,Hypertension,Major Surgery,3,No,Private,Rajshahi,874,1741,6048,51388,8343,0,1054,69448
+59,Male,Pulmonology,COPD,Medication,3,No,Specialized Private,Chattogram,1185,6899,1717,0,8916,0,969,19686
+52,Male,Orthopedics,Knee Osteoarthritis,Minor Surgery,4,No,Community Private,Sylhet,964,1799,6331,6065,6792,0,1155,23106
+46,Female,Pulmonology,Asthma,Minor Surgery,2,No,Private,Rajshahi,1664,3348,3623,6744,3976,0,866,20221
+39,Female,Oncology,Lung Cancer,Medication,4,No,Specialized Private,Sylhet,1294,6605,2253,0,13648,0,818,24618
+44,Male,General Medicine,Dengue Fever,Medication,2,No,Specialized Private,Sylhet,1465,1930,1934,0,8942,0,1000,15271
+4,Female,Gastroenterology,Peptic Ulcer,Minor Surgery,3,No,Community Private,Rajshahi,1333,2849,3266,8564,5340,0,436,21788
+45,Female,Nephrology,Urinary Infection,Medication,1,No,Private,Khulna,542,1804,3906,0,1692,0,732,8676
+68,Female,Orthopedics,Arthritis,Medication,1,No,Specialized Private,Rajshahi,559,1795,2720,0,3157,0,503,8734
+14,Male,Oncology,Breast Cancer,Diagnostic & Medical,4,No,Specialized Private,Dhaka,1601,4445,1408,0,14440,0,1078,22972
+25,Female,Pulmonology,COPD,Diagnostic & Medical,4,No,Community Private,Chattogram,1505,3001,1353,0,3324,0,761,9944
+28,Male,Nephrology,Urinary Infection,Medication,3,No,Private,Rajshahi,712,4267,3259,0,8592,0,672,17502
+43,Male,General Surgery,Appendicitis,Diagnostic & Medical,1,No,Private,Rajshahi,1513,1548,4688,0,1569,0,306,9624
+38,Male,Orthopedics,Arthritis,Major Surgery,6,No,Community Private,Dhaka,1684,2235,1838,18065,6864,0,1029,31715
+23,Male,Cardiology,Heart Failure,Medication,4,No,Private,Dhaka,705,3763,2279,0,7016,0,315,14078
+32,Female,Neurology,Stroke,Minor Surgery,4,No,Private,Dhaka,1687,3726,2976,11838,6256,0,564,27047
+46,Female,Orthopedics,Knee Osteoarthritis,Medication,4,No,Private,Chattogram,576,2511,1135,0,7708,0,381,12311
+28,Female,Gastroenterology,Fatty Liver,Minor Surgery,3,No,Community Private,Chattogram,1448,1978,1779,8036,2553,0,1041,16835
+28,Male,Orthopedics,Fracture,Medication,1,No,Private,Chattogram,1392,9415,1949,0,1856,0,833,15445
+49,Female,Nephrology,Chronic Kidney Disease,Minor Surgery,4,No,Private,Khulna,1168,5051,6923,14399,6852,0,698,35091
+41,Male,Gastroenterology,Peptic Ulcer,Critical Care,10,No,Specialized Private,Sylhet,1481,4592,1571,0,37500,0,902,46046
+41,Male,General Medicine,Dengue Fever,Minor Surgery,2,No,Specialized Private,Khulna,1336,5096,3695,8425,7940,0,701,27193
+19,Female,Nephrology,Chronic Kidney Disease,Diagnostic & Medical,4,No,Specialized Private,Chattogram,1215,4704,1438,0,15496,0,1039,23892
+22,Female,Nephrology,Chronic Kidney Disease,Medication,2,No,Community Private,Chattogram,1760,8037,2423,0,1694,0,374,14288
+6,Female,General Surgery,Appendicitis,Critical Care,10,No,Community Private,Chattogram,1626,3186,2042,0,9770,0,617,17241
+2,Female,Cardiology,Heart Failure,Medication,4,No,Community Private,Rajshahi,930,3156,2391,0,3492,0,381,10350
+56,Female,Oncology,Breast Cancer,Minor Surgery,3,No,Private,Chattogram,576,1357,7090,13575,8472,0,1095,32165
+24,Female,Cardiology,Heart Disease,Minor Surgery,4,No,Private,Dhaka,981,7432,3139,5737,7092,0,950,25331
+35,Male,Cardiology,Heart Disease,Diagnostic & Medical,4,No,Community Private,Chattogram,944,2593,3491,0,5660,0,400,13088
+60,Female,Nephrology,Kidney Stone,Medication,2,No,Community Private,Dhaka,1705,3394,2700,0,3232,0,908,11939
+51,Male,General Medicine,Pneumonia,Medication,3,No,Private,Chattogram,1478,4093,4746,0,6666,0,696,17679
+42,Male,Cardiology,Heart Disease,Medication,4,No,Private,Dhaka,846,7588,3075,0,11304,0,314,23127
+49,Female,Cardiology,Heart Disease,Major Surgery,8,No,Community Private,Chattogram,1403,837,4472,30044,11184,0,758,48698
+46,Male,Pulmonology,COPD,Major Surgery,6,No,Private,Khulna,1178,2167,3007,21934,15576,0,932,44794
+59,Female,Neurology,Migraine,Critical Care,5,Yes,Community Private,Dhaka,1241,6618,4566,0,9000,17610,1167,40202
+60,Male,General Surgery,Hernia,Medication,4,No,Private,Dhaka,1515,1548,3513,0,9900,0,1037,17513
+54,Female,Gastroenterology,Fatty Liver,Minor Surgery,4,No,Private,Chattogram,1285,1873,3733,10520,11200,0,983,29594
+61,Female,Gynecology,Pregnancy Complication,Major Surgery,4,No,Community Private,Dhaka,1477,6297,1900,45433,5392,0,332,60831
+53,Male,Cardiology,Heart Failure,Major Surgery,4,No,Private,Sylhet,550,4062,2348,29551,8020,0,1049,45580
+49,Female,Gynecology,Pregnancy Complication,Medication,3,No,Private,Dhaka,801,2801,3210,0,4620,0,561,11993
+38,Male,Orthopedics,Arthritis,Medication,4,No,Community Private,Dhaka,1371,7466,1052,0,7084,0,952,17925
+4,Male,Neurology,Epilepsy,Major Surgery,4,Yes,Private,Khulna,768,2380,2999,53899,6124,20504,639,87313
+33,Male,General Medicine,Dengue Fever,Medication,4,No,Private,Sylhet,1745,3988,2152,0,7764,0,694,16343
+58,Female,General Surgery,Appendicitis,Diagnostic & Medical,3,No,Specialized Private,Dhaka,1231,3787,2409,0,7584,0,935,15946
+20,Female,Pulmonology,COPD,Critical Care,7,No,Community Private,Sylhet,1626,3176,4410,0,7301,0,502,17015
+25,Male,Orthopedics,Arthritis,Minor Surgery,4,No,Private,Dhaka,1035,2309,3172,12734,6224,0,966,26440
+35,Male,General Surgery,Hernia,Major Surgery,3,No,Specialized Private,Dhaka,1004,3757,1511,34253,12435,0,923,53883
+53,Female,Orthopedics,Fracture,Medication,4,No,Private,Chattogram,876,6081,1827,0,11032,0,760,20576
+30,Male,Nephrology,Kidney Stone,Medication,2,No,Specialized Private,Dhaka,1294,2000,4398,0,5538,0,432,13662
+72,Female,General Surgery,Appendicitis,Minor Surgery,4,No,Private,Dhaka,1791,2174,1126,10326,6856,0,425,22698
+9,Female,Pulmonology,Asthma,Medication,2,No,Community Private,Chattogram,1691,1199,3218,0,2774,0,658,9540
+30,Male,Nephrology,Urinary Infection,Major Surgery,8,No,Specialized Private,Dhaka,1089,863,4447,34680,31320,0,439,72838
+34,Female,Nephrology,Kidney Stone,Minor Surgery,5,No,Private,Dhaka,1228,6005,3313,5468,14305,0,997,31316
+3,Female,General Surgery,Gallstones,Medication,3,No,Private,Chattogram,1062,2536,3568,0,8088,0,400,15654
+42,Male,General Medicine,Pneumonia,Medication,4,No,Community Private,Sylhet,519,7186,921,0,5492,0,640,14758
+54,Male,Pulmonology,Respiratory Infection,Minor Surgery,2,Yes,Community Private,Khulna,587,4457,2043,11772,1748,8530,579,29716
+79,Female,General Surgery,Appendicitis,Medication,2,No,Community Private,Khulna,1521,2020,1048,0,1942,0,473,7004
+52,Male,Gynecology,Ovarian Cyst,Diagnostic & Medical,2,No,Private,Chattogram,1507,5193,5808,0,4260,0,471,17239
+1,Male,Pulmonology,COPD,Major Surgery,6,No,Private,Chattogram,959,3472,4288,20214,15066,0,389,44388
+19,Female,Neurology,Stroke,Medication,1,No,Community Private,Rajshahi,663,6630,1851,0,1288,0,656,11088
+1,Male,Pulmonology,COPD,Medication,1,No,Specialized Private,Sylhet,640,4653,3403,0,2612,0,538,11846
+29,Female,Neurology,Migraine,Diagnostic & Medical,1,No,Specialized Private,Rajshahi,770,1535,4754,0,2590,0,859,10508
+71,Female,Neurology,Migraine,Diagnostic & Medical,3,No,Private,Sylhet,1443,3945,2810,0,8244,0,846,17288
+56,Male,Gynecology,Ovarian Cyst,Medication,2,No,Community Private,Dhaka,1733,2686,1867,0,3150,0,805,10241
+45,Male,Cardiology,Hypertension,Minor Surgery,4,No,Community Private,Khulna,1699,1183,1882,7166,5856,0,490,18276
+33,Male,Oncology,Lung Cancer,Medication,3,No,Community Private,Dhaka,560,2293,3350,0,3510,0,1021,10734
+76,Male,Orthopedics,Fracture,Major Surgery,7,No,Specialized Private,Chattogram,1295,5654,6013,32562,24220,0,404,70148
+48,Male,Neurology,Epilepsy,Medication,4,No,Specialized Private,Dhaka,1483,5295,2489,0,16188,0,1006,26461
+69,Male,Oncology,Lymphoma,Medication,2,No,Specialized Private,Chattogram,1635,3678,2450,0,5808,0,905,14476
+56,Female,Cardiology,Heart Disease,Diagnostic & Medical,1,No,Private,Rajshahi,806,4173,1992,0,2266,0,1127,10364
+20,Female,Nephrology,Chronic Kidney Disease,Medication,4,No,Specialized Private,Sylhet,1720,4497,3791,0,15936,0,989,26933
+37,Male,Oncology,Lung Cancer,Diagnostic & Medical,1,No,Specialized Private,Chattogram,1371,4513,2964,0,3839,0,408,13095
+43,Male,Neurology,Epilepsy,Diagnostic & Medical,4,No,Community Private,Sylhet,1705,1289,1477,0,3892,0,494,8857
+22,Male,General Medicine,Gastritis,Medication,4,No,Private,Dhaka,979,6562,2888,0,10856,0,475,21760
+20,Female,Gynecology,Fibroid,Diagnostic & Medical,2,No,Community Private,Sylhet,1042,1660,2460,0,2414,0,492,8068
+36,Female,Neurology,Epilepsy,Minor Surgery,3,No,Private,Chattogram,1516,1893,1909,7213,6990,0,974,20495
+44,Male,Pulmonology,Respiratory Infection,Critical Care,8,Yes,Community Private,Rajshahi,1520,2065,1741,0,9560,35976,388,51250
+54,Female,Neurology,Epilepsy,Minor Surgery,2,No,Community Private,Khulna,1357,2222,1886,6438,2280,0,712,14895
+29,Male,Orthopedics,Arthritis,Major Surgery,3,No,Community Private,Sylhet,803,4737,2773,29395,4707,0,947,43362
+13,Male,Gastroenterology,Hepatitis,Medication,2,No,Community Private,Rajshahi,856,8076,1269,0,2976,0,437,13614
+71,Male,Gastroenterology,Peptic Ulcer,Medication,3,No,Community Private,Khulna,1118,4216,1487,0,2418,0,950,10189
+46,Male,Nephrology,Chronic Kidney Disease,Medication,3,No,Private,Chattogram,763,6296,2121,0,5634,0,1094,15908
+39,Female,Orthopedics,Fracture,Diagnostic & Medical,3,No,Private,Dhaka,1360,3423,2482,0,8286,0,1160,16711
+69,Female,Cardiology,Heart Disease,Medication,2,No,Private,Dhaka,649,5091,2383,0,5604,0,691,14418
+75,Female,Cardiology,Heart Disease,Medication,3,No,Specialized Private,Rajshahi,550,2231,4970,0,12282,0,802,20835
+8,Male,Pulmonology,COPD,Major Surgery,8,No,Community Private,Khulna,1075,2681,2781,42855,11976,0,483,61851
+34,Male,Pulmonology,Respiratory Infection,Medication,2,No,Private,Dhaka,1145,4704,5755,0,5154,0,652,17410
+68,Female,Nephrology,Urinary Infection,Medication,2,No,Community Private,Khulna,640,23371,2156,0,3284,0,595,30046
+36,Male,Gastroenterology,Fatty Liver,Medication,2,No,Private,Sylhet,1134,2957,6813,0,5516,0,970,17390
+62,Male,Gynecology,Pregnancy Complication,Major Surgery,3,Yes,Community Private,Chattogram,1093,2937,1854,25285,4758,9246,1003,46176
+1,Female,Cardiology,Hypertension,Medication,3,No,Specialized Private,Chattogram,1509,4657,2127,0,7758,0,461,16512
+55,Male,Orthopedics,Fracture,Medication,1,No,Private,Dhaka,1430,1205,1283,0,2494,0,358,6770
+42,Male,Orthopedics,Knee Osteoarthritis,Minor Surgery,5,No,Private,Sylhet,728,3992,2802,11206,14295,0,398,33421
+73,Male,Oncology,Lymphoma,Major Surgery,6,No,Private,Khulna,1604,4968,3049,58770,13638,0,804,82833
+65,Female,General Surgery,Appendicitis,Diagnostic & Medical,5,No,Private,Dhaka,1457,3013,1050,0,10100,0,437,16057
+64,Female,Nephrology,Urinary Infection,Diagnostic & Medical,1,No,Private,Chattogram,1523,1986,3174,0,1575,0,807,9065
+48,Male,Gastroenterology,Fatty Liver,Diagnostic & Medical,4,No,Community Private,Dhaka,1009,2957,947,0,3524,0,863,9300
+71,Female,Oncology,Lymphoma,Diagnostic & Medical,4,No,Specialized Private,Rajshahi,1023,2755,1179,0,11932,0,406,17295
+38,Male,Oncology,Breast Cancer,Minor Surgery,4,No,Community Private,Dhaka,529,4870,1815,11138,5664,0,1095,25111
+66,Male,Nephrology,Kidney Stone,Medication,2,No,Specialized Private,Chattogram,845,5929,2180,0,6832,0,810,16596
+43,Female,General Medicine,Gastritis,Medication,3,No,Community Private,Dhaka,849,1687,3128,0,4848,0,818,11330
+35,Male,Gynecology,Fibroid,Medication,4,No,Community Private,Chattogram,751,1738,2918,0,3292,0,1140,9839
+30,Male,Orthopedics,Knee Osteoarthritis,Diagnostic & Medical,2,Yes,Private,Dhaka,922,4769,2439,0,5366,13062,889,27447
+63,Female,Gastroenterology,Peptic Ulcer,Diagnostic & Medical,2,No,Community Private,Sylhet,1410,1620,2088,0,3108,0,513,8739
+70,Female,General Medicine,Pneumonia,Diagnostic & Medical,1,No,Community Private,Dhaka,1306,2179,6169,0,1436,0,1120,12210
+46,Female,Gynecology,Pregnancy Complication,Medication,2,No,Private,Dhaka,1134,2585,1308,0,4010,0,779,9816
+40,Male,General Medicine,Gastritis,Medication,4,No,Specialized Private,Sylhet,1532,4291,2453,0,14764,0,1029,24069
+49,Male,Neurology,Epilepsy,Minor Surgery,2,No,Private,Chattogram,1385,3118,2561,9831,3260,0,587,20742
+37,Female,Gynecology,Fibroid,Minor Surgery,5,No,Private,Chattogram,975,1742,1897,11065,14315,0,670,30664
+40,Male,General Medicine,Pneumonia,Diagnostic & Medical,5,No,Private,Chattogram,913,4622,4044,0,11785,0,380,21744
+43,Female,Nephrology,Kidney Stone,Major Surgery,6,No,Private,Chattogram,1659,3121,3843,48117,13764,0,818,71322
+59,Male,General Medicine,Gastritis,Medication,3,No,Private,Rajshahi,791,923,4814,0,8631,0,970,16129
+33,Female,Pulmonology,COPD,Diagnostic & Medical,5,No,Community Private,Dhaka,810,2920,3688,0,6210,0,1068,14696
+21,Female,General Medicine,Dengue Fever,Medication,4,No,Specialized Private,Chattogram,1361,4609,2410,0,17928,0,930,27238
+31,Female,Oncology,Lymphoma,Diagnostic & Medical,1,Yes,Private,Chattogram,813,2912,3418,0,1502,5298,330,14273
+34,Male,Pulmonology,Asthma,Medication,3,No,Specialized Private,Chattogram,1090,2889,3315,0,11277,0,938,19509
+71,Male,Nephrology,Urinary Infection,Medication,2,No,Specialized Private,Khulna,1567,7809,2944,0,6490,0,456,19266
+52,Male,Pulmonology,Asthma,Minor Surgery,5,No,Specialized Private,Dhaka,1109,4321,1680,13522,17810,0,1007,39449
+52,Male,Nephrology,Chronic Kidney Disease,Minor Surgery,3,No,Community Private,Sylhet,1577,2073,1041,10644,4680,0,416,20431
+31,Male,Cardiology,Hypertension,Diagnostic & Medical,3,No,Private,Khulna,627,2083,2324,0,8511,0,549,14094
+32,Male,Gastroenterology,Peptic Ulcer,Medication,3,No,Private,Chattogram,1765,1844,3008,0,8301,0,587,15505
+50,Female,Nephrology,Urinary Infection,Diagnostic & Medical,5,No,Private,Chattogram,743,1269,6463,0,11800,0,772,21047
+60,Female,General Surgery,Hernia,Critical Care,3,Yes,Community Private,Dhaka,1448,2315,951,0,3681,14601,1022,24018
+39,Male,Pulmonology,Asthma,Medication,2,No,Private,Chattogram,840,2345,3834,0,3240,0,688,10947
+48,Female,Pulmonology,COPD,Medication,1,No,Private,Rajshahi,1610,4831,3241,0,2995,0,346,13023
+73,Male,Gastroenterology,Peptic Ulcer,Medication,1,No,Community Private,Khulna,1703,6633,4235,0,893,0,966,14430
+28,Female,Cardiology,Hypertension,Medication,1,No,Private,Khulna,1198,2694,1364,0,2242,0,858,8356
+60,Male,Cardiology,Hypertension,Diagnostic & Medical,4,No,Community Private,Chattogram,1447,1231,3693,0,5480,0,767,12618
+12,Male,Gastroenterology,Hepatitis,Medication,4,No,Private,Sylhet,565,1706,1536,0,7280,0,1131,12218
+72,Male,Gynecology,Pregnancy Complication,Diagnostic & Medical,2,No,Private,Rajshahi,1186,1751,4910,0,4088,0,782,12717
+56,Female,Cardiology,Hypertension,Medication,3,No,Community Private,Dhaka,1702,2364,3382,0,5097,0,373,12918
+42,Female,General Surgery,Hernia,Minor Surgery,2,No,Private,Chattogram,1475,4417,5646,4980,3734,0,583,20835
+21,Female,General Surgery,Hernia,Diagnostic & Medical,5,No,Specialized Private,Chattogram,1775,4002,2880,0,17495,0,386,26538
+50,Male,General Surgery,Gallstones,Minor Surgery,5,Yes,Community Private,Dhaka,1184,798,1289,8186,8705,15480,803,36445
+63,Male,Gastroenterology,Hepatitis,Major Surgery,3,No,Specialized Private,Khulna,1711,2980,2380,53287,10110,0,347,70815
+45,Female,Orthopedics,Arthritis,Medication,4,No,Private,Dhaka,1147,3556,2780,0,6300,0,977,14760
+48,Female,Oncology,Breast Cancer,Medication,3,No,Private,Chattogram,862,3931,4621,0,8196,0,408,18018
+55,Female,Gynecology,Pregnancy Complication,Major Surgery,4,No,Private,Dhaka,1687,6243,711,30310,10536,0,1170,50657
+63,Female,Cardiology,Hypertension,Diagnostic & Medical,4,No,Community Private,Sylhet,831,4539,3082,0,6112,0,550,15114
+57,Female,Gynecology,Ovarian Cyst,Medication,1,No,Specialized Private,Dhaka,953,1929,2120,0,4296,0,792,10090
+58,Female,Gynecology,Ovarian Cyst,Diagnostic & Medical,3,No,Community Private,Dhaka,576,3801,1807,0,3183,0,770,10137
+85,Female,Oncology,Breast Cancer,Medication,3,No,Community Private,Dhaka,818,2109,2932,0,4824,0,1073,11756
+58,Male,General Medicine,Dengue Fever,Diagnostic & Medical,4,No,Specialized Private,Dhaka,1050,2505,2499,0,16368,0,769,23191
+56,Male,Pulmonology,Respiratory Infection,Major Surgery,5,No,Private,Chattogram,723,2337,1587,45051,7605,0,1073,58376
+44,Female,Oncology,Lymphoma,Major Surgery,4,No,Community Private,Chattogram,1352,2135,3155,40773,5956,0,831,54202
+51,Female,Pulmonology,Respiratory Infection,Medication,1,No,Specialized Private,Dhaka,1667,3044,5703,0,4236,0,514,15164
+56,Male,Orthopedics,Arthritis,Diagnostic & Medical,4,No,Private,Sylhet,1077,3685,2755,0,8412,0,926,16855
+85,Female,Pulmonology,COPD,Medication,1,No,Community Private,Khulna,816,8229,1251,0,1314,0,989,12599
+63,Male,Gynecology,Fibroid,Major Surgery,7,No,Private,Dhaka,717,5913,1083,55596,14980,0,407,78696
+44,Female,Neurology,Migraine,Medication,2,No,Community Private,Chattogram,1388,4029,8083,0,2454,0,393,16347
+64,Female,Neurology,Migraine,Major Surgery,3,No,Specialized Private,Dhaka,1581,2876,3501,42306,12645,0,394,63303
+74,Male,Neurology,Stroke,Diagnostic & Medical,4,No,Specialized Private,Chattogram,634,2111,811,0,14524,0,1195,19275
+32,Male,Neurology,Migraine,Minor Surgery,2,No,Specialized Private,Rajshahi,1050,3120,2610,9194,8400,0,522,24896
+9,Male,General Surgery,Hernia,Major Surgery,5,Yes,Private,Sylhet,783,2325,3677,29955,12870,22980,482,73072
+11,Female,Neurology,Migraine,Diagnostic & Medical,2,No,Private,Chattogram,1688,3513,8566,0,3686,0,629,18082
+56,Male,General Surgery,Appendicitis,Major Surgery,7,No,Private,Rajshahi,810,2096,1183,34347,14721,0,1086,54243
+22,Male,General Surgery,Appendicitis,Major Surgery,4,No,Community Private,Rajshahi,672,2095,1539,26395,3960,0,891,35552
+48,Female,Nephrology,Kidney Stone,Major Surgery,4,No,Community Private,Dhaka,1607,3868,5137,28516,5012,0,471,44611
+21,Male,Gynecology,Ovarian Cyst,Diagnostic & Medical,5,No,Community Private,Rajshahi,884,1899,3393,0,6235,0,1098,13509
+34,Female,Orthopedics,Fracture,Diagnostic & Medical,3,No,Specialized Private,Rajshahi,877,1755,2548,0,11856,0,789,17825
+35,Male,General Medicine,Diabetes,Diagnostic & Medical,3,No,Private,Sylhet,821,2834,2254,0,6747,0,482,13138
+58,Female,Oncology,Breast Cancer,Major Surgery,6,No,Private,Chattogram,1562,3793,1762,51633,17508,0,359,76617
+22,Female,Cardiology,Heart Disease,Major Surgery,7,No,Community Private,Dhaka,959,1181,2288,21472,11977,0,689,38566
+11,Female,Pulmonology,Asthma,Diagnostic & Medical,1,No,Private,Chattogram,885,2146,2599,0,2735,0,951,9316
+19,Male,Pulmonology,Respiratory Infection,Minor Surgery,4,No,Community Private,Dhaka,928,4337,4603,10190,6848,0,1129,28035
+56,Male,Cardiology,Heart Failure,Critical Care,5,Yes,Community Private,Chattogram,707,7875,3730,0,5490,20725,610,39137
+54,Female,Gynecology,Pregnancy Complication,Medication,4,No,Private,Dhaka,501,1927,2310,0,10936,0,382,16056
+79,Male,Nephrology,Kidney Stone,Diagnostic & Medical,3,No,Community Private,Dhaka,867,3337,2360,0,4920,0,1128,12612
+13,Female,Gynecology,Fibroid,Major Surgery,4,No,Specialized Private,Dhaka,1515,3575,1432,23400,10620,0,1056,41598
+41,Male,General Surgery,Hernia,Diagnostic & Medical,4,No,Community Private,Dhaka,1031,4680,1297,0,4312,0,506,11826
+80,Male,Gynecology,Ovarian Cyst,Diagnostic & Medical,1,No,Community Private,Khulna,1759,3257,3329,0,972,0,704,10021
+48,Female,Neurology,Epilepsy,Diagnostic & Medical,1,No,Specialized Private,Khulna,822,1822,4437,0,3853,0,899,11833
+35,Female,Gastroenterology,Peptic Ulcer,Diagnostic & Medical,2,No,Community Private,Sylhet,1466,2252,1195,0,2844,0,327,8084
+69,Female,Gastroenterology,Peptic Ulcer,Critical Care,3,Yes,Private,Chattogram,1045,2885,2642,0,7779,18051,453,32855
+30,Female,Neurology,Epilepsy,Diagnostic & Medical,3,No,Private,Chattogram,1515,4846,4827,0,8979,0,996,21163
+70,Female,Pulmonology,COPD,Minor Surgery,3,No,Private,Dhaka,1448,5245,1731,9569,5049,0,881,23923
+27,Male,Neurology,Stroke,Diagnostic & Medical,2,No,Community Private,Sylhet,1400,3521,2309,0,2604,0,679,10513
+53,Female,Neurology,Epilepsy,Medication,4,No,Community Private,Khulna,1234,6763,3821,0,6560,0,961,19339
+57,Male,General Surgery,Gallstones,Medication,3,No,Private,Rajshahi,1584,2223,2128,0,6369,0,561,12865
+58,Male,Cardiology,Heart Failure,Major Surgery,8,No,Community Private,Khulna,1658,1355,2954,24106,8408,0,1183,39664
+43,Male,Oncology,Lung Cancer,Diagnostic & Medical,5,No,Community Private,Dhaka,1397,6413,2280,0,5530,0,402,16022
+74,Female,Orthopedics,Arthritis,Minor Surgery,4,No,Specialized Private,Rajshahi,1729,3902,3656,12146,15484,0,718,37635
+10,Male,Gynecology,Ovarian Cyst,Minor Surgery,3,No,Community Private,Chattogram,1341,4653,1956,12365,4782,0,651,25748
+9,Female,General Surgery,Appendicitis,Minor Surgery,5,No,Private,Khulna,940,2729,3204,7515,14255,0,537,29180
+48,Male,Orthopedics,Fracture,Minor Surgery,5,No,Private,Sylhet,1070,3354,4413,5076,8290,0,574,22777
+15,Female,Pulmonology,Respiratory Infection,Diagnostic & Medical,1,No,Specialized Private,Dhaka,872,3360,2404,0,3800,0,317,10753
+85,Female,General Surgery,Hernia,Medication,3,No,Specialized Private,Sylhet,1053,2519,2877,0,7689,0,1080,15218
+52,Female,Cardiology,Heart Disease,Minor Surgery,2,No,Community Private,Dhaka,1512,4641,5302,11115,3166,0,444,26180
+10,Male,Nephrology,Kidney Stone,Medication,1,No,Specialized Private,Sylhet,1022,2011,2723,0,3830,0,877,10463
+13,Female,Cardiology,Hypertension,Medication,3,No,Community Private,Dhaka,622,4150,2807,0,5376,0,1050,14005
+24,Female,Neurology,Epilepsy,Medication,2,No,Community Private,Khulna,1180,4536,6479,0,2216,0,1055,15466
+47,Male,Orthopedics,Arthritis,Medication,1,No,Specialized Private,Dhaka,1605,2445,5265,0,4294,0,1115,14724
+51,Male,Nephrology,Kidney Stone,Major Surgery,4,Yes,Community Private,Sylhet,1726,4060,2257,34925,3428,26396,438,73230
+77,Female,Gastroenterology,Peptic Ulcer,Diagnostic & Medical,5,No,Private,Rajshahi,1573,3212,1542,0,8025,0,901,15253
+65,Female,Pulmonology,Asthma,Medication,4,No,Private,Chattogram,1261,4701,1351,0,11232,0,516,19061
+36,Male,Gynecology,Ovarian Cyst,Diagnostic & Medical,5,No,Community Private,Dhaka,1199,3176,2858,0,7095,0,655,14983
+31,Female,Neurology,Stroke,Minor Surgery,5,No,Private,Chattogram,539,3715,3347,10216,9715,0,315,27847
+63,Male,Neurology,Stroke,Major Surgery,6,No,Community Private,Dhaka,961,3925,9727,55882,6948,0,871,78314
+58,Male,General Surgery,Appendicitis,Medication,2,No,Private,Sylhet,706,4470,7311,0,3820,0,935,17242
+85,Female,Cardiology,Hypertension,Critical Care,5,No,Community Private,Sylhet,1634,2265,1566,0,6720,0,1150,13335
+41,Female,Cardiology,Hypertension,Medication,1,No,Community Private,Dhaka,1028,1662,3171,0,954,0,421,7236
+40,Female,Oncology,Lymphoma,Minor Surgery,5,No,Specialized Private,Chattogram,998,3896,1853,6318,15825,0,729,29619
+85,Female,General Medicine,Diabetes,Medication,1,No,Private,Rajshahi,711,8443,3083,0,1752,0,1108,15097
+36,Female,Gynecology,Pregnancy Complication,Minor Surgery,3,No,Community Private,Sylhet,1304,3212,3523,14358,4182,0,420,26999
+52,Female,Nephrology,Urinary Infection,Minor Surgery,2,No,Community Private,Dhaka,580,2854,3072,5055,3426,0,699,15686
+51,Male,Gastroenterology,Peptic Ulcer,Diagnostic & Medical,3,Yes,Private,Chattogram,1154,3311,1210,0,4521,19578,307,30081
+46,Male,General Surgery,Gallstones,Diagnostic & Medical,5,No,Private,Dhaka,779,3227,2615,0,13320,0,1005,20946
+57,Male,General Surgery,Appendicitis,Diagnostic & Medical,3,No,Specialized Private,Chattogram,1745,8949,3047,0,7785,0,590,22116
+43,Male,Gynecology,Ovarian Cyst,Medication,3,No,Specialized Private,Rajshahi,1181,4134,3937,0,9978,0,1022,20252
+63,Male,Neurology,Migraine,Medication,1,No,Private,Dhaka,1534,2646,7160,0,2530,0,573,14443
+52,Female,Gynecology,Pregnancy Complication,Medication,3,No,Specialized Private,Dhaka,1545,1609,2565,0,10290,0,437,16446
+46,Male,General Surgery,Hernia,Medication,3,No,Community Private,Khulna,842,1249,1613,0,2730,0,1185,7619
+30,Female,Nephrology,Chronic Kidney Disease,Medication,2,No,Specialized Private,Khulna,910,2700,4653,0,7648,0,1056,16967
+53,Female,Gynecology,Fibroid,Diagnostic & Medical,4,No,Specialized Private,Khulna,898,2728,3087,0,16136,0,760,23609
+44,Male,Cardiology,Hypertension,Medication,4,No,Private,Dhaka,754,1046,1793,0,8112,0,1176,12881
+7,Male,General Surgery,Appendicitis,Minor Surgery,3,No,Private,Chattogram,1512,1671,1697,4614,6213,0,820,16527
+19,Female,Oncology,Breast Cancer,Diagnostic & Medical,4,No,Community Private,Chattogram,1299,2833,8068,0,3752,0,328,16280
+44,Female,Gastroenterology,Peptic Ulcer,Medication,3,No,Specialized Private,Chattogram,1440,4409,3844,0,8892,0,934,19519
+59,Male,Nephrology,Chronic Kidney Disease,Major Surgery,3,No,Community Private,Rajshahi,1444,1866,9351,34841,3582,0,462,51546
+61,Female,Pulmonology,Asthma,Minor Surgery,4,No,Community Private,Dhaka,1016,4069,2526,14672,6012,0,932,29227
+14,Female,Gynecology,Ovarian Cyst,Minor Surgery,3,No,Community Private,Sylhet,1704,1673,4672,12535,4986,0,999,26569
+57,Female,Gastroenterology,Peptic Ulcer,Medication,3,No,Private,Chattogram,1458,3846,3777,0,8403,0,868,18352
+57,Female,Oncology,Lymphoma,Diagnostic & Medical,4,No,Community Private,Dhaka,777,15316,3796,0,5656,0,837,26382
+39,Female,Neurology,Stroke,Minor Surgery,2,No,Specialized Private,Khulna,524,9245,2490,13006,6502,0,972,32739
+21,Male,Pulmonology,Respiratory Infection,Minor Surgery,5,No,Private,Chattogram,1094,1689,1402,11442,10750,0,1166,27543
+61,Female,General Medicine,Gastritis,Medication,2,No,Private,Dhaka,627,3088,2249,0,4826,0,1070,11860
+34,Male,Gastroenterology,Hepatitis,Diagnostic & Medical,5,No,Private,Sylhet,851,4276,1410,0,10280,0,516,17333
+51,Male,Gastroenterology,Hepatitis,Minor Surgery,3,No,Specialized Private,Khulna,1340,2386,2485,5147,11517,0,1092,23967
+44,Female,Gastroenterology,Peptic Ulcer,Major Surgery,5,No,Private,Dhaka,1121,4231,1248,25129,9945,0,470,42144
+30,Male,Gynecology,Pregnancy Complication,Medication,3,No,Community Private,Chattogram,882,2409,3247,0,4122,0,417,11077
+24,Male,General Surgery,Gallstones,Medication,2,No,Private,Sylhet,1586,3227,2442,0,3510,0,1093,11858
+49,Female,Gynecology,Fibroid,Diagnostic & Medical,1,No,Specialized Private,Chattogram,1594,6355,5109,0,3898,0,730,17686
+36,Male,Gastroenterology,Fatty Liver,Diagnostic & Medical,3,No,Specialized Private,Rajshahi,1562,3519,5037,0,7587,0,923,18628
+58,Female,Pulmonology,Respiratory Infection,Medication,4,No,Community Private,Chattogram,1109,1698,2747,0,7148,0,410,13112
+11,Male,Gastroenterology,Peptic Ulcer,Diagnostic & Medical,3,No,Private,Dhaka,725,1146,2550,0,7425,0,430,12276
+38,Female,Orthopedics,Fracture,Diagnostic & Medical,3,No,Community Private,Dhaka,1264,7251,2545,0,5064,0,906,17030
+40,Male,Cardiology,Heart Failure,Diagnostic & Medical,2,No,Community Private,Chattogram,1337,5593,4239,0,1952,0,836,13957
+41,Female,Gynecology,Fibroid,Minor Surgery,2,No,Specialized Private,Dhaka,1122,2128,2660,14381,8518,0,1003,29812
+74,Male,Gastroenterology,Peptic Ulcer,Diagnostic & Medical,1,No,Specialized Private,Dhaka,1104,1152,1338,0,2699,0,1004,7297
+58,Male,General Surgery,Hernia,Medication,4,No,Specialized Private,Dhaka,977,1735,3116,0,16244,0,1147,23219
+65,Female,Gastroenterology,Peptic Ulcer,Major Surgery,8,No,Private,Chattogram,612,12920,2753,45307,22840,0,1039,85471
+74,Female,Nephrology,Chronic Kidney Disease,Diagnostic & Medical,3,No,Private,Khulna,1052,2747,1386,0,8508,0,1065,14758
+40,Female,Neurology,Stroke,Diagnostic & Medical,3,No,Specialized Private,Chattogram,1357,1959,2299,0,11382,0,618,17615
+80,Female,General Surgery,Gallstones,Minor Surgery,5,No,Private,Chattogram,1180,1145,1355,4071,10760,0,687,19198
+57,Female,General Surgery,Hernia,Major Surgery,6,No,Private,Rajshahi,790,9865,3698,36490,16950,0,945,68738
+69,Male,Nephrology,Urinary Infection,Medication,4,No,Specialized Private,Khulna,582,5580,4514,0,13760,0,829,25265
+29,Male,Cardiology,Heart Disease,Major Surgery,3,No,Specialized Private,Sylhet,1600,1844,1763,47839,11037,0,536,64619
+43,Female,General Medicine,Dengue Fever,Major Surgery,6,No,Community Private,Rajshahi,1618,1456,1028,52746,9570,0,819,67237
+30,Female,General Surgery,Gallstones,Diagnostic & Medical,4,No,Specialized Private,Chattogram,1367,9358,1436,0,13100,0,498,25759
+50,Female,Gynecology,Ovarian Cyst,Minor Surgery,3,No,Private,Chattogram,1681,4980,1640,12765,5439,0,782,27287
+59,Female,Gastroenterology,Hepatitis,Diagnostic & Medical,5,No,Private,Chattogram,918,1171,3169,0,12360,0,816,18434
+44,Male,Cardiology,Heart Failure,Medication,3,No,Private,Chattogram,1778,3957,4084,0,8226,0,1192,19237
+54,Male,Nephrology,Chronic Kidney Disease,Minor Surgery,3,No,Private,Dhaka,627,9948,1705,12993,5091,0,1018,31382
+43,Male,Cardiology,Hypertension,Major Surgery,6,No,Community Private,Dhaka,1400,5476,1736,40981,8400,0,1164,59157
+64,Male,General Medicine,Diabetes,Diagnostic & Medical,3,No,Community Private,Rajshahi,1242,3530,3214,0,5307,0,515,13808
+20,Male,General Medicine,Gastritis,Diagnostic & Medical,5,No,Community Private,Sylhet,568,2646,1688,0,4180,0,454,9536
+57,Male,General Medicine,Gastritis,Major Surgery,5,No,Private,Chattogram,1738,3809,2774,52653,11095,0,1050,73119
+1,Female,Nephrology,Kidney Stone,Medication,1,No,Community Private,Dhaka,1016,3234,3983,0,1298,0,669,10200
+38,Male,Gynecology,Fibroid,Critical Care,3,Yes,Specialized Private,Chattogram,1015,2557,4579,0,10509,19605,464,38729
+52,Male,General Medicine,Gastritis,Major Surgery,8,No,Community Private,Chattogram,1278,2082,3330,46138,7704,0,364,60896
+15,Male,Nephrology,Urinary Infection,Diagnostic & Medical,4,No,Private,Rajshahi,872,2319,1070,0,9328,0,1046,14635
+59,Male,General Medicine,Gastritis,Minor Surgery,2,No,Specialized Private,Chattogram,874,2423,2141,4403,5400,0,743,15984
+55,Female,Pulmonology,COPD,Medication,1,No,Specialized Private,Dhaka,1584,5348,1326,0,3129,0,863,12250
+39,Male,Gynecology,Ovarian Cyst,Diagnostic & Medical,5,No,Private,Chattogram,659,2280,3404,0,14350,0,350,21043
+52,Male,General Medicine,Gastritis,Medication,3,No,Community Private,Rajshahi,1226,2076,1999,0,3429,0,425,9155
+58,Male,General Medicine,Dengue Fever,Diagnostic & Medical,1,No,Private,Rajshahi,905,2944,1143,0,2670,0,703,8365
+75,Male,Gynecology,Fibroid,Medication,4,No,Private,Chattogram,1687,4127,2153,0,8648,0,428,17043
+49,Female,Cardiology,Hypertension,Medication,1,No,Community Private,Chattogram,1003,1060,3323,0,1275,0,573,7234
+29,Male,Oncology,Lung Cancer,Diagnostic & Medical,4,No,Private,Chattogram,772,4395,4320,0,10688,0,1096,21271
+16,Male,Nephrology,Kidney Stone,Diagnostic & Medical,3,No,Private,Chattogram,1375,8237,2180,0,8535,0,831,21158
+46,Female,General Surgery,Appendicitis,Medication,4,No,Specialized Private,Dhaka,854,2038,3853,0,16680,0,1099,24524
+44,Female,Neurology,Migraine,Medication,4,No,Community Private,Khulna,757,875,2532,0,7068,0,1075,12307
+70,Male,General Surgery,Gallstones,Major Surgery,5,No,Specialized Private,Dhaka,1264,2085,4345,35233,16175,0,341,59443
+50,Female,Cardiology,Heart Disease,Diagnostic & Medical,4,No,Private,Sylhet,1641,5438,6471,0,7908,0,491,21949
+48,Male,Orthopedics,Fracture,Major Surgery,7,No,Community Private,Chattogram,1315,5943,1732,40964,6720,0,365,57039
+56,Male,Pulmonology,Respiratory Infection,Diagnostic & Medical,2,No,Private,Dhaka,1091,2224,1907,0,4702,0,655,10579
+54,Male,General Surgery,Hernia,Major Surgery,6,No,Specialized Private,Chattogram,1686,2114,2351,30297,23628,0,639,60715
+54,Male,Nephrology,Urinary Infection,Diagnostic & Medical,4,No,Private,Dhaka,1631,3780,2598,0,11952,0,657,20618
+23,Male,General Surgery,Appendicitis,Medication,2,No,Private,Dhaka,1679,2251,3298,0,5480,0,698,13406
+44,Male,Gynecology,Ovarian Cyst,Major Surgery,8,No,Community Private,Chattogram,762,2725,5003,35508,7360,0,1035,52393
+24,Female,Gastroenterology,Fatty Liver,Critical Care,6,Yes,Community Private,Sylhet,1505,2978,2151,0,5832,23832,681,36979
+68,Male,Cardiology,Heart Disease,Major Surgery,6,No,Private,Khulna,1232,2533,1797,37367,13596,0,373,56898
+24,Male,Pulmonology,COPD,Diagnostic & Medical,3,No,Community Private,Rajshahi,1251,2158,3679,0,5019,0,741,12848
+28,Male,Gynecology,Pregnancy Complication,Major Surgery,3,No,Specialized Private,Khulna,1309,2216,6633,30403,8043,0,764,49368
+60,Female,General Surgery,Gallstones,Medication,4,No,Private,Dhaka,1025,5479,3743,0,6948,0,709,17904
+34,Female,Gynecology,Pregnancy Complication,Minor Surgery,2,No,Specialized Private,Dhaka,1153,2862,2234,14969,7288,0,1133,29639
+46,Female,Gastroenterology,Peptic Ulcer,Medication,1,No,Community Private,Khulna,971,1160,5833,0,1587,0,1171,10722
+63,Female,Neurology,Migraine,Medication,1,No,Community Private,Rajshahi,502,2556,1322,0,1732,0,434,6546
+56,Male,Gastroenterology,Fatty Liver,Diagnostic & Medical,5,No,Community Private,Chattogram,1126,2151,2035,0,6180,0,530,12022
+72,Female,General Surgery,Gallstones,Medication,4,No,Private,Dhaka,542,2519,2943,0,11164,0,471,17639
+47,Male,Cardiology,Heart Failure,Minor Surgery,5,No,Community Private,Dhaka,1502,4440,1457,12067,4865,0,764,25095
+78,Female,Pulmonology,Respiratory Infection,Medication,3,No,Community Private,Sylhet,863,2021,2221,0,4656,0,342,10103
+34,Male,Gynecology,Pregnancy Complication,Medication,1,No,Private,Rajshahi,1539,7526,3580,0,2588,0,447,15680
+62,Female,Oncology,Lung Cancer,Diagnostic & Medical,3,No,Community Private,Chattogram,653,1868,2668,0,5271,0,398,10858
+85,Male,Cardiology,Heart Failure,Medication,3,No,Specialized Private,Chattogram,1388,2686,3146,0,11034,0,398,18652
+5,Male,General Medicine,Dengue Fever,Minor Surgery,2,No,Community Private,Rajshahi,1325,1959,1258,13793,3274,0,980,22589
+22,Male,Nephrology,Kidney Stone,Diagnostic & Medical,3,No,Specialized Private,Dhaka,774,2633,2549,0,7773,0,704,14433
+71,Male,Orthopedics,Fracture,Diagnostic & Medical,1,No,Community Private,Dhaka,1329,1494,1786,0,818,0,487,5914
+5,Male,Gynecology,Pregnancy Complication,Major Surgery,3,No,Community Private,Dhaka,1583,5449,800,34586,2841,0,1006,46265
+27,Female,Neurology,Stroke,Medication,2,No,Private,Dhaka,604,5116,6278,0,3780,0,570,16348
+36,Male,Orthopedics,Knee Osteoarthritis,Diagnostic & Medical,5,No,Specialized Private,Chattogram,1125,3132,4999,0,16960,0,966,27182
+48,Male,Nephrology,Kidney Stone,Diagnostic & Medical,3,No,Specialized Private,Dhaka,1183,1667,2537,0,13437,0,559,19383
+12,Female,Gastroenterology,Peptic Ulcer,Medication,1,No,Community Private,Sylhet,1282,7467,1096,0,1359,0,479,11683
+42,Female,Cardiology,Heart Disease,Diagnostic & Medical,4,No,Community Private,Sylhet,1556,5170,1333,0,5088,0,1129,14276
+32,Female,Neurology,Migraine,Medication,1,No,Community Private,Rajshahi,919,3858,3750,0,1229,0,1169,10925
+39,Male,General Surgery,Gallstones,Diagnostic & Medical,3,No,Specialized Private,Chattogram,1694,2544,4826,0,13278,0,710,23052
+38,Male,General Surgery,Appendicitis,Medication,4,No,Private,Dhaka,1698,5732,1984,0,9360,0,1197,19971
+38,Male,Gastroenterology,Fatty Liver,Medication,3,No,Specialized Private,Chattogram,1668,2837,1806,0,11841,0,1116,19268
+26,Male,Neurology,Stroke,Medication,2,No,Specialized Private,Rajshahi,1230,4403,1581,0,5498,0,667,13379
+81,Male,General Surgery,Appendicitis,Diagnostic & Medical,4,No,Community Private,Dhaka,1501,5626,3400,0,4880,0,994,16401
+72,Male,Orthopedics,Arthritis,Diagnostic & Medical,5,No,Specialized Private,Chattogram,885,2193,3487,0,20170,0,360,27095
+71,Male,Oncology,Lymphoma,Medication,2,No,Community Private,Chattogram,1153,5230,4812,0,3000,0,1119,15314
+67,Female,Neurology,Stroke,Minor Surgery,4,No,Community Private,Chattogram,907,6656,3706,9972,5984,0,426,27651
+61,Female,Nephrology,Urinary Infection,Minor Surgery,3,No,Private,Dhaka,964,2969,1835,11165,5592,0,371,22896
+70,Female,Orthopedics,Arthritis,Diagnostic & Medical,4,No,Specialized Private,Khulna,581,7011,3016,0,16188,0,819,27615
+64,Male,Nephrology,Chronic Kidney Disease,Medication,1,No,Private,Khulna,1255,2202,1041,0,2330,0,960,7788
+52,Female,General Medicine,Pneumonia,Medication,2,No,Specialized Private,Chattogram,678,4474,1764,0,6812,0,579,14307
+42,Female,Oncology,Lymphoma,Major Surgery,5,No,Community Private,Dhaka,848,1002,3089,58829,4405,0,896,69069
+1,Female,Orthopedics,Arthritis,Diagnostic & Medical,3,No,Community Private,Dhaka,1224,9983,6565,0,2406,0,565,20743
+50,Male,Oncology,Breast Cancer,Medication,2,No,Community Private,Dhaka,1026,4167,4774,0,2330,0,596,12893
+57,Male,General Surgery,Gallstones,Medication,2,No,Private,Sylhet,887,2204,966,0,4966,0,598,9621
+39,Male,Cardiology,Hypertension,Minor Surgery,4,No,Specialized Private,Chattogram,1735,3108,1698,11842,17204,0,1093,36680
+51,Female,General Surgery,Appendicitis,Medication,2,No,Private,Chattogram,659,3125,3447,0,4300,0,879,12410
+53,Male,Neurology,Epilepsy,Medication,2,No,Community Private,Khulna,1165,3569,3740,0,1932,0,971,11377
+24,Male,Orthopedics,Arthritis,Medication,3,No,Community Private,Chattogram,724,1216,3065,0,4626,0,909,10540
+49,Male,Pulmonology,Respiratory Infection,Minor Surgery,2,No,Private,Chattogram,1632,2430,1780,5448,5544,0,333,17167
+49,Male,Gastroenterology,Hepatitis,Diagnostic & Medical,2,No,Private,Sylhet,578,6036,3071,0,4538,0,1171,15394
+75,Male,General Surgery,Appendicitis,Medication,1,No,Private,Chattogram,1492,1427,3290,0,1542,0,515,8266
+73,Male,General Surgery,Hernia,Major Surgery,8,Yes,Specialized Private,Dhaka,1672,9018,3820,38306,31744,49568,305,134433
+47,Female,Gastroenterology,Fatty Liver,Minor Surgery,2,No,Private,Dhaka,1520,2797,2280,10995,5216,0,999,23807
+23,Female,Orthopedics,Arthritis,Diagnostic & Medical,3,No,Specialized Private,Rajshahi,1346,6374,4677,0,11259,0,867,24523
+48,Female,General Surgery,Appendicitis,Minor Surgery,3,No,Private,Dhaka,1078,2674,3898,7677,8085,0,438,23850
+27,Female,General Surgery,Gallstones,Diagnostic & Medical,5,No,Community Private,Dhaka,1356,5773,1801,0,5790,0,554,15274
+57,Male,Gastroenterology,Fatty Liver,Medication,2,No,Specialized Private,Chattogram,1502,1285,2886,0,8808,0,326,14807
+26,Female,Oncology,Lung Cancer,Major Surgery,3,Yes,Specialized Private,Sylhet,1043,2162,1461,55792,8871,14316,1082,84727
+64,Female,Gynecology,Ovarian Cyst,Major Surgery,8,No,Specialized Private,Dhaka,706,2073,1004,28998,24648,0,979,58408
+70,Female,General Surgery,Gallstones,Minor Surgery,3,No,Private,Rajshahi,746,10114,4020,6468,5829,0,467,27644
+16,Male,Oncology,Breast Cancer,Diagnostic & Medical,4,No,Community Private,Chattogram,781,2612,5652,0,6104,0,698,15847
+58,Female,Neurology,Stroke,Medication,3,No,Private,Dhaka,517,5082,1154,0,6177,0,817,13747
+22,Male,Nephrology,Kidney Stone,Diagnostic & Medical,1,No,Private,Khulna,1374,4827,3304,0,2374,0,628,12507
+26,Female,Neurology,Stroke,Medication,1,No,Private,Dhaka,1003,4689,5225,0,2019,0,804,13740
+50,Male,Gynecology,Fibroid,Medication,2,No,Private,Chattogram,888,3151,1672,0,3068,0,574,9353
+53,Female,Cardiology,Heart Disease,Major Surgery,5,No,Specialized Private,Rajshahi,522,1129,2623,59424,20060,0,1160,84918
+76,Male,Nephrology,Kidney Stone,Diagnostic & Medical,5,No,Specialized Private,Sylhet,1659,6507,1336,0,13445,0,829,23776
+21,Male,General Surgery,Hernia,Diagnostic & Medical,1,No,Community Private,Dhaka,1495,3532,3343,0,1003,0,716,10089
+70,Male,Oncology,Breast Cancer,Diagnostic & Medical,5,No,Community Private,Chattogram,1435,2188,3481,0,6375,0,1160,14639
+59,Male,Cardiology,Heart Failure,Minor Surgery,5,No,Private,Rajshahi,770,1919,2158,12593,9150,0,485,27075
+23,Female,Gynecology,Pregnancy Complication,Minor Surgery,2,No,Private,Rajshahi,1756,3166,3687,4617,5246,0,1062,19534
+66,Female,Gastroenterology,Hepatitis,Medication,4,No,Community Private,Khulna,1599,1937,4335,0,3648,0,449,11968
+82,Female,Cardiology,Hypertension,Critical Care,6,Yes,Specialized Private,Dhaka,1132,3745,3174,0,17658,18864,1014,45587
+44,Female,Nephrology,Chronic Kidney Disease,Minor Surgery,5,No,Community Private,Sylhet,727,3345,3703,14996,4685,0,890,28346
+25,Female,Oncology,Lung Cancer,Medication,2,No,Community Private,Khulna,1239,6126,2413,0,2972,0,1200,13950
+50,Male,Oncology,Lung Cancer,Medication,3,No,Private,Chattogram,940,2053,3318,0,6873,0,890,14074
+76,Female,Nephrology,Urinary Infection,Medication,2,No,Specialized Private,Dhaka,549,3889,2068,0,5854,0,351,12711
+50,Male,Orthopedics,Knee Osteoarthritis,Major Surgery,5,No,Community Private,Chattogram,628,3581,2754,47726,4325,0,905,59919
+34,Male,Orthopedics,Fracture,Major Surgery,7,No,Specialized Private,Khulna,1074,3340,5185,31116,19467,0,1109,61291
+50,Female,Oncology,Breast Cancer,Critical Care,6,Yes,Specialized Private,Chattogram,535,5541,4142,0,18216,29310,674,58418
+43,Female,General Medicine,Gastritis,Diagnostic & Medical,4,No,Private,Dhaka,1022,6445,1033,0,6744,0,872,16116
+72,Female,Orthopedics,Knee Osteoarthritis,Major Surgery,5,No,Specialized Private,Chattogram,1204,1595,2203,27015,12520,0,704,45241
+31,Male,Cardiology,Heart Failure,Medication,1,No,Community Private,Chattogram,1484,6603,1615,0,1636,0,553,11891
+49,Male,General Medicine,Pneumonia,Diagnostic & Medical,2,No,Private,Khulna,1052,2602,5178,0,3712,0,978,13522
+64,Female,Oncology,Lymphoma,Medication,2,No,Private,Sylhet,1257,3859,2992,0,4606,0,378,13092
+42,Female,Gynecology,Fibroid,Diagnostic & Medical,2,No,Private,Sylhet,1389,3746,1360,0,4590,0,1158,12243
+62,Female,Nephrology,Urinary Infection,Diagnostic & Medical,5,No,Private,Dhaka,932,5143,1114,0,7920,0,466,15575
+85,Female,Orthopedics,Fracture,Medication,2,No,Private,Sylhet,1321,3368,2534,0,5974,0,774,13971
+45,Male,Cardiology,Heart Disease,Medication,4,No,Community Private,Chattogram,1688,9877,1914,0,5160,0,311,18950
+27,Female,Pulmonology,Respiratory Infection,Major Surgery,6,No,Community Private,Sylhet,1387,1290,2833,54158,6420,0,944,67032
+39,Female,Gynecology,Fibroid,Diagnostic & Medical,1,No,Community Private,Chattogram,878,2832,1652,0,1671,0,809,7842
+36,Male,General Medicine,Pneumonia,Diagnostic & Medical,1,No,Community Private,Chattogram,1083,5380,2563,0,1451,0,380,10857
+49,Male,Neurology,Epilepsy,Diagnostic & Medical,5,No,Community Private,Dhaka,1568,4077,4008,0,4120,0,676,14449
+71,Female,Oncology,Lymphoma,Diagnostic & Medical,5,No,Specialized Private,Dhaka,1213,2198,2620,0,19760,0,463,26254
+49,Male,Nephrology,Kidney Stone,Minor Surgery,3,No,Private,Chattogram,921,3514,1810,14036,7230,0,623,28134
+16,Female,Cardiology,Hypertension,Diagnostic & Medical,5,No,Specialized Private,Sylhet,1526,7000,1932,0,16845,0,1143,28446
+41,Male,Gastroenterology,Fatty Liver,Critical Care,7,No,Community Private,Dhaka,1172,2222,2102,0,11123,0,784,17403
+43,Female,Neurology,Migraine,Major Surgery,6,No,Community Private,Chattogram,539,1666,2368,16565,7824,0,1004,29966
+37,Female,General Medicine,Pneumonia,Diagnostic & Medical,4,No,Private,Khulna,568,1044,1232,0,10848,0,371,14063
+48,Female,Cardiology,Hypertension,Medication,1,No,Private,Chattogram,1412,2512,2582,0,2548,0,637,9691
+53,Male,Gynecology,Fibroid,Major Surgery,7,No,Community Private,Khulna,536,1927,4950,33121,6790,0,733,48057
+55,Male,Nephrology,Urinary Infection,Diagnostic & Medical,1,No,Private,Dhaka,586,5416,5438,0,2938,0,790,15168
+50,Male,Pulmonology,Respiratory Infection,Minor Surgery,3,No,Specialized Private,Sylhet,504,11947,3346,5429,13431,0,847,35504
+53,Male,Oncology,Lymphoma,Major Surgery,4,No,Specialized Private,Rajshahi,928,1523,3902,32203,12560,0,359,51475
+73,Female,Orthopedics,Knee Osteoarthritis,Diagnostic & Medical,1,No,Private,Rajshahi,571,1320,2474,0,2107,0,484,6956
+69,Male,Nephrology,Chronic Kidney Disease,Medication,2,No,Specialized Private,Chattogram,1186,925,3604,0,5108,0,1044,11867
+63,Male,General Surgery,Gallstones,Diagnostic & Medical,1,No,Private,Chattogram,1469,7760,2290,0,2770,0,645,14934
+28,Female,General Medicine,Diabetes,Medication,1,No,Community Private,Khulna,1494,2842,2729,0,952,0,792,8809
+65,Female,General Medicine,Pneumonia,Minor Surgery,5,No,Specialized Private,Chattogram,1489,2352,1473,8028,19980,0,429,33751
+21,Female,Orthopedics,Knee Osteoarthritis,Major Surgery,4,No,Community Private,Khulna,922,1582,2381,44666,3272,0,1071,53894
+32,Male,Orthopedics,Knee Osteoarthritis,Minor Surgery,3,No,Specialized Private,Khulna,1553,2371,5939,4227,9375,0,833,24298
+56,Male,Pulmonology,COPD,Medication,1,No,Private,Dhaka,1408,11038,1494,0,2579,0,385,16904
+48,Male,Gynecology,Fibroid,Major Surgery,6,No,Private,Chattogram,1227,1492,2006,39381,15612,0,888,60606
+63,Female,Gynecology,Ovarian Cyst,Major Surgery,8,No,Private,Chattogram,835,8433,1848,39704,15160,0,1003,66983
+35,Female,Pulmonology,Asthma,Minor Surgery,5,Yes,Private,Chattogram,601,4050,5870,4829,7960,21405,826,45541
+61,Female,Cardiology,Heart Failure,Major Surgery,8,No,Specialized Private,Chattogram,528,6154,1217,49524,34528,0,304,92255
+46,Male,Oncology,Breast Cancer,Medication,1,No,Private,Rajshahi,1504,5325,2110,0,2047,0,967,11953
+41,Male,Orthopedics,Knee Osteoarthritis,Diagnostic & Medical,1,No,Specialized Private,Chattogram,1477,1653,2794,0,4261,0,668,10853
+43,Female,General Medicine,Diabetes,Medication,1,No,Community Private,Dhaka,1513,2307,3859,0,1010,0,1057,9746
+24,Female,Cardiology,Hypertension,Minor Surgery,2,No,Specialized Private,Khulna,1766,2854,1828,4102,6062,0,482,17094
+29,Female,Cardiology,Hypertension,Diagnostic & Medical,4,No,Specialized Private,Rajshahi,1176,13627,2984,0,15828,0,864,34479
+85,Male,Neurology,Epilepsy,Medication,4,No,Community Private,Dhaka,812,11124,4939,0,5972,0,1120,23967
+24,Female,Gastroenterology,Hepatitis,Diagnostic & Medical,2,No,Community Private,Khulna,1488,4203,1135,0,2604,0,682,10112
+47,Female,Gynecology,Fibroid,Medication,2,No,Private,Chattogram,669,4864,2585,0,3004,0,909,12031
+37,Female,Orthopedics,Fracture,Medication,3,No,Community Private,Dhaka,1575,5185,1184,0,2475,0,1092,11511
+54,Female,General Medicine,Gastritis,Critical Care,6,Yes,Private,Chattogram,681,924,2201,0,11310,28476,651,44243
+14,Female,Nephrology,Urinary Infection,Medication,4,No,Private,Dhaka,1795,4015,1910,0,11524,0,743,19987
+26,Male,Gastroenterology,Fatty Liver,Major Surgery,8,No,Community Private,Dhaka,1742,3202,4288,58972,12184,0,403,80791
+49,Male,Pulmonology,COPD,Major Surgery,4,No,Community Private,Sylhet,1728,5540,3256,30167,6856,0,425,47972
+46,Female,Gynecology,Pregnancy Complication,Major Surgery,5,No,Community Private,Dhaka,511,1278,5462,26805,8540,0,1009,43605
+28,Female,Cardiology,Heart Disease,Diagnostic & Medical,4,No,Private,Dhaka,508,1736,2365,0,7432,0,1195,13236
+28,Female,Neurology,Epilepsy,Major Surgery,8,No,Private,Sylhet,532,1236,2518,39947,22616,0,733,67582
+70,Male,Oncology,Lung Cancer,Medication,1,No,Community Private,Dhaka,570,4532,3771,0,1272,0,320,10465
+69,Female,Orthopedics,Knee Osteoarthritis,Minor Surgery,4,No,Private,Chattogram,1165,1934,777,11653,8588,0,856,24973
+45,Female,Cardiology,Heart Disease,Diagnostic & Medical,5,No,Specialized Private,Rajshahi,1586,4188,1614,0,16885,0,519,24792
+22,Male,Cardiology,Hypertension,Diagnostic & Medical,1,No,Private,Dhaka,1286,5438,680,0,1572,0,1038,10014
+51,Male,Orthopedics,Arthritis,Diagnostic & Medical,2,No,Private,Dhaka,1013,9094,3013,0,5690,0,726,19536
+45,Female,Oncology,Lung Cancer,Minor Surgery,5,No,Community Private,Dhaka,1790,5821,2644,9027,4120,0,387,23789
+54,Male,Gastroenterology,Peptic Ulcer,Diagnostic & Medical,1,No,Private,Khulna,948,9146,2737,0,1660,0,941,15432
+71,Female,Pulmonology,COPD,Medication,4,No,Specialized Private,Khulna,1743,1417,2177,0,14852,0,1071,21260
+33,Female,General Surgery,Hernia,Major Surgery,7,No,Private,Chattogram,1645,1366,2237,48182,19523,0,968,73921
+52,Female,Neurology,Migraine,Critical Care,3,Yes,Private,Chattogram,1446,2939,1194,0,8166,13260,875,27880
+25,Female,General Medicine,Pneumonia,Diagnostic & Medical,3,No,Community Private,Dhaka,1009,4597,1622,0,5220,0,1167,13615
+76,Female,General Surgery,Gallstones,Medication,4,No,Private,Chattogram,1165,2421,2375,0,11616,0,1132,18709
+1,Male,Orthopedics,Arthritis,Medication,4,No,Private,Rajshahi,738,2145,3014,0,8012,0,822,14731
+35,Male,Cardiology,Hypertension,Diagnostic & Medical,3,No,Specialized Private,Khulna,1445,2668,5437,0,8832,0,309,18691
+46,Male,Gastroenterology,Peptic Ulcer,Medication,3,No,Private,Khulna,1294,2774,6496,0,5052,0,350,15966
+23,Male,Oncology,Breast Cancer,Medication,2,No,Community Private,Chattogram,835,3858,2149,0,2300,0,729,9871
+39,Female,Orthopedics,Knee Osteoarthritis,Medication,3,No,Private,Chattogram,601,4442,1668,0,7197,0,861,14769
+46,Male,Oncology,Lymphoma,Medication,2,No,Specialized Private,Chattogram,743,2028,2935,0,6706,0,932,13344
+32,Male,Pulmonology,Respiratory Infection,Medication,2,No,Specialized Private,Sylhet,650,4211,1695,0,8248,0,682,15486
+77,Male,Orthopedics,Arthritis,Medication,4,No,Community Private,Rajshahi,1436,2110,6049,0,4996,0,1032,15623
+3,Male,Nephrology,Urinary Infection,Minor Surgery,2,No,Private,Dhaka,1460,2697,3358,12356,4178,0,582,24631
+57,Male,Gynecology,Fibroid,Major Surgery,3,No,Community Private,Khulna,1034,1787,3167,20210,5100,0,428,31726
+15,Male,Pulmonology,Respiratory Infection,Medication,3,No,Specialized Private,Chattogram,875,2110,1883,0,8265,0,576,13709
+62,Male,General Surgery,Hernia,Medication,2,No,Community Private,Dhaka,1705,2597,3084,0,1992,0,1089,10467
+54,Female,Oncology,Lymphoma,Medication,3,No,Specialized Private,Sylhet,1332,1438,2244,0,8916,0,715,14645
+65,Male,General Medicine,Gastritis,Medication,4,No,Private,Chattogram,1259,3038,3974,0,8400,0,934,17605
+20,Male,Orthopedics,Fracture,Minor Surgery,2,No,Community Private,Chattogram,580,5677,2296,5152,2444,0,624,16773
+85,Female,Orthopedics,Knee Osteoarthritis,Medication,3,No,Private,Dhaka,906,2920,1248,0,6516,0,891,12481
+18,Male,General Medicine,Diabetes,Major Surgery,4,No,Private,Rajshahi,665,4419,1836,22169,6052,0,466,35607
+63,Female,Nephrology,Chronic Kidney Disease,Medication,2,No,Community Private,Dhaka,707,3806,4448,0,3412,0,1099,13472
+52,Female,Gastroenterology,Hepatitis,Critical Care,10,Yes,Private,Chattogram,807,3965,1153,0,28720,51120,388,86153
+22,Female,Cardiology,Heart Disease,Medication,2,No,Private,Khulna,1775,3146,1676,0,5120,0,1146,12863
+66,Male,Gastroenterology,Peptic Ulcer,Medication,3,No,Specialized Private,Khulna,628,6375,1951,0,12117,0,460,21531
+51,Female,Gynecology,Fibroid,Minor Surgery,5,No,Private,Chattogram,1601,1717,3044,6444,13030,0,519,26355
+42,Female,Cardiology,Heart Failure,Medication,1,No,Community Private,Sylhet,531,9078,4412,0,1502,0,950,16473
+33,Female,Nephrology,Chronic Kidney Disease,Diagnostic & Medical,4,No,Private,Chattogram,727,4899,2076,0,10252,0,953,18907
+48,Male,Gynecology,Pregnancy Complication,Diagnostic & Medical,5,No,Community Private,Chattogram,1513,1551,2088,0,6345,0,327,11824
+45,Male,Neurology,Migraine,Minor Surgery,5,No,Specialized Private,Chattogram,1361,2206,3923,12250,22300,0,660,42700
+43,Female,Neurology,Epilepsy,Minor Surgery,5,No,Private,Chattogram,1274,1779,4064,11665,13510,0,756,33048
+32,Male,Orthopedics,Arthritis,Medication,3,No,Specialized Private,Chattogram,1541,1332,2095,0,11649,0,859,17476
+29,Female,Gastroenterology,Hepatitis,Diagnostic & Medical,5,No,Community Private,Sylhet,1018,6542,2706,0,7455,0,809,18530
+45,Female,Pulmonology,Asthma,Minor Surgery,3,No,Specialized Private,Khulna,593,3225,1666,5286,9933,0,307,21010
+22,Male,Oncology,Breast Cancer,Diagnostic & Medical,1,No,Community Private,Dhaka,1229,3709,1519,0,1260,0,329,8046
+43,Female,Gynecology,Ovarian Cyst,Medication,2,No,Community Private,Sylhet,757,4890,3437,0,2228,0,893,12205
+42,Female,Gynecology,Ovarian Cyst,Medication,2,No,Private,Chattogram,915,2255,1167,0,5852,0,767,10956
+67,Male,Gastroenterology,Fatty Liver,Medication,2,No,Specialized Private,Chattogram,1778,1774,2633,0,8130,0,949,15264
+38,Female,Pulmonology,Respiratory Infection,Medication,3,No,Specialized Private,Chattogram,1131,3398,753,0,10659,0,393,16334
+53,Female,Pulmonology,Respiratory Infection,Minor Surgery,3,No,Community Private,Chattogram,1616,1674,1627,14494,3741,0,917,24069
+31,Male,General Medicine,Pneumonia,Medication,3,No,Community Private,Sylhet,507,3682,2953,0,4803,0,536,12481
+31,Male,Pulmonology,Respiratory Infection,Diagnostic & Medical,1,No,Private,Chattogram,1586,2444,2175,0,2566,0,478,9249
+62,Female,Gynecology,Pregnancy Complication,Minor Surgery,4,No,Community Private,Dhaka,675,2594,3762,14771,6996,0,315,29113
+46,Female,Pulmonology,Asthma,Medication,3,No,Specialized Private,Chattogram,1013,636,1803,0,11871,0,762,16085
+24,Male,Neurology,Stroke,Critical Care,4,Yes,Community Private,Dhaka,923,3602,2121,0,3532,17764,587,28529
+42,Male,Gastroenterology,Fatty Liver,Major Surgery,6,No,Specialized Private,Chattogram,1359,3769,2284,55489,15918,0,1160,79979
+53,Male,General Surgery,Gallstones,Medication,2,No,Specialized Private,Dhaka,1338,1576,3165,0,7138,0,1171,14388
+27,Male,Oncology,Lymphoma,Diagnostic & Medical,1,No,Specialized Private,Chattogram,531,3257,4588,0,3849,0,879,13104
+74,Female,General Surgery,Appendicitis,Medication,4,No,Private,Chattogram,1181,7081,3089,0,8940,0,1099,21390
+35,Female,Nephrology,Kidney Stone,Diagnostic & Medical,4,No,Private,Sylhet,562,4077,3300,0,8384,0,770,17093
+48,Female,General Medicine,Diabetes,Diagnostic & Medical,5,No,Private,Chattogram,1477,6249,2525,0,8610,0,666,19527
+42,Female,Gastroenterology,Hepatitis,Major Surgery,5,No,Specialized Private,Dhaka,979,11246,2731,52276,18960,0,412,86604
+11,Male,General Medicine,Pneumonia,Diagnostic & Medical,3,No,Community Private,Dhaka,1199,1743,4479,0,3744,0,1103,12268
+53,Male,Oncology,Lung Cancer,Medication,1,No,Private,Dhaka,1070,5620,1788,0,2569,0,426,11473
+40,Male,Nephrology,Chronic Kidney Disease,Medication,3,No,Community Private,Chattogram,598,5009,4137,0,2598,0,1002,13344
+9,Female,Gynecology,Ovarian Cyst,Minor Surgery,2,No,Specialized Private,Dhaka,1667,3591,3553,13330,7426,0,1095,30662
+84,Female,General Medicine,Dengue Fever,Diagnostic & Medical,2,No,Specialized Private,Dhaka,833,648,2833,0,8120,0,752,13186
+18,Male,Nephrology,Kidney Stone,Critical Care,4,Yes,Private,Dhaka,1048,4812,5212,0,8496,22920,632,43120
+56,Male,General Surgery,Appendicitis,Medication,2,No,Private,Dhaka,1653,607,3091,0,4604,0,816,10771
+41,Female,Nephrology,Urinary Infection,Major Surgery,6,No,Private,Rajshahi,1253,2091,1359,50253,13116,0,361,68433
+53,Female,Cardiology,Heart Disease,Medication,3,No,Community Private,Rajshahi,1435,11964,2691,0,3003,0,888,19981
+18,Female,Pulmonology,Asthma,Medication,4,No,Specialized Private,Dhaka,872,5877,2081,0,16028,0,460,25318
+12,Male,Pulmonology,COPD,Medication,3,No,Private,Rajshahi,1579,3963,3552,0,8448,0,1008,18550
+26,Female,Nephrology,Kidney Stone,Medication,4,No,Community Private,Dhaka,1764,10723,3910,0,3456,0,696,20549
+36,Male,Gastroenterology,Hepatitis,Major Surgery,4,No,Specialized Private,Dhaka,690,8345,2357,40986,16660,0,575,69613
+60,Male,Neurology,Stroke,Diagnostic & Medical,3,No,Community Private,Khulna,576,1149,10548,0,3738,0,913,16924
+52,Male,Nephrology,Kidney Stone,Diagnostic & Medical,5,No,Community Private,Chattogram,750,1567,757,0,7085,0,480,10639
+83,Female,Cardiology,Heart Disease,Diagnostic & Medical,4,No,Private,Chattogram,1387,3090,1359,0,6152,0,812,12800
+49,Male,Oncology,Lymphoma,Medication,2,No,Private,Rajshahi,1495,6121,3362,0,5014,0,615,16607
+30,Male,Gynecology,Ovarian Cyst,Diagnostic & Medical,5,No,Community Private,Chattogram,1282,2524,2268,0,5585,0,1150,12809
+24,Male,Gynecology,Pregnancy Complication,Medication,3,No,Private,Dhaka,959,3583,3323,0,5607,0,591,14063
+43,Female,Oncology,Lung Cancer,Medication,1,No,Community Private,Rajshahi,1344,5114,2635,0,822,0,654,10569
+35,Male,Cardiology,Hypertension,Diagnostic & Medical,1,No,Community Private,Dhaka,1650,5986,6267,0,1757,0,459,16119
+55,Male,Nephrology,Urinary Infection,Major Surgery,4,No,Private,Chattogram,643,1087,2840,40456,10560,0,684,56270
+45,Male,Pulmonology,Respiratory Infection,Diagnostic & Medical,3,No,Private,Sylhet,1200,3936,2043,0,8613,0,1170,16962
+65,Female,Pulmonology,COPD,Medication,1,No,Private,Chattogram,863,3025,2799,0,2746,0,862,10295
+29,Male,Orthopedics,Arthritis,Diagnostic & Medical,5,No,Community Private,Dhaka,1451,2629,2706,0,8045,0,441,15272
+64,Male,Neurology,Stroke,Medication,4,No,Private,Chattogram,771,2606,3306,0,8540,0,603,15826
+43,Male,Orthopedics,Arthritis,Diagnostic & Medical,1,No,Private,Chattogram,1770,1854,2344,0,1641,0,761,8370
+51,Male,Cardiology,Hypertension,Major Surgery,5,No,Specialized Private,Sylhet,1049,6395,1544,16381,13130,0,579,39078
+64,Female,Pulmonology,Respiratory Infection,Medication,1,No,Community Private,Rajshahi,1452,2021,4600,0,1114,0,812,9999
+25,Male,Orthopedics,Arthritis,Medication,1,No,Specialized Private,Rajshahi,883,2730,1947,0,4304,0,854,10718
+56,Male,Cardiology,Hypertension,Minor Surgery,2,No,Private,Chattogram,1320,3269,2315,8052,3616,0,1121,19693
+57,Male,Nephrology,Chronic Kidney Disease,Major Surgery,8,No,Private,Sylhet,1410,7175,1831,59914,16168,0,977,87475
+61,Female,General Surgery,Hernia,Minor Surgery,3,No,Private,Dhaka,693,4459,9639,14096,4608,0,639,34134
+71,Male,Neurology,Migraine,Minor Surgery,2,No,Specialized Private,Khulna,1189,4003,2058,13471,7458,0,640,28819
+48,Female,Pulmonology,COPD,Medication,3,No,Community Private,Dhaka,1674,5786,2802,0,2595,0,678,13535
+65,Male,Cardiology,Heart Failure,Diagnostic & Medical,1,No,Private,Khulna,634,4137,3613,0,2493,0,532,11409
+33,Male,Oncology,Breast Cancer,Diagnostic & Medical,1,No,Community Private,Dhaka,1780,4793,3696,0,1551,0,615,12435
+39,Male,General Surgery,Gallstones,Diagnostic & Medical,5,No,Private,Chattogram,1054,1794,3403,0,8455,0,891,15597
+27,Female,Cardiology,Hypertension,Medication,3,No,Specialized Private,Dhaka,599,4148,2865,0,8835,0,858,17305
+25,Male,Gastroenterology,Peptic Ulcer,Diagnostic & Medical,5,No,Community Private,Rajshahi,589,4638,3266,0,4360,0,326,13179
+49,Male,Neurology,Migraine,Major Surgery,4,Yes,Private,Dhaka,1413,5430,2232,51583,11556,21120,662,93996
+73,Male,Gastroenterology,Peptic Ulcer,Critical Care,10,Yes,Private,Dhaka,919,2782,1695,0,18690,41270,718,66074
+56,Male,Orthopedics,Fracture,Minor Surgery,2,No,Community Private,Dhaka,1242,1680,1521,6749,3588,0,479,15259
+31,Female,Nephrology,Chronic Kidney Disease,Diagnostic & Medical,1,No,Private,Dhaka,529,3804,5321,0,1539,0,928,12121
+40,Male,Neurology,Migraine,Medication,4,No,Community Private,Chattogram,1435,5044,1604,0,6828,0,939,15850
+24,Female,Orthopedics,Fracture,Diagnostic & Medical,3,No,Specialized Private,Dhaka,887,2628,1287,0,10185,0,520,15507
+11,Female,Neurology,Stroke,Diagnostic & Medical,2,No,Community Private,Chattogram,681,4662,1570,0,3388,0,448,10749
+57,Female,Neurology,Epilepsy,Medication,2,No,Community Private,Khulna,1050,1770,3198,0,3412,0,620,10050
+6,Female,Gastroenterology,Peptic Ulcer,Major Surgery,3,No,Community Private,Khulna,628,3707,2424,15233,3531,0,378,25901
+18,Male,Gynecology,Ovarian Cyst,Major Surgery,5,No,Community Private,Chattogram,569,3289,2754,44259,7910,0,817,59598
+59,Male,Nephrology,Urinary Infection,Diagnostic & Medical,1,No,Private,Sylhet,1237,10585,2886,0,2368,0,401,17477
+49,Female,Gynecology,Ovarian Cyst,Diagnostic & Medical,5,No,Private,Rajshahi,1150,4136,1283,0,12535,0,429,19533
+18,Male,Cardiology,Hypertension,Medication,1,No,Private,Sylhet,702,2977,3193,0,1780,0,724,9376
+48,Female,Pulmonology,Respiratory Infection,Medication,3,No,Private,Chattogram,1654,6996,3245,0,5940,0,825,18660
+40,Male,Gynecology,Fibroid,Diagnostic & Medical,1,No,Private,Rajshahi,1421,4132,3779,0,1845,0,558,11735
+69,Female,Orthopedics,Fracture,Diagnostic & Medical,5,No,Specialized Private,Dhaka,1716,2150,3412,0,20170,0,995,28443
+59,Male,General Medicine,Diabetes,Critical Care,3,No,Specialized Private,Khulna,1382,2494,4452,0,8391,0,985,17704
+20,Female,Nephrology,Chronic Kidney Disease,Medication,1,No,Private,Dhaka,1470,8230,1296,0,1703,0,586,13285
+51,Female,Gastroenterology,Hepatitis,Diagnostic & Medical,2,No,Specialized Private,Sylhet,1389,2318,1800,0,6052,0,980,12539
+49,Female,Cardiology,Heart Disease,Diagnostic & Medical,3,No,Specialized Private,Chattogram,1622,2244,2197,0,9186,0,304,15553
+25,Female,General Medicine,Gastritis,Medication,1,No,Community Private,Dhaka,1678,2829,2228,0,948,0,734,8417
+82,Female,Neurology,Stroke,Medication,1,No,Community Private,Khulna,1619,4569,5811,0,823,0,662,13484
+48,Female,Orthopedics,Knee Osteoarthritis,Medication,1,No,Specialized Private,Dhaka,1427,2955,3436,0,3153,0,622,11593
+73,Male,Orthopedics,Arthritis,Medication,2,No,Specialized Private,Dhaka,1051,4680,1710,0,6054,0,308,13803
+70,Female,Oncology,Lymphoma,Diagnostic & Medical,2,No,Specialized Private,Sylhet,547,2973,3253,0,6402,0,1014,14189
+37,Female,Neurology,Stroke,Medication,1,No,Private,Dhaka,1375,1895,4102,0,2129,0,978,10479
+78,Female,Orthopedics,Knee Osteoarthritis,Medication,3,No,Specialized Private,Khulna,1013,3193,3733,0,9246,0,843,18028
+71,Male,General Surgery,Gallstones,Minor Surgery,2,No,Community Private,Dhaka,597,3328,6803,11012,2654,0,854,25248
+30,Male,Neurology,Migraine,Minor Surgery,2,No,Private,Dhaka,1121,1662,4597,9863,3532,0,624,21399
+53,Female,Neurology,Epilepsy,Minor Surgery,3,No,Community Private,Khulna,1061,2917,2600,12952,3081,0,759,23370
+22,Male,Neurology,Stroke,Diagnostic & Medical,1,No,Specialized Private,Rajshahi,1683,2169,943,0,2858,0,450,8103
+45,Female,Gynecology,Ovarian Cyst,Major Surgery,7,No,Community Private,Sylhet,1171,1682,2004,57380,8869,0,1184,72290
+40,Male,Oncology,Breast Cancer,Medication,2,No,Specialized Private,Chattogram,1774,2479,1321,0,8024,0,598,14196
+39,Female,General Surgery,Hernia,Medication,1,No,Community Private,Khulna,1332,1575,1128,0,1309,0,838,6182
+53,Male,Pulmonology,Asthma,Diagnostic & Medical,4,No,Private,Sylhet,1025,3226,2179,0,6440,0,899,13769
+53,Male,Cardiology,Hypertension,Critical Care,3,Yes,Community Private,Sylhet,959,2004,2392,0,4170,19491,500,29516
+32,Female,Cardiology,Heart Disease,Diagnostic & Medical,1,No,Specialized Private,Chattogram,1044,709,764,0,4447,0,759,7723
+43,Male,Orthopedics,Fracture,Medication,1,No,Specialized Private,Khulna,1357,3030,1406,0,2793,0,571,9157
+47,Male,Neurology,Epilepsy,Major Surgery,6,No,Specialized Private,Sylhet,1540,1515,1729,36831,17616,0,1061,60292
+24,Female,General Surgery,Gallstones,Minor Surgery,4,No,Community Private,Dhaka,797,3634,5111,4585,5804,0,1013,20944
+85,Male,Neurology,Stroke,Diagnostic & Medical,4,No,Community Private,Khulna,873,4899,1343,0,5200,0,308,12623
+36,Male,General Surgery,Gallstones,Critical Care,4,Yes,Private,Sylhet,664,1739,2396,0,8012,25800,463,39074
+44,Female,Gynecology,Ovarian Cyst,Medication,4,No,Private,Rajshahi,1480,4115,2279,0,7108,0,915,15897
+64,Male,General Medicine,Pneumonia,Major Surgery,5,No,Private,Chattogram,807,6052,2422,27069,12225,0,415,48990
+45,Female,Oncology,Lymphoma,Critical Care,8,Yes,Community Private,Dhaka,810,5999,1897,0,13080,43816,852,66454
+20,Female,Orthopedics,Knee Osteoarthritis,Critical Care,5,No,Private,Sylhet,1591,5153,1839,0,13645,0,946,23174
+28,Male,Cardiology,Hypertension,Major Surgery,5,No,Specialized Private,Chattogram,997,4999,2830,36364,18280,0,894,64364
+62,Female,General Medicine,Dengue Fever,Medication,4,No,Specialized Private,Chattogram,590,1130,1352,0,11252,0,1016,15340
+47,Female,Nephrology,Kidney Stone,Diagnostic & Medical,5,No,Private,Chattogram,1474,2398,933,0,11885,0,480,17170
+41,Female,General Surgery,Appendicitis,Diagnostic & Medical,2,No,Private,Chattogram,755,3240,2274,0,5220,0,766,12255
+22,Female,Gynecology,Ovarian Cyst,Medication,1,No,Community Private,Khulna,1510,1091,2515,0,942,0,1145,7203
+20,Male,Nephrology,Urinary Infection,Medication,3,No,Community Private,Chattogram,1507,3616,1482,0,5187,0,330,12122
+23,Female,Gastroenterology,Peptic Ulcer,Medication,4,No,Community Private,Dhaka,704,3191,3133,0,5300,0,735,13063
+23,Male,Oncology,Breast Cancer,Medication,4,No,Specialized Private,Dhaka,832,3256,1871,0,16256,0,924,23139
+66,Female,Oncology,Breast Cancer,Medication,2,No,Community Private,Rajshahi,1615,12981,1228,0,2918,0,412,19154
+33,Female,Gynecology,Ovarian Cyst,Diagnostic & Medical,1,No,Private,Dhaka,903,2739,1559,0,2135,0,683,8019
+75,Male,Pulmonology,Respiratory Infection,Diagnostic & Medical,1,No,Specialized Private,Rajshahi,1296,1901,2679,0,3790,0,314,9980
+62,Male,Gynecology,Pregnancy Complication,Medication,3,No,Private,Dhaka,799,1589,5657,0,8544,0,688,17277
+27,Female,Gastroenterology,Fatty Liver,Medication,3,No,Private,Dhaka,539,3888,3527,0,8847,0,372,17173
+55,Male,Neurology,Migraine,Medication,2,No,Specialized Private,Dhaka,1289,2471,1423,0,8854,0,358,14395
+74,Female,Oncology,Breast Cancer,Minor Surgery,5,No,Private,Chattogram,563,1704,3604,6906,14635,0,447,27859
+1,Female,Oncology,Breast Cancer,Critical Care,4,Yes,Specialized Private,Rajshahi,1768,3201,2984,0,13924,15488,483,37848
+26,Female,Gastroenterology,Fatty Liver,Minor Surgery,5,No,Private,Rajshahi,777,3923,1615,13609,10580,0,663,31167
+59,Male,General Medicine,Dengue Fever,Medication,4,No,Private,Rajshahi,1002,4507,2456,0,7128,0,450,15543
+22,Female,General Surgery,Gallstones,Diagnostic & Medical,5,No,Community Private,Chattogram,1449,5475,4560,0,4480,0,494,16458
+20,Male,Orthopedics,Arthritis,Minor Surgery,3,No,Specialized Private,Khulna,1529,9503,4253,9322,13242,0,364,38213
+51,Female,General Medicine,Diabetes,Medication,3,No,Community Private,Dhaka,1638,1079,1354,0,3996,0,930,8997
+46,Male,General Medicine,Dengue Fever,Diagnostic & Medical,5,No,Community Private,Dhaka,733,4949,3911,0,8730,0,534,18857
+33,Female,Nephrology,Urinary Infection,Medication,1,No,Specialized Private,Chattogram,1683,2277,2002,0,3935,0,331,10228
+83,Male,Cardiology,Heart Failure,Medication,4,No,Community Private,Khulna,1607,1934,3999,0,6028,0,1070,14638
+27,Male,Oncology,Breast Cancer,Minor Surgery,3,No,Private,Chattogram,970,1672,2730,6540,5853,0,585,18350
+57,Female,Oncology,Lymphoma,Diagnostic & Medical,3,No,Specialized Private,Sylhet,865,4532,2279,0,12957,0,1139,21772
+62,Male,Oncology,Lung Cancer,Diagnostic & Medical,4,No,Private,Sylhet,1615,3178,1645,0,11868,0,891,19197
+72,Female,General Surgery,Hernia,Medication,3,No,Community Private,Dhaka,1482,1608,1656,0,3600,0,1191,9537
+34,Male,Orthopedics,Fracture,Medication,2,No,Private,Dhaka,1323,3454,1571,0,4600,0,536,11484
+33,Female,Gastroenterology,Fatty Liver,Minor Surgery,2,No,Private,Chattogram,768,2309,2237,7589,4266,0,835,18004
+44,Male,Nephrology,Kidney Stone,Medication,1,No,Private,Sylhet,1214,2548,5404,0,1551,0,429,11146
+32,Male,Oncology,Lymphoma,Critical Care,5,No,Private,Chattogram,1528,1687,5314,0,13955,0,1193,23677
+60,Male,Neurology,Epilepsy,Diagnostic & Medical,5,No,Private,Dhaka,1023,2076,2861,0,8195,0,815,14970
+66,Female,Cardiology,Heart Disease,Medication,1,No,Private,Rajshahi,879,2329,2454,0,1880,0,448,7990
+49,Female,Gynecology,Ovarian Cyst,Medication,4,No,Private,Dhaka,511,4134,3619,0,6248,0,524,15036
+19,Female,Cardiology,Heart Disease,Minor Surgery,4,No,Community Private,Chattogram,1359,3582,1122,7412,5096,0,535,19106
+71,Male,Pulmonology,Asthma,Diagnostic & Medical,2,No,Specialized Private,Chattogram,536,1415,2989,0,6198,0,614,11752
+1,Male,Gastroenterology,Hepatitis,Minor Surgery,3,No,Private,Sylhet,612,4228,7730,13121,6837,0,548,33076
+53,Female,General Surgery,Hernia,Medication,4,No,Community Private,Chattogram,1075,1212,4803,0,3672,0,305,11067
+36,Male,Orthopedics,Knee Osteoarthritis,Minor Surgery,5,No,Specialized Private,Chattogram,1596,960,2564,7570,13565,0,1162,27417
+56,Female,Orthopedics,Arthritis,Minor Surgery,2,No,Private,Khulna,1073,11782,4322,11226,3428,0,721,32552
+39,Male,Pulmonology,COPD,Diagnostic & Medical,5,No,Private,Dhaka,1718,2235,1187,0,11185,0,1102,17427
+45,Male,Nephrology,Urinary Infection,Medication,2,No,Community Private,Dhaka,1197,7083,3888,0,2674,0,387,15229
+32,Female,General Surgery,Hernia,Diagnostic & Medical,4,No,Community Private,Chattogram,945,6299,2748,0,5980,0,1185,17157
+28,Female,Gastroenterology,Peptic Ulcer,Minor Surgery,3,No,Private,Khulna,1430,3498,2720,12644,6696,0,533,27521
+36,Female,Orthopedics,Knee Osteoarthritis,Medication,2,No,Community Private,Chattogram,864,2510,4825,0,3546,0,1103,12848
+32,Male,Pulmonology,COPD,Medication,2,No,Community Private,Sylhet,1223,2945,2828,0,2352,0,842,10190
+25,Female,Nephrology,Kidney Stone,Minor Surgery,3,No,Community Private,Khulna,1118,4904,1619,12469,2799,0,944,23853
+70,Female,Cardiology,Hypertension,Diagnostic & Medical,1,No,Community Private,Khulna,1284,3532,6308,0,1141,0,732,12997
+54,Male,Pulmonology,COPD,Medication,3,No,Community Private,Chattogram,535,5106,1320,0,4230,0,1030,12221
+80,Female,Neurology,Epilepsy,Diagnostic & Medical,4,No,Private,Rajshahi,1580,2081,907,0,6388,0,786,11742
+42,Female,Nephrology,Urinary Infection,Diagnostic & Medical,1,No,Community Private,Chattogram,772,2737,2620,0,1114,0,1073,8316
+67,Male,General Surgery,Hernia,Minor Surgery,3,No,Specialized Private,Dhaka,1436,8498,1332,4396,8274,0,832,24768
+41,Male,General Surgery,Hernia,Diagnostic & Medical,4,No,Private,Rajshahi,797,3327,2569,0,7472,0,920,15085
+31,Female,Gynecology,Pregnancy Complication,Diagnostic & Medical,5,No,Private,Chattogram,1183,1096,3359,0,8440,0,607,14685
+78,Female,General Surgery,Appendicitis,Diagnostic & Medical,4,No,Private,Dhaka,1301,2579,2470,0,10264,0,1147,17761
+21,Female,Orthopedics,Fracture,Diagnostic & Medical,5,No,Private,Dhaka,1199,1968,1688,0,12195,0,731,17781
+15,Male,Gynecology,Fibroid,Diagnostic & Medical,2,Yes,Private,Dhaka,748,3360,4814,0,5564,11416,1134,27036
+46,Female,General Surgery,Appendicitis,Minor Surgery,4,No,Specialized Private,Rajshahi,1119,1655,643,14002,15136,0,306,32861
+38,Male,Pulmonology,Respiratory Infection,Minor Surgery,2,No,Community Private,Rajshahi,1578,1339,1926,14082,3172,0,669,22766
+71,Male,Gastroenterology,Fatty Liver,Medication,2,No,Private,Dhaka,1721,2590,2114,0,3042,0,1165,10632
+46,Female,Gastroenterology,Hepatitis,Major Surgery,8,No,Community Private,Chattogram,1535,3572,3094,37057,11056,0,1157,57471
+37,Female,Pulmonology,Respiratory Infection,Medication,2,No,Specialized Private,Dhaka,1775,3699,2896,0,5962,0,1120,15452
+33,Male,Gastroenterology,Fatty Liver,Diagnostic & Medical,5,No,Private,Chattogram,1457,2243,1352,0,12545,0,973,18570
+8,Female,Oncology,Lung Cancer,Medication,2,No,Specialized Private,Khulna,1696,1857,3094,0,8366,0,353,15366
+48,Female,Nephrology,Urinary Infection,Diagnostic & Medical,5,No,Private,Dhaka,692,2547,5608,0,13400,0,1040,23287
+57,Male,Cardiology,Heart Failure,Minor Surgery,4,Yes,Private,Chattogram,1570,11834,1947,8520,7228,13016,505,44620
+24,Female,General Medicine,Diabetes,Medication,1,No,Community Private,Khulna,1783,7943,1889,0,1327,0,560,13502
+22,Male,Orthopedics,Fracture,Minor Surgery,3,No,Community Private,Dhaka,1137,10886,5216,6730,4347,0,679,28995
+32,Male,Oncology,Breast Cancer,Medication,4,No,Private,Sylhet,1278,9556,3271,0,8560,0,688,23353
+51,Female,Pulmonology,Asthma,Medication,4,No,Community Private,Chattogram,761,13949,4134,0,3204,0,862,22910
+63,Male,Gynecology,Pregnancy Complication,Medication,2,No,Specialized Private,Khulna,613,2581,1857,0,8570,0,1049,14670
+37,Male,General Surgery,Gallstones,Medication,2,No,Specialized Private,Rajshahi,1045,1164,1953,0,6988,0,446,11596
+18,Female,Pulmonology,Asthma,Critical Care,10,Yes,Private,Chattogram,930,3626,2941,0,16870,50220,652,75239
+37,Male,Gastroenterology,Peptic Ulcer,Diagnostic & Medical,5,No,Private,Dhaka,1019,8553,3029,0,13435,0,804,26840
+30,Male,Gastroenterology,Fatty Liver,Medication,4,No,Private,Sylhet,641,6509,4080,0,8576,0,820,20626
+70,Male,Orthopedics,Fracture,Medication,3,No,Private,Chattogram,1495,3977,2579,0,5946,0,410,14407
+59,Male,Oncology,Breast Cancer,Medication,4,No,Community Private,Dhaka,979,4463,1743,0,7092,0,1121,15398
+9,Male,Neurology,Epilepsy,Minor Surgery,2,No,Specialized Private,Dhaka,1128,6399,2356,8266,6558,0,477,25184
+48,Female,Gynecology,Pregnancy Complication,Medication,1,No,Community Private,Dhaka,1303,2327,3345,0,1630,0,361,8966
+14,Female,Gynecology,Ovarian Cyst,Medication,3,No,Specialized Private,Chattogram,1753,3425,1341,0,7614,0,1197,15330
+7,Female,Cardiology,Heart Disease,Major Surgery,8,No,Community Private,Chattogram,1504,3134,3053,36079,13808,0,611,58189
+51,Male,Nephrology,Chronic Kidney Disease,Diagnostic & Medical,4,No,Community Private,Rajshahi,1219,2257,3491,0,3200,0,1012,11179
+50,Male,Pulmonology,COPD,Critical Care,7,Yes,Specialized Private,Khulna,842,3822,4518,0,25648,28455,360,63645
+22,Male,General Medicine,Dengue Fever,Major Surgery,6,No,Specialized Private,Dhaka,1047,3016,1181,26885,25602,0,699,58430
+30,Female,Nephrology,Urinary Infection,Major Surgery,8,No,Private,Rajshahi,929,2742,1647,27955,18928,0,902,53103
+53,Female,Neurology,Epilepsy,Diagnostic & Medical,2,No,Private,Dhaka,735,1800,4074,0,4546,0,1046,12201
+59,Female,Orthopedics,Arthritis,Diagnostic & Medical,5,No,Private,Khulna,1603,1037,2396,0,9095,0,747,14878
+47,Male,Oncology,Lung Cancer,Medication,1,No,Specialized Private,Dhaka,721,3669,6136,0,4104,0,837,15467
+45,Male,Nephrology,Urinary Infection,Diagnostic & Medical,2,No,Private,Dhaka,1475,4959,2240,0,3096,0,300,12070
+51,Male,General Medicine,Diabetes,Diagnostic & Medical,3,No,Specialized Private,Chattogram,1383,2358,2232,0,11742,0,825,18540
+28,Male,Pulmonology,Asthma,Medication,2,No,Community Private,Chattogram,1007,2712,1892,0,1910,0,811,8332
+51,Male,Neurology,Epilepsy,Medication,1,No,Private,Sylhet,612,3209,1517,0,2875,0,968,9181
+63,Female,Gastroenterology,Hepatitis,Medication,4,No,Community Private,Rajshahi,1716,5188,1183,0,6472,0,820,15379
+85,Male,Pulmonology,Asthma,Minor Surgery,2,No,Private,Dhaka,1605,3852,5009,11626,4020,0,1115,27227
+35,Male,Oncology,Lymphoma,Minor Surgery,4,No,Specialized Private,Dhaka,932,2000,2844,13734,11424,0,707,31641
+40,Male,Cardiology,Hypertension,Medication,2,No,Private,Dhaka,1242,9297,1537,0,4836,0,560,17472
+21,Female,Pulmonology,Asthma,Medication,4,No,Private,Rajshahi,1661,2850,1769,0,11596,0,1127,19003
+75,Male,General Surgery,Appendicitis,Medication,4,No,Specialized Private,Dhaka,538,5126,2817,0,16328,0,714,25523
+35,Male,Pulmonology,Asthma,Minor Surgery,2,No,Private,Chattogram,1510,3495,4025,9901,5446,0,1126,25503
+76,Male,Pulmonology,Asthma,Minor Surgery,3,No,Community Private,Chattogram,1776,1617,5707,12246,5040,0,646,27032
+47,Female,Neurology,Migraine,Medication,2,No,Private,Chattogram,1357,14354,2526,0,5126,0,883,24246
+15,Male,Gastroenterology,Fatty Liver,Minor Surgery,2,No,Private,Dhaka,941,1587,2149,9061,3392,0,1129,18259
+39,Female,Gastroenterology,Fatty Liver,Minor Surgery,2,No,Private,Dhaka,1334,1892,3352,4393,5872,0,363,17206
+62,Female,Gastroenterology,Peptic Ulcer,Diagnostic & Medical,4,No,Community Private,Rajshahi,635,2686,5786,0,6916,0,433,16456
+85,Male,Cardiology,Hypertension,Diagnostic & Medical,2,No,Specialized Private,Rajshahi,797,2500,3736,0,7632,0,1059,15724
+32,Male,Gynecology,Fibroid,Minor Surgery,3,No,Community Private,Sylhet,772,1331,2344,14400,3840,0,1064,23751
+70,Male,Gynecology,Pregnancy Complication,Major Surgery,5,No,Community Private,Chattogram,976,1041,1264,31017,7980,0,1176,43454
+11,Male,Cardiology,Hypertension,Diagnostic & Medical,4,No,Specialized Private,Chattogram,1622,8774,2758,0,16008,0,988,30150
+56,Female,General Surgery,Hernia,Medication,2,No,Community Private,Chattogram,705,1058,3246,0,1798,0,781,7588
+21,Female,General Surgery,Gallstones,Diagnostic & Medical,4,No,Community Private,Rajshahi,1518,1141,3168,0,6496,0,677,13000
+40,Female,Gastroenterology,Hepatitis,Medication,2,No,Private,Sylhet,504,2604,3930,0,3090,0,1039,11167
+36,Female,Oncology,Lung Cancer,Minor Surgery,5,No,Specialized Private,Sylhet,620,2724,1225,10814,20560,0,460,36403
+44,Female,General Medicine,Pneumonia,Diagnostic & Medical,4,No,Specialized Private,Dhaka,845,11481,3099,0,16844,0,854,33123
+30,Male,General Medicine,Gastritis,Minor Surgery,2,No,Private,Dhaka,955,2912,4791,14665,3886,0,931,28140
+28,Female,Pulmonology,Asthma,Diagnostic & Medical,3,No,Community Private,Dhaka,1627,3135,3538,0,4737,0,944,13981
+18,Female,General Medicine,Dengue Fever,Diagnostic & Medical,2,Yes,Community Private,Sylhet,1700,2264,5977,0,2156,6112,510,18719
+81,Male,Pulmonology,Respiratory Infection,Major Surgery,7,No,Community Private,Khulna,826,1977,2389,49472,6433,0,951,62048
+40,Female,General Medicine,Diabetes,Medication,3,No,Community Private,Dhaka,1243,1868,3553,0,2703,0,599,9966
+49,Female,Oncology,Lymphoma,Medication,3,No,Specialized Private,Dhaka,857,3755,2542,0,9951,0,504,17609
+44,Male,Orthopedics,Fracture,Diagnostic & Medical,2,No,Specialized Private,Dhaka,835,7387,3094,0,7988,0,1132,20436
+59,Male,Oncology,Breast Cancer,Medication,2,No,Private,Chattogram,1626,4758,6574,0,3918,0,796,17672
+20,Male,Cardiology,Heart Failure,Diagnostic & Medical,3,No,Community Private,Chattogram,1121,7805,1240,0,4731,0,781,15678
+53,Female,Oncology,Lung Cancer,Minor Surgery,2,No,Private,Rajshahi,1467,2831,8851,5122,4658,0,411,23340
+48,Female,Gynecology,Pregnancy Complication,Diagnostic & Medical,2,No,Private,Dhaka,1104,2019,1135,0,5956,0,534,10748
+44,Female,Nephrology,Kidney Stone,Medication,4,No,Community Private,Dhaka,753,3495,5967,0,3212,0,945,14372
+73,Female,Nephrology,Chronic Kidney Disease,Diagnostic & Medical,4,No,Community Private,Chattogram,1711,3921,3126,0,4676,0,745,14179
+74,Female,General Surgery,Gallstones,Medication,2,No,Private,Dhaka,1229,1557,1380,0,4836,0,1165,10167
+50,Female,Orthopedics,Knee Osteoarthritis,Medication,4,No,Private,Dhaka,1587,3051,3070,0,6996,0,418,15122
+10,Female,Cardiology,Heart Disease,Medication,3,No,Community Private,Chattogram,1305,6019,5900,0,3249,0,789,17262
+46,Female,General Surgery,Hernia,Medication,2,No,Specialized Private,Chattogram,741,3724,1080,0,7702,0,349,13596
+10,Female,Pulmonology,Asthma,Diagnostic & Medical,2,No,Community Private,Sylhet,611,990,1403,0,2318,0,1055,6377
+36,Male,Neurology,Migraine,Major Surgery,4,No,Private,Rajshahi,1310,2160,7537,40023,10212,0,1001,62243
+55,Female,Cardiology,Heart Disease,Diagnostic & Medical,1,No,Private,Dhaka,1263,3512,1192,0,2014,0,713,8694
+40,Male,Gynecology,Ovarian Cyst,Medication,3,No,Private,Dhaka,1210,5618,4373,0,4689,0,732,16622
+57,Male,Pulmonology,Asthma,Critical Care,10,Yes,Private,Dhaka,1734,1566,2978,0,28500,38980,456,74214
+51,Female,Gastroenterology,Peptic Ulcer,Diagnostic & Medical,3,No,Specialized Private,Sylhet,626,1724,3855,0,8553,0,1036,15794
+48,Male,Gynecology,Fibroid,Medication,2,No,Private,Khulna,1641,1603,2358,0,4550,0,421,10573
+43,Male,Orthopedics,Fracture,Diagnostic & Medical,1,No,Community Private,Sylhet,963,6492,3666,0,1567,0,1193,13881
+66,Female,Gynecology,Fibroid,Minor Surgery,4,No,Specialized Private,Khulna,507,4376,1197,13326,15864,0,981,36251
+85,Male,Oncology,Lung Cancer,Minor Surgery,5,No,Private,Dhaka,1279,1721,1538,10847,9590,0,346,25321
+9,Female,Pulmonology,COPD,Diagnostic & Medical,5,No,Private,Chattogram,526,2780,3312,0,14425,0,840,21883
+53,Female,Nephrology,Kidney Stone,Medication,4,No,Private,Chattogram,1253,1588,4662,0,10072,0,346,17921
+8,Male,Pulmonology,Respiratory Infection,Medication,2,No,Community Private,Sylhet,765,1426,1980,0,2490,0,470,7131
+50,Female,General Surgery,Gallstones,Major Surgery,3,No,Community Private,Khulna,1066,1332,5796,23969,3726,0,507,36396
+48,Male,Pulmonology,Respiratory Infection,Medication,4,No,Community Private,Rajshahi,810,2210,2741,0,5412,0,714,11887
+24,Male,Gynecology,Fibroid,Major Surgery,3,No,Private,Chattogram,770,2143,2588,39998,5934,0,858,52291
+43,Male,Gynecology,Ovarian Cyst,Major Surgery,3,No,Private,Dhaka,655,4605,2120,18791,5652,0,575,32398
+85,Female,General Medicine,Dengue Fever,Major Surgery,8,No,Community Private,Dhaka,1087,1854,1851,46523,10664,0,681,62660
+74,Male,Pulmonology,Respiratory Infection,Diagnostic & Medical,1,No,Community Private,Dhaka,1023,4979,1134,0,1408,0,326,8870
+21,Female,General Medicine,Gastritis,Medication,2,No,Specialized Private,Chattogram,1269,1460,4936,0,7064,0,806,15535
+32,Male,General Surgery,Hernia,Medication,2,No,Private,Khulna,1648,2021,3210,0,5394,0,511,12784
+56,Male,General Medicine,Diabetes,Major Surgery,8,No,Private,Chattogram,998,3716,2131,47358,16752,0,1113,72068
+54,Male,Neurology,Stroke,Minor Surgery,4,No,Specialized Private,Dhaka,816,3470,2930,12745,11624,0,549,32134
+45,Female,Nephrology,Urinary Infection,Diagnostic & Medical,2,No,Specialized Private,Chattogram,871,7795,3903,0,6332,0,799,19700
+44,Female,Cardiology,Hypertension,Major Surgery,7,No,Specialized Private,Dhaka,1479,2691,4650,26603,25067,0,1131,61621
+57,Female,Gastroenterology,Peptic Ulcer,Diagnostic & Medical,1,No,Private,Dhaka,671,3714,3791,0,2382,0,440,10998
+61,Male,Orthopedics,Fracture,Diagnostic & Medical,2,No,Private,Dhaka,1522,4710,3515,0,3508,0,959,14214
+62,Female,Pulmonology,Respiratory Infection,Minor Surgery,5,No,Specialized Private,Dhaka,1060,853,4587,14264,18370,0,949,40083
+42,Female,Gastroenterology,Hepatitis,Medication,4,No,Community Private,Khulna,1680,2040,2324,0,5972,0,860,12876
+77,Male,Oncology,Breast Cancer,Medication,1,No,Community Private,Dhaka,1632,6559,5927,0,1785,0,792,16695
+45,Female,Pulmonology,Respiratory Infection,Diagnostic & Medical,3,No,Specialized Private,Khulna,1089,2241,2844,0,8496,0,575,15245
+34,Male,Neurology,Stroke,Medication,4,No,Community Private,Chattogram,580,4133,2127,0,3384,0,1134,11358
+40,Male,Neurology,Epilepsy,Medication,3,No,Private,Dhaka,515,3864,1158,0,5574,0,1005,12116
+72,Male,General Surgery,Appendicitis,Minor Surgery,5,No,Community Private,Dhaka,1519,4951,3834,5738,4265,0,826,21133
+28,Female,Orthopedics,Knee Osteoarthritis,Medication,1,No,Specialized Private,Chattogram,683,1938,4304,0,3825,0,569,11319
+13,Female,Neurology,Epilepsy,Medication,1,No,Specialized Private,Khulna,1094,3711,4453,0,4189,0,688,14135
+37,Female,Oncology,Breast Cancer,Medication,1,No,Community Private,Sylhet,622,4851,1731,0,1694,0,1050,9948
+69,Female,Orthopedics,Fracture,Medication,4,No,Private,Dhaka,1609,4381,1721,0,11500,0,493,19704
+64,Female,Orthopedics,Knee Osteoarthritis,Major Surgery,8,No,Community Private,Sylhet,1629,860,3165,53480,13280,0,402,72816
+56,Female,Cardiology,Hypertension,Major Surgery,5,Yes,Private,Khulna,1356,4659,5897,35034,10250,19570,997,77763
+51,Male,Pulmonology,COPD,Medication,2,No,Community Private,Dhaka,1167,4867,2018,0,3394,0,951,12397
+69,Male,Orthopedics,Fracture,Medication,2,No,Private,Khulna,1446,7903,2500,0,3054,0,783,15686
+85,Female,General Surgery,Hernia,Diagnostic & Medical,3,No,Community Private,Rajshahi,1668,1714,4402,0,3702,0,1141,12627
+38,Female,Gastroenterology,Hepatitis,Minor Surgery,3,No,Private,Chattogram,1594,1637,2404,6589,4821,0,364,17409
+42,Female,Orthopedics,Fracture,Medication,4,No,Community Private,Dhaka,1426,1539,4913,0,6928,0,1030,15836
+74,Male,General Medicine,Gastritis,Medication,1,No,Private,Khulna,1265,6400,7721,0,2005,0,433,17824
+41,Male,Pulmonology,Respiratory Infection,Diagnostic & Medical,5,No,Specialized Private,Chattogram,1746,2188,2067,0,15125,0,300,21426
+1,Male,General Medicine,Gastritis,Minor Surgery,3,No,Community Private,Sylhet,1120,3245,3711,12726,5097,0,570,26469
+54,Male,Orthopedics,Arthritis,Medication,1,No,Community Private,Khulna,1512,1910,1994,0,1520,0,1021,7957
+75,Male,Gynecology,Ovarian Cyst,Diagnostic & Medical,4,No,Private,Dhaka,1410,4582,1665,0,8540,0,558,16755
+35,Male,Oncology,Breast Cancer,Diagnostic & Medical,4,No,Community Private,Sylhet,1616,3931,1889,0,5740,0,909,14085
+46,Male,Nephrology,Urinary Infection,Diagnostic & Medical,4,No,Community Private,Rajshahi,1150,4311,3812,0,4816,0,831,14920
+49,Female,General Surgery,Appendicitis,Minor Surgery,4,No,Specialized Private,Chattogram,1377,2854,2056,6126,13832,0,617,26862
+54,Female,Gynecology,Ovarian Cyst,Major Surgery,8,No,Community Private,Dhaka,1658,6735,2632,22206,11800,0,1119,46150
+45,Male,Pulmonology,Respiratory Infection,Medication,4,No,Community Private,Dhaka,1218,3140,2769,0,5668,0,716,13511
+37,Male,Orthopedics,Fracture,Critical Care,10,Yes,Private,Dhaka,1655,2608,2237,0,24900,42720,638,74758
+44,Male,General Medicine,Pneumonia,Diagnostic & Medical,3,No,Community Private,Chattogram,1309,8467,2335,0,3918,0,471,16500
+54,Male,Pulmonology,COPD,Minor Surgery,4,Yes,Specialized Private,Dhaka,624,9996,4384,12900,10896,20632,1043,60475
+12,Male,Orthopedics,Fracture,Diagnostic & Medical,4,No,Community Private,Dhaka,1536,1719,1119,0,6632,0,781,11787
+55,Male,General Surgery,Appendicitis,Minor Surgery,5,No,Community Private,Dhaka,1500,2839,4178,4344,5955,0,362,19178
+1,Male,Gastroenterology,Peptic Ulcer,Medication,2,No,Community Private,Chattogram,1017,5094,2730,0,3582,0,529,12952
+70,Female,Gynecology,Fibroid,Medication,1,No,Private,Khulna,1702,3052,1933,0,1680,0,909,9276
+42,Female,Gastroenterology,Peptic Ulcer,Medication,2,No,Specialized Private,Dhaka,592,1488,4132,0,8062,0,1182,15456
+42,Male,Gastroenterology,Hepatitis,Medication,1,No,Community Private,Chattogram,754,2837,4706,0,1776,0,516,10589
+43,Male,General Surgery,Hernia,Major Surgery,5,No,Community Private,Sylhet,553,754,3165,41345,6250,0,390,52457
+39,Female,Neurology,Epilepsy,Minor Surgery,2,No,Private,Dhaka,1294,2639,3640,12346,3950,0,666,24535
+43,Female,Gynecology,Ovarian Cyst,Major Surgery,4,No,Private,Sylhet,623,2656,2143,41637,8528,0,444,56031
+39,Male,Gastroenterology,Hepatitis,Minor Surgery,5,No,Community Private,Khulna,1516,2125,1653,5776,5695,0,1142,17907
+31,Female,General Medicine,Pneumonia,Critical Care,10,Yes,Private,Chattogram,1217,1197,1750,0,23430,40150,1054,68798
+50,Male,Neurology,Epilepsy,Diagnostic & Medical,4,No,Community Private,Chattogram,1131,2737,1713,0,3704,0,704,9989
+26,Male,Pulmonology,COPD,Medication,4,No,Private,Rajshahi,784,3154,2037,0,6560,0,332,12867
+75,Female,Gastroenterology,Hepatitis,Critical Care,10,No,Community Private,Dhaka,646,2064,1214,0,11960,0,667,16551
+75,Female,Gynecology,Pregnancy Complication,Diagnostic & Medical,3,No,Community Private,Dhaka,987,6234,1133,0,5010,0,683,14047
+37,Female,Orthopedics,Fracture,Medication,3,No,Private,Chattogram,1445,6568,1264,0,8472,0,614,18363
+68,Male,Cardiology,Heart Failure,Minor Surgery,5,No,Specialized Private,Chattogram,1361,4740,4233,12021,18100,0,684,41139
+62,Male,Gastroenterology,Peptic Ulcer,Medication,1,No,Community Private,Dhaka,1588,5278,1480,0,1074,0,596,10016
+41,Male,General Medicine,Dengue Fever,Medication,3,No,Private,Rajshahi,900,5493,4237,0,7002,0,1157,18789
+59,Male,Oncology,Lung Cancer,Medication,1,No,Community Private,Chattogram,724,1563,1947,0,1196,0,661,6091
+72,Female,Neurology,Epilepsy,Medication,4,No,Specialized Private,Khulna,1649,1871,2965,0,14504,0,984,21973
+80,Male,General Medicine,Pneumonia,Minor Surgery,3,No,Private,Rajshahi,1007,1476,1766,13382,7692,0,775,26098
+42,Male,Nephrology,Chronic Kidney Disease,Medication,2,No,Community Private,Chattogram,1336,4840,3214,0,2518,0,1161,13069
+53,Male,Nephrology,Chronic Kidney Disease,Major Surgery,6,No,Private,Dhaka,511,2544,2604,41401,15714,0,467,63241
+55,Female,Gynecology,Pregnancy Complication,Minor Surgery,3,No,Specialized Private,Chattogram,1516,5483,2526,7248,8589,0,1054,26416
+9,Male,Nephrology,Urinary Infection,Diagnostic & Medical,3,No,Specialized Private,Dhaka,1795,2639,2647,0,11760,0,583,19424
+40,Male,Gastroenterology,Peptic Ulcer,Medication,1,No,Private,Chattogram,1464,3646,1044,0,1771,0,334,8259
+17,Female,Gastroenterology,Fatty Liver,Medication,2,No,Community Private,Dhaka,1330,2657,4102,0,2800,0,1020,11909
+39,Male,General Surgery,Gallstones,Major Surgery,5,No,Private,Chattogram,1617,5841,3372,42030,14310,0,380,67550
+50,Male,Cardiology,Hypertension,Diagnostic & Medical,5,No,Private,Khulna,1157,2427,2268,0,9440,0,566,15858
+22,Female,Pulmonology,COPD,Medication,4,No,Community Private,Khulna,966,4868,2730,0,4572,0,847,13983
+85,Female,Orthopedics,Fracture,Diagnostic & Medical,5,No,Private,Dhaka,682,2161,1354,0,9570,0,1038,14805
+39,Male,Pulmonology,Asthma,Medication,4,No,Private,Chattogram,1338,8875,4408,0,9120,0,1104,24845
+37,Male,Neurology,Epilepsy,Medication,2,No,Private,Dhaka,627,2617,1994,0,3198,0,776,9212
+78,Male,Pulmonology,Respiratory Infection,Diagnostic & Medical,1,No,Private,Dhaka,622,4532,1008,0,1700,0,743,8605
+8,Male,Pulmonology,Respiratory Infection,Diagnostic & Medical,1,No,Specialized Private,Sylhet,1741,1128,4978,0,4096,0,358,12301
+61,Male,Cardiology,Heart Disease,Minor Surgery,3,No,Private,Dhaka,922,2818,2820,7317,8910,0,1007,23794
+32,Male,Neurology,Epilepsy,Diagnostic & Medical,1,No,Community Private,Dhaka,808,6057,7606,0,1456,0,659,16586
+75,Male,Nephrology,Kidney Stone,Diagnostic & Medical,1,No,Community Private,Dhaka,565,5352,2446,0,1004,0,1157,10524
+8,Male,Nephrology,Kidney Stone,Medication,3,No,Specialized Private,Sylhet,1660,2523,3742,0,11961,0,492,20378
+76,Female,Orthopedics,Knee Osteoarthritis,Medication,2,No,Private,Chattogram,983,1432,1038,0,4880,0,813,9146
+69,Male,Gynecology,Ovarian Cyst,Medication,3,No,Specialized Private,Dhaka,1776,4893,3361,0,11499,0,1113,22642
+26,Female,Oncology,Lung Cancer,Diagnostic & Medical,5,No,Community Private,Khulna,1795,3092,1645,0,7380,0,1128,15040
+15,Female,Nephrology,Urinary Infection,Major Surgery,6,No,Specialized Private,Chattogram,939,3631,4536,16829,16488,0,1027,43450
+42,Female,Neurology,Migraine,Diagnostic & Medical,5,No,Community Private,Chattogram,688,4467,1552,0,7535,0,501,14743
+31,Male,Gastroenterology,Peptic Ulcer,Major Surgery,6,No,Private,Dhaka,675,2191,5820,57474,17550,0,377,84087
+13,Female,General Surgery,Gallstones,Medication,3,No,Community Private,Chattogram,913,2357,4248,0,3336,0,370,11224
+76,Female,Neurology,Epilepsy,Minor Surgery,4,No,Specialized Private,Dhaka,1763,3471,1014,5454,13384,0,785,25871
+42,Female,General Surgery,Hernia,Medication,3,No,Specialized Private,Dhaka,682,3648,3153,0,11136,0,1193,19812
+62,Female,Pulmonology,Asthma,Medication,1,No,Community Private,Dhaka,1229,3663,1283,0,845,0,954,7974
+54,Female,General Surgery,Gallstones,Critical Care,3,Yes,Private,Chattogram,1252,3226,5582,0,8322,19977,350,38709
+63,Female,Pulmonology,COPD,Medication,4,No,Private,Chattogram,586,7738,1322,0,9252,0,855,19753
+45,Male,Oncology,Lung Cancer,Medication,2,No,Community Private,Dhaka,1227,6595,1984,0,3130,0,1199,14135
+34,Male,Nephrology,Chronic Kidney Disease,Diagnostic & Medical,2,No,Specialized Private,Dhaka,1384,1930,1043,0,7912,0,940,13209
+47,Male,General Medicine,Gastritis,Medication,2,No,Specialized Private,Khulna,1773,4662,2726,0,8170,0,622,17953
+32,Male,Neurology,Migraine,Diagnostic & Medical,1,No,Private,Dhaka,1041,2190,3900,0,2341,0,878,10350
+47,Female,Pulmonology,Respiratory Infection,Major Surgery,6,No,Specialized Private,Dhaka,751,1155,3567,56051,17976,0,471,79971
+52,Male,Pulmonology,COPD,Major Surgery,6,No,Specialized Private,Dhaka,530,7506,1646,47150,20286,0,964,78082
+37,Male,Pulmonology,Respiratory Infection,Minor Surgery,5,No,Private,Sylhet,963,3064,6330,12945,9500,0,942,33744
+57,Female,Cardiology,Hypertension,Diagnostic & Medical,2,No,Community Private,Sylhet,1420,2155,1379,0,3422,0,539,8915
+15,Male,General Medicine,Gastritis,Minor Surgery,3,No,Community Private,Chattogram,737,4174,2970,13741,4047,0,498,26167
+25,Male,Neurology,Migraine,Minor Surgery,2,No,Private,Chattogram,1788,2172,3379,9678,5790,0,878,23685
+60,Female,Nephrology,Chronic Kidney Disease,Major Surgery,6,No,Private,Dhaka,1468,3056,3025,51061,12492,0,499,71601
+50,Female,Nephrology,Chronic Kidney Disease,Minor Surgery,5,No,Community Private,Dhaka,600,7143,2289,15000,8590,0,512,34134
+52,Male,Orthopedics,Knee Osteoarthritis,Minor Surgery,4,No,Specialized Private,Dhaka,665,2211,2933,10667,11560,0,889,28925
+57,Male,General Surgery,Hernia,Minor Surgery,4,No,Community Private,Chattogram,1064,1847,4594,8356,5640,0,506,22007
+51,Female,Oncology,Breast Cancer,Major Surgery,6,No,Community Private,Sylhet,1275,9586,8459,36425,5076,0,1139,61960
+40,Female,Orthopedics,Knee Osteoarthritis,Medication,3,No,Community Private,Dhaka,1089,3084,4119,0,5004,0,927,14223
+49,Male,Pulmonology,COPD,Major Surgery,5,No,Private,Rajshahi,671,4939,1734,17155,11510,0,1047,37056
+30,Male,Pulmonology,Asthma,Diagnostic & Medical,4,No,Private,Chattogram,987,1718,4943,0,10820,0,706,19174
+42,Male,General Surgery,Gallstones,Critical Care,10,Yes,Community Private,Dhaka,1371,1280,1616,0,12600,38380,766,56013
+53,Female,Pulmonology,COPD,Diagnostic & Medical,4,No,Private,Sylhet,740,6319,2156,0,11200,0,628,21043
+65,Female,General Medicine,Dengue Fever,Medication,3,No,Community Private,Chattogram,1653,2462,2298,0,2529,0,607,9549
+8,Male,Oncology,Lymphoma,Diagnostic & Medical,2,No,Private,Dhaka,527,1923,1445,0,3754,0,722,8371
+18,Female,Neurology,Epilepsy,Minor Surgery,4,No,Specialized Private,Sylhet,1055,2313,3429,14262,15136,0,938,37133
+36,Male,Gynecology,Ovarian Cyst,Medication,1,No,Community Private,Khulna,1405,1784,2563,0,1443,0,776,7971
+55,Male,Gastroenterology,Fatty Liver,Medication,1,No,Community Private,Chattogram,1019,3019,2106,0,1587,0,821,8552
+85,Female,Orthopedics,Fracture,Minor Surgery,2,No,Private,Rajshahi,1402,2119,1336,12645,5654,0,341,23497
+22,Female,Neurology,Migraine,Medication,2,No,Specialized Private,Dhaka,503,7065,3196,0,8928,0,366,20058
+24,Male,Neurology,Stroke,Minor Surgery,5,No,Community Private,Dhaka,1637,4049,3426,7358,6915,0,1162,24547
+49,Male,Orthopedics,Arthritis,Diagnostic & Medical,4,No,Specialized Private,Chattogram,1659,3837,2133,0,12992,0,565,21186
+69,Female,Gastroenterology,Peptic Ulcer,Diagnostic & Medical,4,No,Specialized Private,Dhaka,1248,3624,3804,0,17892,0,756,27324
+44,Female,General Medicine,Pneumonia,Diagnostic & Medical,4,No,Community Private,Chattogram,721,1649,4045,0,6260,0,947,13622
+44,Female,Gastroenterology,Fatty Liver,Medication,4,No,Private,Chattogram,1382,1328,5301,0,8496,0,963,17470
+9,Male,General Medicine,Dengue Fever,Diagnostic & Medical,4,No,Specialized Private,Rajshahi,1556,7739,1254,0,14080,0,904,25533
+32,Female,Cardiology,Heart Failure,Minor Surgery,2,No,Specialized Private,Dhaka,1351,2082,2663,14947,8878,0,381,30302
+21,Male,General Medicine,Gastritis,Medication,3,No,Private,Sylhet,1415,2892,3688,0,6213,0,517,14725
+64,Male,Oncology,Lymphoma,Diagnostic & Medical,2,No,Private,Dhaka,706,6230,7672,0,3782,0,401,18791
+82,Female,General Surgery,Appendicitis,Diagnostic & Medical,3,No,Private,Khulna,759,7626,1930,0,6135,0,478,16928
+49,Male,Cardiology,Heart Disease,Medication,4,No,Private,Sylhet,1093,3788,2025,0,8348,0,803,16057
+64,Male,Orthopedics,Knee Osteoarthritis,Diagnostic & Medical,5,No,Private,Dhaka,1054,7651,2222,0,13955,0,639,25521
+35,Male,Neurology,Migraine,Major Surgery,4,Yes,Private,Dhaka,1293,3914,2976,40471,11900,19252,698,80504
+49,Male,General Medicine,Diabetes,Medication,3,No,Private,Dhaka,1616,2376,2675,0,6624,0,784,14075
+29,Female,Gastroenterology,Peptic Ulcer,Diagnostic & Medical,5,No,Specialized Private,Sylhet,1681,1599,2256,0,16110,0,377,22023
+42,Female,Cardiology,Hypertension,Major Surgery,8,No,Private,Sylhet,1067,2889,3513,19040,23064,0,862,50435
+31,Male,General Medicine,Gastritis,Diagnostic & Medical,4,No,Private,Chattogram,1447,3900,6049,0,7580,0,687,19663
+30,Male,Neurology,Migraine,Diagnostic & Medical,5,No,Private,Khulna,1098,3329,1284,0,9165,0,998,15874
+43,Male,Gastroenterology,Hepatitis,Minor Surgery,3,No,Community Private,Chattogram,1269,4280,5357,7762,5190,0,510,24368
+53,Female,General Medicine,Dengue Fever,Medication,4,No,Community Private,Chattogram,1711,3623,1578,0,3448,0,1103,11463
+23,Female,Neurology,Epilepsy,Minor Surgery,3,No,Private,Chattogram,1074,7409,1451,10767,6792,0,990,28483
+47,Female,Pulmonology,COPD,Medication,3,No,Community Private,Sylhet,1554,4870,820,0,3363,0,793,11400
+32,Female,Pulmonology,COPD,Major Surgery,3,No,Private,Rajshahi,919,1668,5739,50013,7668,0,670,66677
+59,Male,General Surgery,Appendicitis,Medication,2,No,Community Private,Sylhet,1793,1602,1055,0,3306,0,443,8199
+46,Male,General Surgery,Hernia,Medication,1,No,Community Private,Khulna,1397,2128,2457,0,1512,0,667,8161
+69,Male,Nephrology,Chronic Kidney Disease,Diagnostic & Medical,2,No,Community Private,Sylhet,1251,4252,3022,0,3534,0,363,12422
+30,Female,Nephrology,Urinary Infection,Major Surgery,6,No,Private,Chattogram,883,3509,2064,15210,12714,0,625,35005
+56,Female,Orthopedics,Arthritis,Medication,2,No,Specialized Private,Chattogram,1268,2108,2228,0,7538,0,1080,14222
+56,Female,Gastroenterology,Peptic Ulcer,Minor Surgery,3,No,Community Private,Dhaka,1644,1657,3515,9656,4188,0,566,21226
+48,Female,General Medicine,Dengue Fever,Diagnostic & Medical,1,No,Private,Chattogram,653,1640,7317,0,1955,0,403,11968
+49,Female,General Surgery,Gallstones,Medication,2,No,Community Private,Chattogram,1548,3861,2958,0,2052,0,723,11142
+68,Male,Orthopedics,Fracture,Minor Surgery,3,No,Community Private,Dhaka,1274,2766,4070,7414,5274,0,1067,21865
+39,Male,General Surgery,Gallstones,Diagnostic & Medical,4,No,Specialized Private,Chattogram,1351,8359,1133,0,10436,0,1130,22409
+31,Female,Orthopedics,Knee Osteoarthritis,Major Surgery,4,No,Community Private,Sylhet,962,2030,1598,22515,5868,0,708,33681
+62,Female,Orthopedics,Knee Osteoarthritis,Major Surgery,7,No,Private,Dhaka,571,1442,1776,53414,12796,0,462,70461
+40,Male,Gastroenterology,Hepatitis,Medication,2,No,Specialized Private,Rajshahi,1608,4741,3626,0,8804,0,1031,19810
+85,Female,Pulmonology,Respiratory Infection,Critical Care,4,Yes,Specialized Private,Sylhet,726,1802,1303,0,17704,25944,685,48164
+62,Male,Orthopedics,Arthritis,Diagnostic & Medical,5,No,Community Private,Dhaka,1358,2552,6373,0,6205,0,902,17390
+43,Female,Orthopedics,Fracture,Diagnostic & Medical,5,No,Private,Dhaka,1481,1496,6149,0,9655,0,870,19651
+61,Male,Cardiology,Heart Disease,Diagnostic & Medical,1,No,Private,Chattogram,900,2316,4319,0,2774,0,758,11067
+46,Female,Gynecology,Fibroid,Diagnostic & Medical,5,Yes,Community Private,Chattogram,1040,1492,641,0,5900,26590,524,36187
+35,Male,Pulmonology,Respiratory Infection,Medication,3,No,Community Private,Rajshahi,1618,1373,833,0,3177,0,627,7628
+70,Male,Nephrology,Urinary Infection,Medication,3,No,Private,Dhaka,1015,4206,3656,0,8769,0,896,18542
+35,Female,Neurology,Stroke,Diagnostic & Medical,1,No,Private,Sylhet,1730,1913,8054,0,2575,0,379,14651
+16,Male,Neurology,Stroke,Major Surgery,6,No,Private,Chattogram,694,3422,1471,48337,10236,0,876,65036
+26,Female,General Medicine,Dengue Fever,Diagnostic & Medical,4,No,Community Private,Dhaka,1047,4690,1528,0,7144,0,743,15152
+25,Female,General Medicine,Diabetes,Critical Care,4,Yes,Private,Dhaka,959,6104,4899,0,11840,18756,1141,43699
+17,Female,General Medicine,Diabetes,Medication,1,No,Specialized Private,Dhaka,1555,10343,5051,0,3497,0,429,20875
+59,Female,Gastroenterology,Fatty Liver,Diagnostic & Medical,2,No,Specialized Private,Chattogram,1783,3091,2166,0,8818,0,600,16458
+13,Female,General Medicine,Diabetes,Medication,2,No,Specialized Private,Chattogram,1383,3857,517,0,6312,0,1124,13193
+28,Female,General Medicine,Gastritis,Minor Surgery,3,Yes,Community Private,Chattogram,1138,4299,2786,5197,5391,16002,910,35723
+33,Female,General Medicine,Dengue Fever,Major Surgery,8,No,Community Private,Chattogram,1673,1475,1857,37557,12560,0,414,55536
+53,Male,General Medicine,Pneumonia,Minor Surgery,4,No,Community Private,Dhaka,830,3557,2089,9299,5352,0,775,21902
+83,Female,Neurology,Migraine,Major Surgery,3,No,Community Private,Chattogram,1269,4613,4253,17418,4836,0,934,33323
+28,Male,General Medicine,Dengue Fever,Medication,4,No,Community Private,Dhaka,666,3487,4717,0,3936,0,343,13149
+46,Male,Gynecology,Fibroid,Minor Surgery,2,No,Private,Chattogram,1121,4706,1826,12410,4306,0,1180,25549
+25,Male,Pulmonology,Respiratory Infection,Minor Surgery,4,No,Specialized Private,Chattogram,737,2399,1527,5013,16152,0,505,26333
+40,Female,General Medicine,Diabetes,Medication,3,No,Private,Chattogram,724,3638,2348,0,4689,0,368,11767
+27,Male,Pulmonology,COPD,Diagnostic & Medical,2,No,Private,Dhaka,1120,1857,3123,0,5246,0,1180,12526
+85,Female,Orthopedics,Knee Osteoarthritis,Major Surgery,4,No,Community Private,Chattogram,1562,5020,1015,48552,6900,0,987,64036
+26,Female,Neurology,Stroke,Minor Surgery,5,No,Community Private,Khulna,823,3468,3725,4065,5975,0,738,18794
+36,Female,General Surgery,Gallstones,Medication,2,No,Community Private,Chattogram,1376,12556,1946,0,3384,0,780,20042
+37,Male,General Surgery,Hernia,Diagnostic & Medical,4,No,Community Private,Sylhet,1293,2364,2278,0,4416,0,1044,11395
+43,Male,Orthopedics,Arthritis,Diagnostic & Medical,1,No,Community Private,Chattogram,833,4810,2536,0,1415,0,340,9934
+63,Male,Pulmonology,Respiratory Infection,Medication,3,No,Private,Khulna,1236,3561,2909,0,8427,0,1102,17235
+39,Female,General Medicine,Pneumonia,Diagnostic & Medical,2,No,Private,Sylhet,1631,2405,2557,0,4458,0,373,11424
+49,Female,Orthopedics,Knee Osteoarthritis,Diagnostic & Medical,3,No,Community Private,Dhaka,770,1673,5652,0,3090,0,388,11573
+41,Female,Gastroenterology,Hepatitis,Diagnostic & Medical,3,No,Community Private,Chattogram,1156,5434,2618,0,2430,0,484,12122
+8,Female,General Medicine,Diabetes,Medication,2,No,Community Private,Dhaka,930,2816,2696,0,3226,0,834,10502
+34,Female,Pulmonology,Asthma,Diagnostic & Medical,1,No,Private,Khulna,1469,7060,2472,0,2027,0,889,13917
+39,Female,Gastroenterology,Hepatitis,Diagnostic & Medical,1,No,Specialized Private,Chattogram,1381,3867,2300,0,2676,0,605,10829
+65,Male,Pulmonology,Respiratory Infection,Diagnostic & Medical,2,No,Private,Rajshahi,1019,7399,3084,0,5538,0,947,17987
+22,Male,Gynecology,Pregnancy Complication,Medication,4,No,Community Private,Chattogram,1677,3194,972,0,4400,0,638,10881
+41,Male,Gynecology,Fibroid,Diagnostic & Medical,1,No,Private,Chattogram,1443,4684,3403,0,2002,0,991,12523
+72,Male,Orthopedics,Knee Osteoarthritis,Diagnostic & Medical,4,No,Community Private,Dhaka,1484,2784,3191,0,4268,0,888,12615
+50,Male,Cardiology,Heart Failure,Medication,2,No,Private,Dhaka,1347,4214,1832,0,5390,0,1138,13921
+52,Male,General Surgery,Gallstones,Diagnostic & Medical,4,No,Specialized Private,Dhaka,612,2994,1518,0,15772,0,717,21613
+59,Male,General Surgery,Hernia,Minor Surgery,3,No,Private,Chattogram,629,1528,2271,5450,8364,0,962,19204
+64,Male,Oncology,Lung Cancer,Medication,2,No,Community Private,Dhaka,1339,3333,2658,0,3134,0,859,11323
+43,Female,Cardiology,Hypertension,Medication,1,No,Private,Sylhet,841,4459,5665,0,1819,0,903,13687
+48,Female,Gynecology,Pregnancy Complication,Diagnostic & Medical,2,No,Community Private,Rajshahi,1262,5474,1445,0,3054,0,456,11691
+42,Female,Nephrology,Chronic Kidney Disease,Minor Surgery,3,No,Specialized Private,Khulna,1739,2697,1815,11822,10308,0,346,28727
+75,Male,Orthopedics,Knee Osteoarthritis,Diagnostic & Medical,2,No,Community Private,Sylhet,1595,3032,2193,0,2592,0,1139,10551
+54,Female,Neurology,Migraine,Minor Surgery,5,No,Specialized Private,Dhaka,1066,1935,1620,4646,21635,0,662,31564
+53,Male,Nephrology,Urinary Infection,Minor Surgery,5,No,Community Private,Dhaka,997,2234,2347,12634,6280,0,871,25363
+85,Female,Oncology,Lymphoma,Diagnostic & Medical,3,No,Specialized Private,Dhaka,1180,10240,2257,0,7542,0,689,21908
+37,Female,Orthopedics,Fracture,Major Surgery,3,No,Specialized Private,Sylhet,1592,3567,3733,29078,10866,0,1097,49933
+27,Female,Nephrology,Kidney Stone,Medication,2,No,Community Private,Chattogram,1733,2171,3253,0,2288,0,951,10396
+1,Male,Pulmonology,Asthma,Medication,4,No,Community Private,Chattogram,1333,3534,6378,0,6396,0,1041,18682
+31,Male,Cardiology,Hypertension,Diagnostic & Medical,4,No,Specialized Private,Dhaka,1072,12916,4070,0,13080,0,300,31438
+60,Male,Gastroenterology,Peptic Ulcer,Medication,2,No,Community Private,Dhaka,1684,3747,2671,0,3154,0,1188,12444
+19,Male,General Medicine,Dengue Fever,Major Surgery,8,No,Community Private,Chattogram,767,2465,3032,16956,7368,0,842,31430
+17,Male,Neurology,Migraine,Medication,4,No,Specialized Private,Chattogram,1091,5941,2005,0,12872,0,413,22322
+37,Female,Orthopedics,Arthritis,Critical Care,4,Yes,Private,Chattogram,1712,2793,3148,0,7156,14020,839,29668
+38,Female,General Surgery,Hernia,Medication,1,No,Private,Dhaka,1595,6662,1618,0,1941,0,457,12273
+39,Female,Gastroenterology,Hepatitis,Medication,3,No,Community Private,Rajshahi,1351,6273,1899,0,4389,0,501,14413
+34,Male,Gynecology,Fibroid,Critical Care,5,Yes,Community Private,Khulna,599,9046,3093,0,6920,32860,746,53264
+60,Female,Nephrology,Urinary Infection,Diagnostic & Medical,4,No,Private,Chattogram,1266,6977,1772,0,7752,0,927,18694
+38,Female,Cardiology,Hypertension,Diagnostic & Medical,2,No,Community Private,Rajshahi,711,3521,2587,0,3324,0,666,10809

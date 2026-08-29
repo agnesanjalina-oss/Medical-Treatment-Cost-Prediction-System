@@ -1,312 +1,1017 @@
 <!DOCTYPE html>
+
 <html lang="en">
 
 <head>
+<meta charset="UTF-8">
 
-    <meta charset="UTF-8">
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0">
 
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0">
+<title>Medical Treatment Cost Prediction</title>
 
-    <title>Treatment Cost Prediction</title>
+<link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    rel="stylesheet">
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-          rel="stylesheet">
+<link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
-    <link rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<style>
+    * {
+        box-sizing: border-box;
+    }
 
-    <style>
+    html,
+    body {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        min-height: 100%;
+    }
 
-        body {
-            background: #eef3f8;
-            font-family: Arial, sans-serif;
+    body {
+        background: #eef3f8;
+        font-family: Arial, Helvetica, sans-serif;
+        color: #222;
+    }
+
+    /* =========================
+       NAVBAR
+    ========================= */
+
+    .navbar {
+        width: 100%;
+        margin: 0;
+        padding: 14px 25px;
+        background: #0d6efd !important;
+        border: none;
+        border-radius: 0;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.10);
+    }
+
+    .navbar .container-fluid {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    .navbar-brand {
+        color: white !important;
+        font-size: 20px;
+        font-weight: bold;
+        text-decoration: none;
+    }
+
+    .nav-link {
+        color: white !important;
+        font-weight: 500;
+        text-decoration: none;
+        transition: 0.2s;
+    }
+
+    .nav-link:hover {
+        opacity: 0.85;
+    }
+
+    /* =========================
+       MAIN CONTAINER
+    ========================= */
+
+    .main-container {
+        width: 1000px;
+        max-width: 95%;
+        margin: 25px auto 0 auto;
+        padding: 0;
+    }
+
+    /* =========================
+       MAIN CARD
+    ========================= */
+
+    .main-card {
+        width: 100%;
+        background: white;
+        border: none;
+        border-radius: 15px;
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.12);
+        overflow: hidden;
+    }
+
+    /* =========================
+       CARD HEADER
+    ========================= */
+
+    .card-header-custom {
+        background: #0d6efd;
+        color: white;
+        padding: 20px 25px;
+    }
+
+    .card-header-custom h3 {
+        margin: 0;
+        font-size: 22px;
+        font-weight: bold;
+    }
+
+    .card-header-custom p {
+        margin: 6px 0 0 0;
+        opacity: 0.95;
+    }
+
+    /* =========================
+       CARD BODY
+    ========================= */
+
+    .card-body-custom {
+        padding: 30px;
+    }
+
+    /* =========================
+       SECTION TITLE
+    ========================= */
+
+    .section-title {
+        margin-top: 0;
+        margin-bottom: 20px;
+        color: #0d6efd;
+        font-weight: bold;
+        font-size: 18px;
+    }
+
+    /* =========================
+       FORM
+    ========================= */
+
+    .form-label {
+        font-weight: 600;
+        color: #333;
+        margin-bottom: 7px;
+    }
+
+    .form-control,
+    .form-select {
+        width: 100%;
+        padding: 11px 12px;
+        border: 1px solid #ced4da;
+        border-radius: 8px;
+        font-size: 15px;
+        background: white;
+    }
+
+    .form-control:focus,
+    .form-select:focus {
+        border-color: #0d6efd;
+        box-shadow: 0 0 0 0.15rem rgba(13, 110, 253, 0.15);
+    }
+
+    /* =========================
+       PREDICT BUTTON
+    ========================= */
+
+    .btn-predict {
+        width: 100%;
+        padding: 13px;
+        font-size: 17px;
+        font-weight: bold;
+        border-radius: 8px;
+    }
+
+    /* =========================
+       RESULT BOX
+    ========================= */
+
+    .result-box {
+        margin-top: 30px;
+        padding: 25px;
+        border-radius: 12px;
+        background: #e8f5e9;
+        border: 2px solid #198754;
+        text-align: center;
+    }
+
+    .result-box h5 {
+        margin-bottom: 8px;
+        font-weight: 600;
+    }
+
+    .result-box h2 {
+        color: #198754;
+        font-weight: bold;
+        margin-bottom: 8px;
+    }
+
+    .result-box p {
+        color: #6c757d;
+    }
+
+    /* =========================
+       DIVIDER
+    ========================= */
+
+    hr {
+        border: 0;
+        border-top: 1px solid #dee2e6;
+        margin: 25px 0;
+    }
+
+    /* =========================
+       ALERT
+    ========================= */
+
+    .alert {
+        border-radius: 10px;
+        margin-bottom: 25px;
+    }
+
+    /* =========================
+       FOOTER
+    ========================= */
+
+    .footer {
+        width: 100%;
+        text-align: center;
+        margin: 25px 0;
+        padding-bottom: 15px;
+        color: #808080;
+        font-size: 14px;
+    }
+
+    /* =========================
+       MOBILE
+    ========================= */
+
+    @media (max-width: 768px) {
+
+        .navbar {
+            padding: 14px 15px;
         }
 
-        .container {
-            margin-top: 40px;
+        .navbar .container-fluid {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 8px;
         }
 
-        .card {
-            border: none;
-            border-radius: 15px;
-            box-shadow: 0 5px 20px rgba(0,0,0,.12);
+        .navbar .nav-menu {
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 5px;
         }
 
-        .header {
-            background: #198754;
-            color: white;
+        .nav-link {
+            margin-right: 10px !important;
+        }
+
+        .main-container {
+            width: 95%;
+            max-width: 95%;
+            margin: 20px auto 0 auto;
+        }
+
+        .card-body-custom {
             padding: 20px;
-            border-radius: 15px 15px 0 0;
         }
 
-        .result {
-            background: #e8f5e9;
-            border-radius: 12px;
-            padding: 25px;
-            text-align: center;
+        .card-header-custom {
+            padding: 18px 20px;
         }
 
-        .cost {
-            font-size: 35px;
-            font-weight: bold;
-            color: #198754;
+        .card-header-custom h3 {
+            font-size: 19px;
         }
 
-    </style>
+    }
+
+</style>
 
 </head>
 
 <body>
 
-<div class="container">
+<!-- =========================
+     NAVBAR
+========================= -->
 
-    <div class="d-flex justify-content-between align-items-center mb-4">
+<nav class="navbar">
 
-        <h2>
-            <i class="fa-solid fa-calculator"></i>
-            Treatment Cost Prediction
-        </h2>
+<div class="container-fluid">
 
-        <a href="{{ url_for('dashboard') }}"
-           class="btn btn-secondary">
+    <a
+        class="navbar-brand"
+        href="{{ url_for('dashboard') }}">
 
-            <i class="fa-solid fa-arrow-left"></i>
+        <i class="fa-solid fa-hospital me-2"></i>
+
+        Medical Cost Prediction
+
+    </a>
+
+
+    <div class="nav-menu">
+
+        <a
+            href="{{ url_for('dashboard') }}"
+            class="nav-link d-inline-block me-3">
+
+            <i class="fa-solid fa-house me-1"></i>
+
             Dashboard
 
         </a>
 
-    </div>
 
+        <a
+            href="{{ url_for('patient') }}"
+            class="nav-link d-inline-block me-3">
 
-    <div class="card">
+            <i class="fa-solid fa-users me-1"></i>
 
-        <div class="header">
+            Patients
 
-            <h4>
-                Enter Treatment Information
-            </h4>
+        </a>
 
-        </div>
 
+        <a
+            href="{{ url_for('prediction') }}"
+            class="nav-link d-inline-block me-3">
 
-        <div class="card-body">
+            <i class="fa-solid fa-calculator me-1"></i>
 
-            <form action="{{ url_for('prediction') }}"
-                  method="POST">
+            Prediction
 
-                <div class="row">
+        </a>
 
 
-                    <div class="col-md-6 mb-3">
+        <a
+            href="{{ url_for('history') }}"
+            class="nav-link d-inline-block me-3">
 
-                        <label class="form-label">
-                            Patient
-                        </label>
+            <i class="fa-solid fa-clock-rotate-left me-1"></i>
 
-                        <select name="patient_id"
-                                id="patient_id"
-                                class="form-select"
-                                onchange="fillPatient()">
+            History
 
-                            <option value="">
-                                Select Patient
-                            </option>
+        </a>
 
-                            {% for p in patients %}
 
-                            <option value="{{ p['id'] }}"
-                                    data-name="{{ p['patient_name'] }}"
-                                    data-disease="{{ p['disease'] }}">
+        <a
+            href="{{ url_for('logout') }}"
+            class="nav-link d-inline-block">
 
-                                {{ p['patient_name'] }}
+            <i class="fa-solid fa-right-from-bracket me-1"></i>
 
-                            </option>
+            Logout
 
-                            {% endfor %}
-
-                        </select>
-
-                    </div>
-
-
-                    <div class="col-md-6 mb-3">
-
-                        <label class="form-label">
-                            Patient Name
-                        </label>
-
-                        <input type="text"
-                               name="patient_name"
-                               id="patient_name"
-                               class="form-control"
-                               placeholder="Patient name"
-                               required>
-
-                    </div>
-
-
-                    <div class="col-md-6 mb-3">
-
-                        <label class="form-label">
-                            Disease
-                        </label>
-
-                        <input type="text"
-                               name="disease"
-                               id="disease"
-                               class="form-control"
-                               placeholder="Disease"
-                               required>
-
-                    </div>
-
-
-                    <div class="col-md-6 mb-3">
-
-                        <label class="form-label">
-                            Treatment Type
-                        </label>
-
-                        <select name="treatment_type"
-                                class="form-select"
-                                required>
-
-                            <option value="">
-                                Select Treatment
-                            </option>
-
-                            <option value="Medication">
-                                Medication
-                            </option>
-
-                            <option value="Surgery">
-                                Surgery
-                            </option>
-
-                            <option value="Emergency">
-                                Emergency
-                            </option>
-
-                            <option value="General Treatment">
-                                General Treatment
-                            </option>
-
-                            <option value="Diagnostic">
-                                Diagnostic
-                            </option>
-
-                        </select>
-
-                    </div>
-
-
-                    <div class="col-md-6 mb-3">
-
-                        <label class="form-label">
-                            Hospital Days
-                        </label>
-
-                        <input type="number"
-                               name="hospital_days"
-                               class="form-control"
-                               min="0"
-                               value="0"
-                               required>
-
-                    </div>
-
-
-                    <div class="col-md-6 mb-3">
-
-                        <label class="form-label">
-                            ICU Required?
-                        </label>
-
-                        <select name="icu"
-                                class="form-select">
-
-                            <option value="0">
-                                No
-                            </option>
-
-                            <option value="1">
-                                Yes
-                            </option>
-
-                        </select>
-
-                    </div>
-
-                </div>
-
-
-                <button type="submit"
-                        class="btn btn-success">
-
-                    <i class="fa-solid fa-calculator"></i>
-                    Predict Treatment Cost
-
-                </button>
-
-            </form>
-
-
-            {% if predicted_cost is not none %}
-
-            <hr class="my-4">
-
-
-            <div class="result">
-
-                <h4>
-                    Estimated Treatment Cost
-                </h4>
-
-                <div class="cost">
-
-                    ৳ {{ "{:,.2f}".format(predicted_cost) }}
-
-                </div>
-
-                <p class="text-muted mb-0">
-
-                    This is an estimated cost.
-
-                </p>
-
-            </div>
-
-            {% endif %}
-
-        </div>
+        </a>
 
     </div>
 
 </div>
 
 
-<script>
+</nav>
 
-function fillPatient() {
+<!-- =========================
+     MAIN CONTENT
+========================= -->
 
-    const select = document.getElementById("patient_id");
+<div class="main-container">
 
-    const option = select.options[select.selectedIndex];
+<!-- FLASH MESSAGES -->
 
-    if (option.value) {
+{% with messages = get_flashed_messages() %}
 
-        document.getElementById("patient_name").value =
-            option.getAttribute("data-name");
+    {% if messages %}
 
-        document.getElementById("disease").value =
-            option.getAttribute("data-disease");
+        {% for message in messages %}
 
-    }
+            <div
+                class="alert alert-info alert-dismissible fade show"
+                role="alert">
 
-}
+                <i class="fa-solid fa-circle-info me-2"></i>
 
+                {{ message }}
+
+                <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="alert">
+                </button>
+
+            </div>
+
+        {% endfor %}
+
+    {% endif %}
+
+{% endwith %}
+
+
+<!-- MAIN CARD -->
+
+<div class="main-card">
+
+
+    <!-- HEADER -->
+
+    <div class="card-header-custom">
+
+        <h3>
+
+            <i class="fa-solid fa-calculator me-2"></i>
+
+            Treatment Cost Prediction
+
+        </h3>
+
+        <p>
+
+            Enter the patient's treatment information
+            to predict the estimated medical cost.
+
+        </p>
+
+    </div>
+
+
+    <!-- BODY -->
+
+    <div class="card-body-custom">
+
+
+        <form
+            action="{{ url_for('prediction') }}"
+            method="POST">
+
+
+            <!-- =========================
+                 PATIENT INFORMATION
+            ========================= -->
+
+            <h5 class="section-title">
+
+                <i class="fa-solid fa-user me-2"></i>
+
+                Patient Information
+
+            </h5>
+
+
+            <div class="row">
+
+
+                <!-- PATIENT NAME -->
+
+                <div class="col-md-6 mb-3">
+
+                    <label
+                        for="patient_name"
+                        class="form-label">
+
+                        Patient Name
+
+                    </label>
+
+                    <input
+                        type="text"
+                        id="patient_name"
+                        name="patient_name"
+                        class="form-control"
+                        placeholder="Enter patient name"
+                        value="{% if selected_patient %}{{ selected_patient['patient_name'] }}{% endif %}"
+                        required>
+
+                </div>
+
+
+                <!-- AGE -->
+
+                <div class="col-md-6 mb-3">
+
+                    <label
+                        for="age"
+                        class="form-label">
+
+                        Age
+
+                    </label>
+
+                    <input
+                        type="number"
+                        id="age"
+                        name="age"
+                        class="form-control"
+                        min="0"
+                        max="120"
+                        placeholder="Enter age"
+                        value="{% if selected_patient %}{{ selected_patient['age'] }}{% endif %}"
+                        required>
+
+                </div>
+
+
+                <!-- GENDER -->
+
+                <div class="col-md-6 mb-3">
+
+                    <label
+                        for="gender"
+                        class="form-label">
+
+                        Gender
+
+                    </label>
+
+                    <select
+                        id="gender"
+                        name="gender"
+                        class="form-select"
+                        required>
+
+                        <option value="">
+                            Select Gender
+                        </option>
+
+                        <option value="Male">
+                            Male
+                        </option>
+
+                        <option value="Female">
+                            Female
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <!-- DISEASE -->
+
+                <div class="col-md-6 mb-3">
+
+                    <label
+                        for="disease"
+                        class="form-label">
+
+                        Disease
+
+                    </label>
+
+                    <select
+                        id="disease"
+                        name="disease"
+                        class="form-select"
+                        required>
+
+                        <option value="">
+                            Select Disease
+                        </option>
+
+                        <option value="Diabetes">
+                            Diabetes
+                        </option>
+
+                        <option value="Hypertension">
+                            Hypertension
+                        </option>
+
+                        <option value="Heart Disease">
+                            Heart Disease
+                        </option>
+
+                        <option value="Kidney Disease">
+                            Kidney Disease
+                        </option>
+
+                        <option value="Liver Disease">
+                            Liver Disease
+                        </option>
+
+                        <option value="Stroke">
+                            Stroke
+                        </option>
+
+                        <option value="Pneumonia">
+                            Pneumonia
+                        </option>
+
+                        <option value="Asthma">
+                            Asthma
+                        </option>
+
+                        <option value="Cancer">
+                            Cancer
+                        </option>
+
+                        <option value="Other">
+                            Other
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <!-- DEPARTMENT -->
+
+                <div class="col-md-6 mb-3">
+
+                    <label
+                        for="department"
+                        class="form-label">
+
+                        Department
+
+                    </label>
+
+                    <select
+                        id="department"
+                        name="department"
+                        class="form-select"
+                        required>
+
+                        <option value="">
+                            Select Department
+                        </option>
+
+                        <option value="General Medicine">
+                            General Medicine
+                        </option>
+
+                        <option value="Cardiology">
+                            Cardiology
+                        </option>
+
+                        <option value="Neurology">
+                            Neurology
+                        </option>
+
+                        <option value="Orthopedics">
+                            Orthopedics
+                        </option>
+
+                        <option value="Gastroenterology">
+                            Gastroenterology
+                        </option>
+
+                        <option value="Nephrology">
+                            Nephrology
+                        </option>
+
+                        <option value="Pulmonology">
+                            Pulmonology
+                        </option>
+
+                        <option value="Pediatrics">
+                            Pediatrics
+                        </option>
+
+                        <option value="Gynecology">
+                            Gynecology
+                        </option>
+
+                        <option value="Dermatology">
+                            Dermatology
+                        </option>
+
+                        <option value="ENT">
+                            ENT
+                        </option>
+
+                        <option value="General Surgery">
+                            General Surgery
+                        </option>
+
+                        <option value="Oncology">
+                            Oncology
+                        </option>
+
+                        <option value="Emergency">
+                            Emergency
+                        </option>
+
+                        <option value="ICU">
+                            ICU
+                        </option>
+
+                    </select>
+
+                </div>
+
+            </div>
+
+
+            <hr>
+
+
+            <!-- =========================
+                 TREATMENT INFORMATION
+            ========================= -->
+
+            <h5 class="section-title">
+
+                <i class="fa-solid fa-stethoscope me-2"></i>
+
+                Treatment Information
+
+            </h5>
+
+
+            <div class="row">
+
+
+                <!-- TREATMENT TYPE -->
+
+                <div class="col-md-6 mb-3">
+
+                    <label
+                        for="treatment_type"
+                        class="form-label">
+
+                        Treatment Type
+
+                    </label>
+
+                    <select
+                        id="treatment_type"
+                        name="treatment_type"
+                        class="form-select"
+                        required>
+
+                        <option value="">
+                            Select Treatment Type
+                        </option>
+
+                        <option value="Medication">
+                            Medication
+                        </option>
+
+                        <option value="Surgery">
+                            Surgery
+                        </option>
+
+                        <option value="Diagnostic Test">
+                            Diagnostic Test
+                        </option>
+
+                        <option value="Chemotherapy">
+                            Chemotherapy
+                        </option>
+
+                        <option value="Radiotherapy">
+                            Radiotherapy
+                        </option>
+
+                        <option value="Physiotherapy">
+                            Physiotherapy
+                        </option>
+
+                        <option value="Dialysis">
+                            Dialysis
+                        </option>
+
+                        <option value="Emergency Treatment">
+                            Emergency Treatment
+                        </option>
+
+                        <option value="Other">
+                            Other
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <!-- HOSPITAL DAYS -->
+
+                <div class="col-md-6 mb-3">
+
+                    <label
+                        for="hospital_days"
+                        class="form-label">
+
+                        Hospital Days
+
+                    </label>
+
+                    <input
+                        type="number"
+                        id="hospital_days"
+                        name="hospital_days"
+                        class="form-control"
+                        min="1"
+                        max="365"
+                        placeholder="Number of hospital days"
+                        required>
+
+                </div>
+
+
+                <!-- ICU -->
+
+                <div class="col-md-6 mb-3">
+
+                    <label
+                        for="icu"
+                        class="form-label">
+
+                        ICU Required?
+
+                    </label>
+
+                    <select
+                        id="icu"
+                        name="icu"
+                        class="form-select"
+                        required>
+
+                        <option value="No">
+                            No
+                        </option>
+
+                        <option value="Yes">
+                            Yes
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <!-- HOSPITAL TYPE -->
+
+                <div class="col-md-6 mb-3">
+
+                    <label
+                        for="hospital_type"
+                        class="form-label">
+
+                        Hospital Type
+
+                    </label>
+
+                    <select
+                        id="hospital_type"
+                        name="hospital_type"
+                        class="form-select"
+                        required>
+
+                        <option value="">
+                            Select Hospital Type
+                        </option>
+
+                        <option value="Government">
+                            Government
+                        </option>
+
+                        <option value="Private">
+                            Private
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <!-- LOCATION -->
+
+                <div class="col-md-6 mb-3">
+
+                    <label
+                        for="hospital_location"
+                        class="form-label">
+
+                        Hospital Location
+
+                    </label>
+
+                    <select
+                        id="hospital_location"
+                        name="hospital_location"
+                        class="form-select"
+                        required>
+
+                        <option value="">
+                            Select Location
+                        </option>
+
+                        <option value="Dhaka">
+                            Dhaka
+                        </option>
+
+                        <option value="Chattogram">
+                            Chattogram
+                        </option>
+
+                        <option value="Sylhet">
+                            Sylhet
+                        </option>
+
+                        <option value="Rajshahi">
+                            Rajshahi
+                        </option>
+
+                        <option value="Khulna">
+                            Khulna
+                        </option>
+
+                        <option value="Barishal">
+                            Barishal
+                        </option>
+
+                        <option value="Rangpur">
+                            Rangpur
+                        </option>
+
+                        <option value="Mymensingh">
+                            Mymensingh
+                        </option>
+
+                    </select>
+
+                </div>
+
+            </div>
+
+
+            <!-- PREDICT BUTTON -->
+
+            <div class="mt-4">
+
+                <button
+                    type="submit"
+                    class="btn btn-primary btn-predict">
+
+                    <i class="fa-solid fa-calculator me-2"></i>
+
+                    Predict Treatment Cost
+
+                </button>
+
+            </div>
+
+
+        </form>
+
+
+        <!-- =========================
+             PREDICTION RESULT
+        ========================= -->
+
+        {% if predicted_cost is not none %}
+
+            <div class="result-box">
+
+                <i
+                    class="fa-solid fa-money-bill-wave fa-2x mb-3">
+
+                </i>
+
+                <h5>
+                    Estimated Treatment Cost
+                </h5>
+
+                <h2>
+
+                    ৳ {{ "{:,.2f}".format(predicted_cost) }}
+
+                </h2>
+
+                <p class="mb-0">
+
+                    This is an ML-based estimated treatment cost.
+
+                </p>
+
+            </div>
+
+        {% endif %}
+
+
+    </div>
+
+</div>
+
+
+<!-- FOOTER -->
+
+<div class="footer">
+
+    © 2026 Medical Treatment Cost Prediction System
+    for Bangladesh Hospitals
+
+</div>
+
+</div>
+
+<script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
 </script>
 
 </body>
+
 </html>

@@ -1,0 +1,826 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Patient Information - Medical Cost Prediction</title>
+
+<link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    rel="stylesheet">
+
+<link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+<style>
+
+    /* =========================
+       BASIC RESET
+       ========================= */
+
+    * {
+        box-sizing: border-box;
+    }
+
+    html,
+    body {
+        margin: 0 !important;
+        padding: 0 !important;
+        min-height: 100vh;
+    }
+
+    body {
+        background: #eef3f8;
+        font-family: Arial, Helvetica, sans-serif;
+        color: #222;
+    }
+
+
+    /* =========================
+       NAVBAR
+       ========================= */
+
+    .navbar {
+        width: 100%;
+        height: 55px;
+        margin: 0 !important;
+        padding: 0 25px !important;
+        background: #0d6efd !important;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.10);
+        border: none;
+        border-radius: 0;
+    }
+
+    .navbar .container-fluid {
+        width: 100%;
+        max-width: 100%;
+        height: 55px;
+
+        margin: 0 !important;
+        padding: 0 !important;
+
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .navbar-brand {
+        margin: 0 !important;
+        padding: 0 !important;
+
+        color: white !important;
+        font-size: 20px;
+        font-weight: bold;
+        text-decoration: none;
+
+        line-height: 1;
+    }
+
+    .navbar-brand i {
+        margin-right: 7px;
+    }
+
+    .navbar .nav-link {
+        color: white !important;
+
+        margin: 0 0 0 20px !important;
+        padding: 0 !important;
+
+        font-size: 15px;
+        font-weight: 500;
+
+        line-height: 55px;
+
+        display: inline-block;
+        text-decoration: none;
+
+        transition: opacity 0.2s;
+    }
+
+    .navbar .nav-link:hover {
+        opacity: 0.8;
+    }
+
+
+    /* =========================
+       MAIN CONTAINER
+       ========================= */
+
+    .container-main {
+        width: 1100px;
+        max-width: 95%;
+
+        margin: 20px auto 0 auto !important;
+        padding: 0 !important;
+
+        min-height: auto !important;
+    }
+
+
+    /* =========================
+       FLASH MESSAGE
+       ========================= */
+
+    .alert {
+        border-radius: 10px;
+        margin-bottom: 20px;
+    }
+
+
+    /* =========================
+       MAIN CARD
+       ========================= */
+
+    .main-card {
+        width: 100%;
+
+        margin: 0 !important;
+        padding: 0 !important;
+
+        background: #ffffff;
+
+        border: none;
+        border-radius: 15px;
+
+        box-shadow:
+            0 5px 20px rgba(0, 0, 0, 0.12);
+
+        overflow: hidden;
+    }
+
+
+    /* =========================
+       CARD HEADER
+       ========================= */
+
+    .card-header-custom {
+        background: #0d6efd;
+        color: white;
+
+        padding: 18px 25px;
+
+        font-size: 20px;
+        font-weight: bold;
+    }
+
+
+    /* =========================
+       CARD BODY
+       ========================= */
+
+    .card-body-custom {
+        padding: 30px;
+    }
+
+
+    /* =========================
+       PAGE TITLE
+       ========================= */
+
+    .page-title {
+        margin: 0;
+
+        font-size: 24px;
+        font-weight: bold;
+
+        color: #222;
+    }
+
+    .page-description {
+        color: #6c757d;
+
+        margin-top: 6px;
+        margin-bottom: 0;
+    }
+
+
+    /* =========================
+       TABLE
+       ========================= */
+
+    .table-container {
+        width: 100%;
+
+        border: 1px solid #dee2e6;
+
+        border-radius: 10px;
+
+        overflow: hidden;
+    }
+
+    .table {
+        width: 100%;
+
+        margin: 0;
+
+        vertical-align: middle;
+    }
+
+    .table thead th {
+        background: #f1f5f9;
+
+        color: #333;
+
+        font-weight: bold;
+
+        padding: 14px 12px;
+
+        border-bottom: 2px solid #dee2e6;
+
+        white-space: nowrap;
+    }
+
+    .table tbody td {
+        padding: 14px 12px;
+    }
+
+    .table tbody tr {
+        transition: 0.2s;
+    }
+
+    .table tbody tr:hover {
+        background: #f8fbff;
+    }
+
+
+    /* =========================
+       PATIENT INFORMATION
+       ========================= */
+
+    .patient-id {
+        color: #0d6efd;
+        font-weight: bold;
+    }
+
+    .patient-name {
+        color: #333;
+        font-weight: 600;
+    }
+
+    .gender-text {
+        color: #555;
+    }
+
+
+    /* =========================
+       BADGES
+       ========================= */
+
+    .disease-badge {
+        display: inline-block;
+
+        padding: 6px 10px;
+
+        border-radius: 20px;
+
+        background: #e8f1ff;
+
+        color: #0d6efd;
+
+        font-size: 13px;
+
+        font-weight: 600;
+    }
+
+    .department-badge {
+        display: inline-block;
+
+        padding: 6px 10px;
+
+        border-radius: 20px;
+
+        background: #eef8f1;
+
+        color: #198754;
+
+        font-size: 13px;
+
+        font-weight: 600;
+    }
+
+
+    /* =========================
+       ACTION BUTTON
+       ========================= */
+
+    .action-btn {
+        white-space: nowrap;
+    }
+
+
+    /* =========================
+       EMPTY PATIENT AREA
+       ========================= */
+
+    .empty-box {
+        text-align: center;
+
+        padding: 60px 20px;
+    }
+
+    .empty-icon {
+        font-size: 55px;
+
+        color: #adb5bd;
+
+        margin-bottom: 20px;
+    }
+
+    .empty-box h5 {
+        font-weight: bold;
+
+        margin-bottom: 8px;
+    }
+
+    .empty-box p {
+        color: #6c757d;
+
+        margin-bottom: 20px;
+    }
+
+
+    /* =========================
+       FOOTER
+       ========================= */
+
+    .footer {
+        width: 100%;
+
+        text-align: center;
+
+        margin: 25px 0;
+
+        padding-bottom: 10px;
+
+        color: #808080;
+
+        font-size: 14px;
+    }
+
+
+    /* =========================
+       MOBILE
+       ========================= */
+
+    @media (max-width: 768px) {
+
+        .navbar {
+            height: auto;
+            padding: 12px 15px !important;
+        }
+
+        .navbar .container-fluid {
+            height: auto;
+
+            flex-direction: column;
+
+            align-items: center;
+
+            gap: 8px;
+        }
+
+        .navbar-brand {
+            line-height: normal;
+        }
+
+        .navbar .nav-link {
+            line-height: normal;
+
+            margin: 0 7px !important;
+
+            font-size: 14px;
+        }
+
+        .container-main {
+            width: 95%;
+
+            margin: 15px auto 0 auto !important;
+        }
+
+        .card-body-custom {
+            padding: 20px;
+        }
+
+        .card-header-custom {
+            font-size: 18px;
+        }
+
+        .page-title {
+            font-size: 21px;
+        }
+
+        .d-flex {
+            flex-direction: column;
+
+            align-items: flex-start !important;
+
+            gap: 15px;
+        }
+
+    }
+
+</style>
+
+
+</head>
+
+<body>
+
+<!-- =========================
+     NAVBAR
+     ========================= -->
+
+<nav class="navbar navbar-expand-lg">
+
+
+<div class="container-fluid">
+
+    <a
+        class="navbar-brand"
+        href="{{ url_for('dashboard') }}">
+
+        <i class="fa-solid fa-hospital"></i>
+
+        Medical Cost Prediction
+
+    </a>
+
+
+    <div>
+
+        <a
+            class="nav-link d-inline-block"
+            href="{{ url_for('dashboard') }}">
+
+            <i class="fa-solid fa-house"></i>
+
+            Dashboard
+
+        </a>
+
+
+        <a
+            class="nav-link d-inline-block"
+            href="{{ url_for('patient') }}">
+
+            <i class="fa-solid fa-user-plus"></i>
+
+            Add Patient
+
+        </a>
+
+
+        <a
+            class="nav-link d-inline-block"
+            href="{{ url_for('prediction') }}">
+
+            <i class="fa-solid fa-calculator"></i>
+
+            Prediction
+
+        </a>
+
+
+        <a
+            class="nav-link d-inline-block"
+            href="{{ url_for('history') }}">
+
+            <i class="fa-solid fa-clock-rotate-left"></i>
+
+            History
+
+        </a>
+
+
+        <a
+            class="nav-link d-inline-block"
+            href="{{ url_for('logout') }}">
+
+            <i class="fa-solid fa-right-from-bracket"></i>
+
+            Logout
+
+        </a>
+
+    </div>
+
+</div>
+```
+
+</nav>
+
+<!-- =========================
+     MAIN CONTENT
+     ========================= -->
+
+<div class="container-main">
+
+
+<!-- FLASH MESSAGES -->
+
+{% with messages = get_flashed_messages() %}
+
+    {% if messages %}
+
+        {% for message in messages %}
+
+            <div
+                class="alert alert-success alert-dismissible fade show"
+                role="alert">
+
+                <i class="fa-solid fa-circle-check me-2"></i>
+
+                {{ message }}
+
+                <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="alert">
+                </button>
+
+            </div>
+
+        {% endfor %}
+
+    {% endif %}
+
+{% endwith %}
+
+
+<!-- MAIN CARD -->
+
+<div class="main-card">
+
+
+    <!-- CARD HEADER -->
+
+    <div class="card-header-custom">
+
+        <i class="fa-solid fa-users me-2"></i>
+
+        Patient Information
+
+    </div>
+
+
+    <!-- CARD BODY -->
+
+    <div class="card-body-custom">
+
+
+        <!-- TITLE -->
+
+        <div
+            class="d-flex justify-content-between align-items-center mb-4">
+
+            <div>
+
+                <h2 class="page-title">
+                    All Patients
+                </h2>
+
+                <p class="page-description">
+
+                    View and manage patient information
+                    stored in the system.
+
+                </p>
+
+            </div>
+
+
+            <a
+                href="{{ url_for('patient') }}"
+                class="btn btn-primary">
+
+                <i class="fa-solid fa-user-plus me-2"></i>
+
+                Add Patient
+
+            </a>
+
+        </div>
+
+
+        <!-- PATIENT TABLE -->
+
+        {% if patients %}
+
+
+            <div class="table-container">
+
+                <div class="table-responsive">
+
+                    <table class="table table-hover">
+
+
+                        <thead>
+
+                            <tr>
+
+                                <th>
+                                    ID
+                                </th>
+
+                                <th>
+                                    Patient Name
+                                </th>
+
+                                <th>
+                                    Age
+                                </th>
+
+                                <th>
+                                    Gender
+                                </th>
+
+                                <th>
+                                    Disease
+                                </th>
+
+                                <th>
+                                    Department
+                                </th>
+
+                                <th>
+                                    Action
+                                </th>
+
+                            </tr>
+
+                        </thead>
+
+
+                        <tbody>
+
+                            {% for patient in patients %}
+
+                                <tr>
+
+
+                                    <td>
+
+                                        <span class="patient-id">
+
+                                            #{{ patient['id'] }}
+
+                                        </span>
+
+                                    </td>
+
+
+                                    <td>
+
+                                        <span class="patient-name">
+
+                                            {{ patient['patient_name'] }}
+
+                                        </span>
+
+                                    </td>
+
+
+                                    <td>
+
+                                        {{ patient['age'] }}
+
+                                        years
+
+                                    </td>
+
+
+                                    <td>
+
+                                        <span class="gender-text">
+
+                                            {{ patient['gender'] }}
+
+                                        </span>
+
+                                    </td>
+
+
+                                    <td>
+
+                                        <span class="disease-badge">
+
+                                            {{ patient['disease'] }}
+
+                                        </span>
+
+                                    </td>
+
+
+                                    <td>
+
+                                        <span class="department-badge">
+
+                                            {{ patient['department'] }}
+
+                                        </span>
+
+                                    </td>
+
+
+                                    <td>
+
+                                        <a
+                                            href="{{ url_for('prediction', patient_id=patient['id']) }}"
+                                            class="btn btn-success btn-sm action-btn">
+
+                                            <i class="fa-solid fa-calculator me-1"></i>
+
+                                            Predict Cost
+
+                                        </a>
+
+                                    </td>
+
+
+                                </tr>
+
+                            {% endfor %}
+
+                        </tbody>
+
+
+                    </table>
+
+                </div>
+
+            </div>
+
+
+        {% else %}
+
+
+            <!-- NO PATIENTS -->
+
+            <div class="empty-box">
+
+                <div class="empty-icon">
+
+                    <i class="fa-solid fa-user-slash"></i>
+
+                </div>
+
+
+                <h5>
+                    No Patients Found
+                </h5>
+
+
+                <p>
+
+                    No patient information has been
+                    added to the system yet.
+
+                </p>
+
+
+                <a
+                    href="{{ url_for('patient') }}"
+                    class="btn btn-primary">
+
+                    <i class="fa-solid fa-user-plus me-2"></i>
+
+                    Add First Patient
+
+                </a>
+
+            </div>
+
+
+        {% endif %}
+
+
+    </div>
+
+</div>
+
+
+<!-- FOOTER -->
+
+<div class="footer">
+
+    © 2026 Medical Treatment Cost Prediction System
+    for Bangladesh Hospitals
+
+</div>
+```
+
+</div>
+
+<script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
+</script>
+
+</body>
+
+</html>

@@ -1,759 +1,1277 @@
-from flask import Flask, render_template, request, redirect, session, url_for
-import sqlite3
-from datetime import datetime
 import os
+import sqlite3
+import joblib
+import pandas as pd
+
+from flask import (
+    Flask,
+    render_template,
+    request,
+    redirect,
+    url_for,
+    session,
+    flash
+)
+
+
+# ============================================================
+# FLASK APPLICATION
+# ============================================================
 
 app = Flask(__name__)
 
-# =====================================================
-# APPLICATION SETTINGS
-# =====================================================
-
 app.secret_key = os.environ.get(
     "SECRET_KEY",
-    "medical_cost_secret"
+    "medical_cost_prediction_secret_key"
 )
 
-# Use one database file consistently
-BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-DATABASE = os.path.join(BASE_DIR, "medical_cost.db")
+
+# ============================================================
+# FILE PATHS
+# ============================================================
+
+BASE_DIR = os.path.dirname(
+    os.path.abspath(__file__)
+)
+
+MODEL_PATH = os.path.join(
+    BASE_DIR,
+    "model",
+    "medical_cost_model.pkl"
+)
+
+DATABASE_PATH = os.path.join(
+    BASE_DIR,
+    "database.db"
+)
 
 
-# =====================================================
+# ============================================================
+# LOAD ML MODEL
+# ============================================================
+
+try:
+
+    model = joblib.load(MODEL_PATH)
+
+    print("========================================")
+    print("ML MODEL LOADED SUCCESSFULLY")
+    print("========================================")
+    print("Model:", MODEL_PATH)
+
+    if hasattr(model, "feature_names_in_"):
+
+        print("Model features:")
+        print(list(model.feature_names_in_))
+
+except Exception as e:
+
+    model = None
+
+    print("========================================")
+    print("ERROR: ML MODEL COULD NOT BE LOADED")
+    print("========================================")
+    print(e)
+
+
+# ============================================================
 # DATABASE CONNECTION
-# =====================================================
+# ============================================================
 
 def get_db_connection():
-    conn = sqlite3.connect(DATABASE)
+
+    conn = sqlite3.connect(
+        DATABASE_PATH
+    )
+
     conn.row_factory = sqlite3.Row
+
     return conn
 
 
-# =====================================================
+# ============================================================
 # INITIALIZE DATABASE
-# =====================================================
+# ============================================================
 
-def init_db():
+def init_database():
 
     conn = get_db_connection()
 
-    # -------------------------------------------------
+    cursor = conn.cursor()
+
     # USERS TABLE
-    # -------------------------------------------------
-
-    conn.execute("""
+    cursor.execute("""
         CREATE TABLE IF NOT EXISTS users (
+
             id INTEGER PRIMARY KEY AUTOINCREMENT,
-            name TEXT NOT NULL,
+
+            username TEXT UNIQUE NOT NULL,
+
             email TEXT UNIQUE NOT NULL,
-            phone TEXT,
-            user_type TEXT NOT NULL,
+
             password TEXT NOT NULL
+
         )
     """)
 
-    # -------------------------------------------------
     # PATIENTS TABLE
-    # -------------------------------------------------
-
-    conn.execute("""
+    cursor.execute("""
         CREATE TABLE IF NOT EXISTS patients (
+
             id INTEGER PRIMARY KEY AUTOINCREMENT,
+
             patient_name TEXT NOT NULL,
+
             age INTEGER NOT NULL,
+
             gender TEXT NOT NULL,
-            phone TEXT,
-            address TEXT,
-            blood_group TEXT,
+
             disease TEXT NOT NULL,
-            admission_date TEXT
+
+            department TEXT NOT NULL
+
         )
     """)
 
-    # -------------------------------------------------
-    # PREDICTIONS TABLE
-    # -------------------------------------------------
+    # PREDICTION HISTORY TABLE
+    cursor.execute("""
+        CREATE TABLE IF NOT EXISTS prediction_history (
 
-    conn.execute("""
-        CREATE TABLE IF NOT EXISTS predictions (
             id INTEGER PRIMARY KEY AUTOINCREMENT,
-            patient_id INTEGER,
-            patient_name TEXT NOT NULL,
-            disease TEXT NOT NULL,
-            treatment_type TEXT NOT NULL,
-            hospital_days INTEGER NOT NULL,
-            icu INTEGER NOT NULL,
-            predicted_cost REAL NOT NULL,
-            prediction_date TEXT NOT NULL,
 
-            FOREIGN KEY (patient_id)
-            REFERENCES patients(id)
+            patient_id INTEGER,
+
+            patient_name TEXT,
+
+            age INTEGER,
+
+            gender TEXT,
+
+            department TEXT,
+
+            disease TEXT,
+
+            treatment_type TEXT,
+
+            hospital_days INTEGER,
+
+            icu TEXT,
+
+            hospital_type TEXT,
+
+            hospital_location TEXT,
+
+            predicted_cost REAL,
+
+            created_at TIMESTAMP
+                DEFAULT CURRENT_TIMESTAMP
+
         )
     """)
-
-    # -------------------------------------------------
-    # CREATE DEMO ADMIN ACCOUNT
-    # -------------------------------------------------
-
-    admin = conn.execute(
-        """
-        SELECT *
-        FROM users
-        WHERE email = ?
-        """,
-        ("admin@gmail.com",)
-    ).fetchone()
-
-    if admin is None:
-
-        conn.execute("""
-            INSERT INTO users
-            (
-                name,
-                email,
-                phone,
-                user_type,
-                password
-            )
-            VALUES (?, ?, ?, ?, ?)
-        """, (
-            "Administrator",
-            "admin@gmail.com",
-            "",
-            "Hospital Staff",
-            "123456"
-        ))
 
     conn.commit()
+
     conn.close()
 
-
-# =====================================================
-# IMPORTANT:
-# INITIALIZE DATABASE WHEN FLASK/GUNICORN STARTS
-# =====================================================
-
-init_db()
+    print("Database initialized successfully.")
 
 
-# =====================================================
+init_database()
+
+
+# ============================================================
 # LOGIN PAGE
-# =====================================================
+# ============================================================
 
 @app.route("/")
-def login_page():
+def index():
 
-    return render_template("login.html")
+    if "user_id" in session:
 
-
-# =====================================================
-# LOGIN
-# =====================================================
-
-@app.route("/login", methods=["GET", "POST"])
-def login():
-
-    if request.method == "POST":
-
-        email = request.form.get(
-            "email",
-            ""
-        ).strip()
-
-        password = request.form.get(
-            "password",
-            ""
-        ).strip()
-
-        # Check empty fields
-        if not email or not password:
-
-            return """
-            <h3>Please enter email and password.</h3>
-            <a href="/">Back to Login</a>
-            """
-
-        conn = get_db_connection()
-
-        user = conn.execute("""
-            SELECT *
-            FROM users
-            WHERE email = ? AND password = ?
-        """, (
-            email,
-            password
-        )).fetchone()
-
-        conn.close()
-
-        # Successful login
-        if user:
-
-            session["user"] = user["email"]
-            session["user_name"] = user["name"]
-            session["user_type"] = user["user_type"]
-
-            return redirect(
-                url_for("dashboard")
-            )
-
-        # Invalid login
-        return """
-        <h3>Invalid Email or Password</h3>
-
-        <p>Please check your email and password.</p>
-
-        <a href="/">Back to Login</a>
-        """
-
-    return redirect(
-        url_for("login_page")
-    )
-
-
-# =====================================================
-# REGISTER PAGE + REGISTRATION
-# =====================================================
-
-@app.route("/register", methods=["GET", "POST"])
-def register_page():
-
-    if request.method == "POST":
-
-        name = request.form.get(
-            "name",
-            ""
-        ).strip()
-
-        email = request.form.get(
-            "email",
-            ""
-        ).strip()
-
-        phone = request.form.get(
-            "phone",
-            ""
-        ).strip()
-
-        user_type = request.form.get(
-            "user_type",
-            ""
-        ).strip()
-
-        password = request.form.get(
-            "password",
-            ""
-        ).strip()
-
-        confirm_password = request.form.get(
-            "confirm_password",
-            ""
-        ).strip()
-
-        # -------------------------------------------------
-        # VALIDATE REQUIRED FIELDS
-        # -------------------------------------------------
-
-        if not name or not email or not password:
-
-            return """
-            <h3>Please fill in all required fields.</h3>
-
-            <a href="/register">
-                Back to Register
-            </a>
-            """
-
-        # -------------------------------------------------
-        # CHECK PASSWORD
-        # -------------------------------------------------
-
-        if password != confirm_password:
-
-            return """
-            <h3>Passwords do not match!</h3>
-
-            <a href="/register">
-                Back to Register
-            </a>
-            """
-
-        # -------------------------------------------------
-        # DEFAULT USER TYPE
-        # -------------------------------------------------
-
-        if not user_type:
-
-            user_type = "Hospital Staff"
-
-        # -------------------------------------------------
-        # SAVE USER
-        # -------------------------------------------------
-
-        conn = get_db_connection()
-
-        try:
-
-            conn.execute("""
-                INSERT INTO users
-                (
-                    name,
-                    email,
-                    phone,
-                    user_type,
-                    password
-                )
-                VALUES (?, ?, ?, ?, ?)
-            """, (
-                name,
-                email,
-                phone,
-                user_type,
-                password
-            ))
-
-            conn.commit()
-
-        except sqlite3.IntegrityError:
-
-            conn.close()
-
-            return """
-            <h3>Email already exists!</h3>
-
-            <p>
-                Please use a different email address.
-            </p>
-
-            <a href="/register">
-                Back to Register
-            </a>
-            """
-
-        conn.close()
-
-        return """
-        <h3>Registration Successful!</h3>
-
-        <p>
-            Your account has been created successfully.
-        </p>
-
-        <a href="/">
-            Go to Login
-        </a>
-        """
+        return redirect(
+            url_for("dashboard")
+        )
 
     return render_template(
-        "register.html"
+        "login.html"
     )
 
 
-# =====================================================
+# ============================================================
+# REGISTER
+# ============================================================
+
+@app.route(
+    "/register",
+    methods=["GET", "POST"]
+)
+def register():
+
+    if request.method == "GET":
+
+        return render_template(
+            "register.html"
+        )
+
+    name = request.form.get(
+        "name",
+        ""
+    ).strip()
+
+    username = request.form.get(
+        "username",
+        ""
+    ).strip()
+
+    email = request.form.get(
+        "email",
+        ""
+    ).strip().lower()
+
+    password = request.form.get(
+        "password",
+        ""
+    ).strip()
+
+    confirm_password = request.form.get(
+        "confirm_password",
+        ""
+    ).strip()
+
+    # DEFAULT USERNAME
+    if not username:
+
+        if email:
+
+            username = email.split("@")[0]
+
+        else:
+
+            username = name
+
+    if not name:
+
+        name = username
+
+    # VALIDATION
+    if not email:
+
+        flash(
+            "Email is required."
+        )
+
+        return redirect(
+            url_for("register")
+        )
+
+    if not password:
+
+        flash(
+            "Password is required."
+        )
+
+        return redirect(
+            url_for("register")
+        )
+
+    if password != confirm_password:
+
+        flash(
+            "Passwords do not match."
+        )
+
+        return redirect(
+            url_for("register")
+        )
+
+    if len(password) < 6:
+
+        flash(
+            "Password must contain at least 6 characters."
+        )
+
+        return redirect(
+            url_for("register")
+        )
+
+    conn = get_db_connection()
+
+    try:
+
+        # CHECK EMAIL
+        existing_email = conn.execute(
+            """
+            SELECT id
+            FROM users
+            WHERE email = ?
+            """,
+            (email,)
+        ).fetchone()
+
+        if existing_email:
+
+            flash(
+                "Email already exists. Please login."
+            )
+
+            return redirect(
+                url_for("index")
+            )
+
+        # CHECK USERNAME
+        existing_username = conn.execute(
+            """
+            SELECT id
+            FROM users
+            WHERE username = ?
+            """,
+            (username,)
+        ).fetchone()
+
+        if existing_username:
+
+            base_username = username
+
+            counter = 1
+
+            while True:
+
+                new_username = (
+                    base_username
+                    + "_"
+                    + str(counter)
+                )
+
+                check_username = conn.execute(
+                    """
+                    SELECT id
+                    FROM users
+                    WHERE username = ?
+                    """,
+                    (new_username,)
+                ).fetchone()
+
+                if not check_username:
+
+                    username = new_username
+
+                    break
+
+                counter += 1
+
+        # INSERT USER
+        conn.execute(
+            """
+            INSERT INTO users
+            (
+                username,
+                email,
+                password
+            )
+            VALUES (?, ?, ?)
+            """,
+            (
+                username,
+                email,
+                password
+            )
+        )
+
+        conn.commit()
+
+        flash(
+            "Registration successful. Please login."
+        )
+
+        return redirect(
+            url_for("index")
+        )
+
+    except sqlite3.Error as e:
+
+        conn.rollback()
+
+        flash(
+            "Registration error: "
+            + str(e)
+        )
+
+        return redirect(
+            url_for("register")
+        )
+
+    finally:
+
+        conn.close()
+
+
+# ============================================================
+# LOGIN
+# ============================================================
+
+@app.route(
+    "/login",
+    methods=["GET", "POST"]
+)
+def login():
+
+    if request.method == "GET":
+
+        return redirect(
+            url_for("index")
+        )
+
+    login_value = request.form.get(
+        "username",
+        ""
+    ).strip().lower()
+
+    if not login_value:
+
+        login_value = request.form.get(
+            "email",
+            ""
+        ).strip().lower()
+
+    password = request.form.get(
+        "password",
+        ""
+    ).strip()
+
+    if not login_value or not password:
+
+        flash(
+            "Please enter username/email and password."
+        )
+
+        return redirect(
+            url_for("index")
+        )
+
+    conn = get_db_connection()
+
+    try:
+
+        user = conn.execute(
+            """
+            SELECT *
+            FROM users
+            WHERE LOWER(email) = ?
+               OR LOWER(username) = ?
+            """,
+            (
+                login_value,
+                login_value
+            )
+        ).fetchone()
+
+    except sqlite3.Error as e:
+
+        conn.close()
+
+        flash(
+            "Database error: "
+            + str(e)
+        )
+
+        return redirect(
+            url_for("index")
+        )
+
+    conn.close()
+
+    if user and user["password"] == password:
+
+        session.clear()
+
+        session["user_id"] = user["id"]
+
+        session["username"] = user["username"]
+
+        session["email"] = user["email"]
+
+        return redirect(
+            url_for("dashboard")
+        )
+
+    flash(
+        "Invalid username/email or password."
+    )
+
+    return redirect(
+        url_for("index")
+    )
+
+
+# ============================================================
 # DASHBOARD
-# =====================================================
+# ============================================================
 
 @app.route("/dashboard")
 def dashboard():
 
-    # Check login
-    if "user" not in session:
+    if "user_id" not in session:
 
         return redirect(
-            url_for("login_page")
+            url_for("index")
         )
+
+    conn = get_db_connection()
+
+    try:
+
+        patients = conn.execute(
+            """
+            SELECT *
+            FROM patients
+            ORDER BY id DESC
+            """
+        ).fetchall()
+
+        total_patients = conn.execute(
+            """
+            SELECT COUNT(*) AS total
+            FROM patients
+            """
+        ).fetchone()["total"]
+
+        total_predictions = conn.execute(
+            """
+            SELECT COUNT(*) AS total
+            FROM prediction_history
+            """
+        ).fetchone()["total"]
+
+    finally:
+
+        conn.close()
 
     return render_template(
         "dashboard.html",
-        user=session.get("user"),
-        user_name=session.get("user_name"),
-        user_type=session.get("user_type")
+        patients=patients,
+        total_patients=total_patients,
+        total_predictions=total_predictions
     )
 
 
-# =====================================================
-# PATIENT INFORMATION
-# =====================================================
+# ============================================================
+# ADD PATIENT
+# ============================================================
 
-@app.route("/patient", methods=["GET", "POST"])
+@app.route(
+    "/patient",
+    methods=["GET", "POST"]
+)
 def patient():
 
-    # Check login
-    if "user" not in session:
+    if "user_id" not in session:
 
         return redirect(
-            url_for("login_page")
+            url_for("index")
         )
 
-    # -------------------------------------------------
-    # SAVE PATIENT
-    # -------------------------------------------------
+    if request.method == "GET":
 
-    if request.method == "POST":
+        return render_template(
+            "patient.html"
+        )
 
-        patient_name = request.form.get(
-            "patient_name",
-            ""
-        ).strip()
+    patient_name = request.form.get(
+        "patient_name",
+        ""
+    ).strip()
 
-        age = request.form.get(
-            "age",
-            ""
-        ).strip()
+    age = request.form.get(
+        "age",
+        ""
+    ).strip()
 
-        gender = request.form.get(
-            "gender",
-            ""
-        ).strip()
+    gender = request.form.get(
+        "gender",
+        ""
+    ).strip()
 
-        phone = request.form.get(
-            "phone",
-            ""
-        ).strip()
+    disease = request.form.get(
+        "disease",
+        ""
+    ).strip()
 
-        address = request.form.get(
-            "address",
-            ""
-        ).strip()
+    department = request.form.get(
+        "department",
+        ""
+    ).strip()
 
-        blood_group = request.form.get(
-            "blood_group",
-            ""
-        ).strip()
+    # VALIDATION
+    if not patient_name:
 
-        disease = request.form.get(
-            "disease",
-            ""
-        ).strip()
-
-        admission_date = request.form.get(
-            "admission_date",
-            ""
-        ).strip()
-
-        # -------------------------------------------------
-        # VALIDATION
-        # -------------------------------------------------
-
-        if (
-            not patient_name
-            or not age
-            or not gender
-            or not disease
-        ):
-
-            return """
-            <h3>
-                Please fill in all required
-                patient information.
-            </h3>
-
-            <a href="/patient">
-                Back to Patient Information
-            </a>
-            """
-
-        # Check age
-        try:
-
-            age = int(age)
-
-        except ValueError:
-
-            return """
-            <h3>Age must be a number.</h3>
-
-            <a href="/patient">
-                Back to Patient Information
-            </a>
-            """
-
-        if age <= 0:
-
-            return """
-            <h3>Age must be greater than 0.</h3>
-
-            <a href="/patient">
-                Back to Patient Information
-            </a>
-            """
-
-        # -------------------------------------------------
-        # INSERT PATIENT
-        # -------------------------------------------------
-
-        conn = get_db_connection()
-
-        conn.execute("""
-            INSERT INTO patients
-            (
-                patient_name,
-                age,
-                gender,
-                phone,
-                address,
-                blood_group,
-                disease,
-                admission_date
-            )
-            VALUES (?, ?, ?, ?, ?, ?, ?, ?)
-        """, (
-            patient_name,
-            age,
-            gender,
-            phone,
-            address,
-            blood_group,
-            disease,
-            admission_date
-        ))
-
-        conn.commit()
-        conn.close()
+        flash(
+            "Patient name is required."
+        )
 
         return redirect(
             url_for("patient")
         )
 
-    # -------------------------------------------------
-    # GET PATIENTS
-    # -------------------------------------------------
+    if not age:
+
+        flash(
+            "Age is required."
+        )
+
+        return redirect(
+            url_for("patient")
+        )
+
+    if not gender:
+
+        flash(
+            "Gender is required."
+        )
+
+        return redirect(
+            url_for("patient")
+        )
+
+    if not disease:
+
+        flash(
+            "Disease is required."
+        )
+
+        return redirect(
+            url_for("patient")
+        )
+
+    if not department:
+
+        flash(
+            "Department is required."
+        )
+
+        return redirect(
+            url_for("patient")
+        )
+
+    try:
+
+        age = int(age)
+
+        if age < 0 or age > 120:
+
+            raise ValueError
+
+    except ValueError:
+
+        flash(
+            "Please enter a valid age between 0 and 120."
+        )
+
+        return redirect(
+            url_for("patient")
+        )
 
     conn = get_db_connection()
 
-    patients = conn.execute("""
-        SELECT *
-        FROM patients
-        ORDER BY id DESC
-    """).fetchall()
+    try:
+
+        cursor = conn.execute(
+            """
+            INSERT INTO patients
+            (
+                patient_name,
+                age,
+                gender,
+                disease,
+                department
+            )
+            VALUES (?, ?, ?, ?, ?)
+            """,
+            (
+                patient_name,
+                age,
+                gender,
+                disease,
+                department
+            )
+        )
+
+        conn.commit()
+
+        patient_id = cursor.lastrowid
+
+        print(
+            "Patient saved successfully:",
+            patient_id,
+            patient_name
+        )
+
+        flash(
+            "Patient added successfully."
+        )
+
+        return redirect(
+            url_for("patients")
+        )
+
+    except sqlite3.Error as e:
+
+        conn.rollback()
+
+        flash(
+            "Could not save patient: "
+            + str(e)
+        )
+
+        return redirect(
+            url_for("patient")
+        )
+
+    finally:
+
+        conn.close()
+
+
+# ============================================================
+# PATIENT LIST
+# ============================================================
+
+@app.route("/patients")
+def patients():
+
+    if "user_id" not in session:
+
+        return redirect(
+            url_for("index")
+        )
+
+    conn = get_db_connection()
+
+    try:
+
+        patient_records = conn.execute(
+            """
+            SELECT
+                id,
+                patient_name,
+                age,
+                gender,
+                disease,
+                department
+            FROM patients
+            ORDER BY id DESC
+            """
+        ).fetchall()
+
+    except sqlite3.Error as e:
+
+        conn.close()
+
+        flash(
+            "Could not load patients: "
+            + str(e)
+        )
+
+        return redirect(
+            url_for("dashboard")
+        )
 
     conn.close()
 
     return render_template(
-        "patient.html",
-        patients=patients
+        "patients.html",
+        patients=patient_records
     )
 
 
-# =====================================================
-# TREATMENT COST PREDICTION
-# =====================================================
+# ============================================================
+# DELETE PATIENT
+# ============================================================
 
-@app.route("/prediction", methods=["GET", "POST"])
-def prediction():
+@app.route(
+    "/delete_patient/<int:patient_id>",
+    methods=["POST"]
+)
+def delete_patient(patient_id):
 
-    # Check login
-    if "user" not in session:
+    if "user_id" not in session:
 
         return redirect(
-            url_for("login_page")
+            url_for("index")
+        )
+
+    conn = get_db_connection()
+
+    try:
+
+        patient_record = conn.execute(
+            """
+            SELECT id
+            FROM patients
+            WHERE id = ?
+            """,
+            (patient_id,)
+        ).fetchone()
+
+        if not patient_record:
+
+            flash(
+                "Patient not found."
+            )
+
+            return redirect(
+                url_for("patients")
+            )
+
+        conn.execute(
+            """
+            DELETE FROM patients
+            WHERE id = ?
+            """,
+            (patient_id,)
+        )
+
+        conn.commit()
+
+        flash(
+            "Patient deleted successfully."
+        )
+
+    except sqlite3.Error as e:
+
+        conn.rollback()
+
+        flash(
+            "Could not delete patient: "
+            + str(e)
+        )
+
+    finally:
+
+        conn.close()
+
+    return redirect(
+        url_for("patients")
+    )
+
+
+# ============================================================
+# PREDICTION
+# ============================================================
+
+@app.route(
+    "/prediction",
+    methods=["GET", "POST"]
+)
+def prediction():
+
+    if "user_id" not in session:
+
+        return redirect(
+            url_for("index")
         )
 
     predicted_cost = None
 
-    # -------------------------------------------------
-    # MAKE PREDICTION
-    # -------------------------------------------------
+    selected_patient = None
 
-    if request.method == "POST":
+    # GET PATIENT ID
+    patient_id = request.args.get(
+        "patient_id",
+        ""
+    ).strip()
 
-        patient_id = request.form.get(
-            "patient_id",
-            ""
-        ).strip()
+    if patient_id:
 
-        patient_name = request.form.get(
-            "patient_name",
-            ""
-        ).strip()
-
-        disease = request.form.get(
-            "disease",
-            ""
-        ).strip()
-
-        treatment_type = request.form.get(
-            "treatment_type",
-            ""
-        ).strip()
-
-        hospital_days_text = request.form.get(
-            "hospital_days",
-            "0"
-        ).strip()
-
-        icu_text = request.form.get(
-            "icu",
-            "0"
-        ).strip()
-
-        # -------------------------------------------------
-        # VALIDATE REQUIRED FIELDS
-        # -------------------------------------------------
-
-        if not patient_name:
-
-            return """
-            <h3>Please enter patient name.</h3>
-
-            <a href="/prediction">
-                Back to Prediction
-            </a>
-            """
-
-        if not disease:
-
-            return """
-            <h3>Please enter disease.</h3>
-
-            <a href="/prediction">
-                Back to Prediction
-            </a>
-            """
-
-        if not treatment_type:
-
-            treatment_type = "General Treatment"
-
-        # -------------------------------------------------
-        # VALIDATE NUMBERS
-        # -------------------------------------------------
+        conn = get_db_connection()
 
         try:
+
+            selected_patient = conn.execute(
+                """
+                SELECT *
+                FROM patients
+                WHERE id = ?
+                """,
+                (patient_id,)
+            ).fetchone()
+
+        finally:
+
+            conn.close()
+
+    # POST PREDICTION
+    if request.method == "POST":
+
+        if model is None:
+
+            flash(
+                "ML model could not be loaded."
+            )
+
+            return redirect(
+                url_for("prediction")
+            )
+
+        try:
+
+            # GET INPUTS
+            age_text = request.form.get(
+                "age",
+                ""
+            ).strip()
+
+            gender = request.form.get(
+                "gender",
+                ""
+            ).strip()
+
+            department = request.form.get(
+                "department",
+                ""
+            ).strip()
+
+            disease = request.form.get(
+                "disease",
+                ""
+            ).strip()
+
+            treatment_type = request.form.get(
+                "treatment_type",
+                ""
+            ).strip()
+
+            hospital_days_text = request.form.get(
+                "hospital_days",
+                ""
+            ).strip()
+
+            # ICU
+            icu_value = request.form.get(
+                "icu",
+                "No"
+            ).strip()
+
+            if icu_value.lower() == "yes":
+
+                icu = 1
+                icu_display = "Yes"
+
+            else:
+
+                icu = 0
+                icu_display = "No"
+
+            # OTHER INPUTS
+            hospital_type = request.form.get(
+                "hospital_type",
+                ""
+            ).strip()
+
+            hospital_location = request.form.get(
+                "hospital_location",
+                ""
+            ).strip()
+
+            patient_name = request.form.get(
+                "patient_name",
+                ""
+            ).strip()
+
+            posted_patient_id = request.form.get(
+                "patient_id",
+                ""
+            ).strip()
+
+            # VALIDATE AGE
+            if not age_text:
+
+                raise ValueError(
+                    "Age is required."
+                )
+
+            age = int(age_text)
+
+            if age < 0 or age > 120:
+
+                raise ValueError(
+                    "Age must be between 0 and 120."
+                )
+
+            # VALIDATE HOSPITAL DAYS
+            if not hospital_days_text:
+
+                raise ValueError(
+                    "Hospital days is required."
+                )
 
             hospital_days = int(
                 hospital_days_text
             )
 
-            icu = int(
-                icu_text
-            )
+            if (
+                hospital_days < 1
+                or hospital_days > 365
+            ):
 
-        except ValueError:
+                raise ValueError(
+                    "Hospital days must be between 1 and 365."
+                )
 
-            return """
-            <h3>
-                Hospital days and ICU must be numbers.
-            </h3>
+            # VALIDATE CATEGORICAL INPUTS
+            required_values = [
 
-            <a href="/prediction">
-                Back to Prediction
-            </a>
-            """
+                gender,
 
-        if hospital_days < 0:
+                department,
 
-            hospital_days = 0
-
-        if icu not in [0, 1]:
-
-            icu = 0
-
-        # -------------------------------------------------
-        # DEMO COST CALCULATION
-        # -------------------------------------------------
-
-        base_cost = 5000
-
-        daily_cost = hospital_days * 3000
-
-        icu_cost = icu * 10000
-
-        predicted_cost = (
-            base_cost
-            + daily_cost
-            + icu_cost
-        )
-
-        # -------------------------------------------------
-        # SAVE PREDICTION
-        # -------------------------------------------------
-
-        conn = get_db_connection()
-
-        conn.execute("""
-            INSERT INTO predictions
-            (
-                patient_id,
-                patient_name,
                 disease,
+
                 treatment_type,
-                hospital_days,
-                icu,
+
+                hospital_type,
+
+                hospital_location
+
+            ]
+
+            if any(
+                not value
+                for value in required_values
+            ):
+
+                raise ValueError(
+                    "Please fill in all prediction fields."
+                )
+
+            # CREATE DATAFRAME
+            input_data = pd.DataFrame(
+                [
+                    {
+                        "age": age,
+
+                        "gender": gender,
+
+                        "department": department,
+
+                        "disease": disease,
+
+                        "treatment_type": treatment_type,
+
+                        "hospital_days": hospital_days,
+
+                        "icu": icu,
+
+                        "hospital_type": hospital_type,
+
+                        "hospital_location": hospital_location
+                    }
+                ]
+            )
+
+            # MATCH MODEL FEATURES
+            if hasattr(
+                model,
+                "feature_names_in_"
+            ):
+
+                model_features = list(
+                    model.feature_names_in_
+                )
+
+                input_data = input_data[
+                    model_features
+                ]
+
+            print()
+            print(
+                "========================================"
+            )
+            print(
+                "PREDICTION INPUT"
+            )
+            print(
+                "========================================"
+            )
+
+            print(input_data)
+
+            print(
+                "ICU form value:",
+                icu_value
+            )
+
+            print(
+                "ICU model value:",
+                icu
+            )
+
+            print(
+                "========================================"
+            )
+
+            # MAKE PREDICTION
+            prediction_result = model.predict(
+                input_data
+            )
+
+            predicted_cost = float(
+                prediction_result[0]
+            )
+
+            predicted_cost = max(
+                0,
+                predicted_cost
+            )
+
+            predicted_cost = round(
                 predicted_cost,
-                prediction_date
+                2
             )
-            VALUES (?, ?, ?, ?, ?, ?, ?, ?)
-        """, (
-            patient_id if patient_id else None,
-            patient_name,
-            disease,
-            treatment_type,
-            hospital_days,
-            icu,
-            predicted_cost,
-            datetime.now().strftime(
-                "%Y-%m-%d %H:%M:%S"
+
+            # SAVE PREDICTION HISTORY
+            conn = get_db_connection()
+
+            try:
+
+                patient_id_value = None
+
+                if posted_patient_id:
+
+                    try:
+
+                        patient_id_value = int(
+                            posted_patient_id
+                        )
+
+                    except ValueError:
+
+                        patient_id_value = None
+
+                conn.execute(
+                    """
+                    INSERT INTO prediction_history
+                    (
+                        patient_id,
+                        patient_name,
+                        age,
+                        gender,
+                        department,
+                        disease,
+                        treatment_type,
+                        hospital_days,
+                        icu,
+                        hospital_type,
+                        hospital_location,
+                        predicted_cost
+                    )
+                    VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+                    """,
+                    (
+                        patient_id_value,
+                        patient_name,
+                        age,
+                        gender,
+                        department,
+                        disease,
+                        treatment_type,
+                        hospital_days,
+                        icu_display,
+                        hospital_type,
+                        hospital_location,
+                        predicted_cost
+                    )
+                )
+
+                conn.commit()
+
+            except sqlite3.Error as e:
+
+                conn.rollback()
+
+                raise Exception(
+                    "Could not save prediction: "
+                    + str(e)
+                )
+
+            finally:
+
+                conn.close()
+
+            flash(
+                "Treatment cost predicted successfully."
             )
-        ))
 
-        conn.commit()
-        conn.close()
+        except ValueError as e:
 
-    # -------------------------------------------------
-    # SHOW PATIENTS FOR PREDICTION
-    # -------------------------------------------------
+            flash(
+                "Invalid input: "
+                + str(e)
+            )
 
-    conn = get_db_connection()
+        except Exception as e:
 
-    patients = conn.execute("""
-        SELECT *
-        FROM patients
-        ORDER BY id DESC
-    """).fetchall()
+            flash(
+                "Prediction error: "
+                + str(e)
+            )
 
-    conn.close()
-
+    # RENDER PREDICTION PAGE
     return render_template(
         "prediction.html",
         predicted_cost=predicted_cost,
-        patients=patients
+        selected_patient=selected_patient
     )
 
 
-# =====================================================
-# PREDICTION HISTORY
-# =====================================================
+# ============================================================
+# HISTORY
+# ============================================================
 
 @app.route("/history")
 def history():
 
-    # Check login
-    if "user" not in session:
+    if "user_id" not in session:
 
         return redirect(
-            url_for("login_page")
+            url_for("index")
         )
 
     conn = get_db_connection()
 
-    predictions = conn.execute("""
-        SELECT *
-        FROM predictions
-        ORDER BY id DESC
-    """).fetchall()
+    try:
+
+        history_records = conn.execute(
+            """
+            SELECT *
+            FROM prediction_history
+            ORDER BY id DESC
+            """
+        ).fetchall()
+
+    except sqlite3.Error as e:
+
+        conn.close()
+
+        flash(
+            "Could not load prediction history: "
+            + str(e)
+        )
+
+        return redirect(
+            url_for("dashboard")
+        )
 
     conn.close()
 
     return render_template(
         "history.html",
-        predictions=predictions
+        history=history_records
     )
 
 
-# =====================================================
+# ============================================================
 # LOGOUT
-# =====================================================
+# ============================================================
 
 @app.route("/logout")
 def logout():
@@ -761,23 +1279,62 @@ def logout():
     session.clear()
 
     return redirect(
-        url_for("login_page")
+        url_for("index")
     )
 
 
-# =====================================================
-# RUN APPLICATION LOCALLY
-# =====================================================
+# ============================================================
+# RUN APPLICATION
+# ============================================================
 
 if __name__ == "__main__":
 
+    print()
+    print("========================================")
+    print("BANGLADESH MEDICAL COST PREDICTION")
+    print("========================================")
+
+    print(
+        "ML model loaded:",
+        model is not None
+    )
+
+    print(
+        "Database:",
+        DATABASE_PATH
+    )
+
+    print(
+        "Starting Flask server..."
+    )
+
+    print(
+        "========================================"
+    )
+
+    print()
+
+    # Port 5000 is already being used by macOS.
+    # Use port 5001 for local development.
+    # If a hosting service provides PORT,
+    # that PORT will be used automatically.
+
+    port = int(
+        os.environ.get(
+            "PORT",
+            5001
+        )
+    )
+
+    print(
+        f"Server running at: http://127.0.0.1:{port}"
+    )
+
+    print()
+
     app.run(
         host="0.0.0.0",
-        port=int(
-            os.environ.get(
-                "PORT",
-                5000
-            )
-        ),
-        debug=True
+        port=port,
+        debug=False
     )
+
